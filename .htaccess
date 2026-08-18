@@ -1,15 +1,28 @@
 # Pacific Business Park — cPanel hardening
-# Deliberately no Content-Security-Policy here: a mismatched CSP silently
-# broke inline/external JS on a sibling ATL project (see SPEC.md §0.1) in a
-# way that was invisible from source. Don't add one until the social embeds
-# (SPEC.md §2.4) are actually being wired in, and test with a live CSP check
-# first when that happens.
+#
+# This site is on the same shared hosting account as axiel.co.za, which sends
+# an account-wide default CSP (default-src 'self'; script-src 'self'; no
+# frame-src) — confirmed via `curl -I` on both domains: identical CSP string,
+# same origin IP. That default silently blocked the Instagram embed script
+# AND the Google Maps iframe on this site (both are third-party origins with
+# no exception in the account default). Same failure class documented in
+# SPEC.md §0.1 from a sibling ATL project — invisible from the page's own
+# source, only shows up as "nothing loads" in the browser.
+#
+# Fix: declare our own CSP below with the specific exceptions this page
+# needs. A per-site `Header always set` for the same header name overrides
+# the account-wide default on this host — confirmed by X-Frame-Options
+# already differing between axiel.co.za (DENY) and this site (SAMEORIGIN).
+# If Instagram/Maps still don't load after this deploys, the override isn't
+# taking effect here the way it does for X-Frame-Options — stop and check
+# with a live `curl -I` before assuming the CSP values themselves are wrong.
 
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://www.instagram.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.cdninstagram.com https://*.fbcdn.net https://*.google.com https://*.gstatic.com; frame-src 'self' https://www.instagram.com https://www.google.com https://maps.google.com; connect-src 'self' https://www.instagram.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
 </IfModule>
 
 <IfModule mod_rewrite.c>
