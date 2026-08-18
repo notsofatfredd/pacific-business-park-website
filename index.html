@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pacific Business Park | Stores, Events & Shopping in Cape Town</title>
+    <meta
+      name="description"
+      content="Pacific Business Park in Cape Town. Explore stores, events, opening day activity, trading hours, and visitor information."
+    />
+    <link rel="canonical" href="https://pacificbusinesspark.co.za/" />
+
+    <!-- Favicons / home-screen icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png" />
+    <meta name="theme-color" content="#081d3a" />
+
+    <!-- Open Graph / social share -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pacific Business Park" />
+    <meta property="og:title" content="Pacific Business Park | Stores, Events & Shopping in Cape Town" />
+    <meta
+      property="og:description"
+      content="Pacific Business Park in Cape Town. Explore stores, events, opening day activity, trading hours, and visitor information."
+    />
+    <meta property="og:image" content="https://pacificbusinesspark.co.za/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://pacificbusinesspark.co.za/" />
+    <meta property="og:locale" content="en_ZA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pacific Business Park | Stores, Events & Shopping in Cape Town" />
+    <meta
+      name="twitter:description"
+      content="Pacific Business Park in Cape Town. Explore stores, events, opening day activity, trading hours, and visitor information."
+    />
+    <meta name="twitter:image" content="https://pacificbusinesspark.co.za/images/og-image.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top-strip">
+      <a
+        class="top-address"
+        href="https://www.google.com/maps/search/?api=1&query=1E+Jakes+Gerwel+Drive,+Cape+Town"
+        target="_blank"
+        rel="noopener noreferrer"
+        >1E Jakes Gerwel Drive, Cape Town</a
+      >
+      <p>Mon-Sat: 09:00-18:00 | Sun: 09:00-13:00</p>
+      <a href="mailto:info@pacificbusinesspark.co.za"
+        >info@pacificbusinesspark.co.za</a
+      >
+    </div>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="#home" aria-label="Pacific Business Park home">
+          <img
+            src="images/pacific-business-park-logo.png"
+            alt="Pacific Business Park logo"
+            class="brand-logo"
+          />
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#directory">Store Directory</a>
+          <a href="#opening-day">What's On</a>
+          <a href="#offers">Deals & Offers</a>
+          <a href="#contact">Visit Us</a>
+          <a href="#overview">About The Centre</a>
+        </nav>
+
+        <button
+          id="mobile-menu-button"
+          class="mobile-menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          Menu
+        </button>
+      </div>
+
+      <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+        <a href="#directory">Store Directory</a>
+        <a href="#opening-day">What's On</a>
+        <a href="#offers">Deals & Offers</a>
+        <a href="#contact">Visit Us</a>
+        <a href="#overview">About The Centre</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-kicker">Your local shopping destination in Cape Town</p>
+          <h1>Pacific Business Park: shops, services, and everyday convenience.</h1>
+          <p class="hero-copy">
+            From food and fragrance to gadgets and hardware, Pacific Business
+            Park brings practical shopping together in one easy location. More
+            stores are opening as the centre grows.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#directory">Browse Stores</a>
+            <a class="btn btn-secondary" href="#opening-day">See What's On</a>
+          </div>
+          <div class="hero-meta">
+            <article>
+              <strong>25</strong>
+              <span>Retail units in phase one</span>
+            </article>
+            <article>
+              <strong>17 Confirmed</strong>
+              <span>Stores currently listed</span>
+            </article>
+            <article>
+              <strong>Opening Day</strong>
+              <span>25 April 2026</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="directory" class="section directory">
+        <div class="section-heading">
+          <p class="eyebrow">Store Directory</p>
+          <h2>Stores currently trading.</h2>
+        </div>
+
+        <div class="directory-controls">
+          <label class="field">
+            <span>Search stores</span>
+            <input
+              type="search"
+              id="store-search"
+              placeholder="Search by store name..."
+              autocomplete="off"
+            />
+          </label>
+          <label class="field">
+            <span>Category</span>
+            <select id="category-filter">
+              <option value="all">All categories</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="alpha-filter" id="alpha-filter" aria-label="A to Z filter">
+          <button type="button" class="alpha-btn active" data-letter="all">
+            All
+          </button>
+          <button type="button" class="alpha-btn" data-letter="a">A</button>
+          <button type="button" class="alpha-btn" data-letter="b">B</button>
+          <button type="button" class="alpha-btn" data-letter="c">C</button>
+          <button type="button" class="alpha-btn" data-letter="d">D</button>
+          <button type="button" class="alpha-btn" data-letter="e">E</button>
+          <button type="button" class="alpha-btn" data-letter="f">F</button>
+          <button type="button" class="alpha-btn" data-letter="g">G</button>
+          <button type="button" class="alpha-btn" data-letter="h">H</button>
+          <button type="button" class="alpha-btn" data-letter="i">I</button>
+          <button type="button" class="alpha-btn" data-letter="j">J</button>
+          <button type="button" class="alpha-btn" data-letter="k">K</button>
+          <button type="button" class="alpha-btn" data-letter="l">L</button>
+          <button type="button" class="alpha-btn" data-letter="m">M</button>
+          <button type="button" class="alpha-btn" data-letter="n">N</button>
+          <button type="button" class="alpha-btn" data-letter="o">O</button>
+          <button type="button" class="alpha-btn" data-letter="p">P</button>
+          <button type="button" class="alpha-btn" data-letter="q">Q</button>
+          <button type="button" class="alpha-btn" data-letter="r">R</button>
+          <button type="button" class="alpha-btn" data-letter="s">S</button>
+          <button type="button" class="alpha-btn" data-letter="t">T</button>
+          <button type="button" class="alpha-btn" data-letter="u">U</button>
+          <button type="button" class="alpha-btn" data-letter="v">V</button>
+          <button type="button" class="alpha-btn" data-letter="w">W</button>
+          <button type="button" class="alpha-btn" data-letter="x">X</button>
+          <button type="button" class="alpha-btn" data-letter="y">Y</button>
+          <button type="button" class="alpha-btn" data-letter="z">Z</button>
+        </div>
+
+        <p class="directory-results" id="directory-results">
+          Showing 17 of 17 confirmed stores.
+        </p>
+
+        <div class="directory-grid" id="directory-grid">
+          <!-- Rendered from assets/stores-data.js by assets/site.js -->
+        </div>
+
+        <p class="directory-note">
+          More logos and store website links will be added as they are finalized.
+        </p>
+      </section>
+
+      <section id="opening-day" class="section opening-day">
+        <div class="section-heading">
+          <p class="eyebrow">What's On</p>
+          <h2>Events and activations at the centre.</h2>
+        </div>
+        <div class="opening-grid">
+          <article class="opening-card">
+            <h3>Saturday, 25 April 2026</h3>
+            <p class="opening-time">9:00 AM - 6:00 PM</p>
+            <p>Pacific Business Park, Cape Town</p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=1E+Jakes+Gerwel+Drive,+Cape+Town"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Get Directions</a
+            >
+          </article>
+          <article class="opening-card">
+            <h3>Guest food trucks on the day</h3>
+            <ul class="opening-vendors">
+              <li>Bass Coffee Co</li>
+              <li>Obsession</li>
+              <li>Smasht</li>
+            </ul>
+            <p class="opening-note">
+              Food trucks are for launch day only, and are not a permanent food
+              court feature.
+            </p>
+          </article>
+          <article class="opening-card">
+            <h3>Upcoming Centre Activity</h3>
+            <ul class="opening-vendors">
+              <li>Weekend in-store specials announcements</li>
+              <li>School holiday family activation updates</li>
+              <li>Seasonal retail promotions and centre events</li>
+            </ul>
+            <p class="opening-note">
+              Follow our updates for new event announcements.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="offers" class="section offers">
+        <div class="section-heading">
+          <p class="eyebrow">Deals & Offers</p>
+          <h2>Promotions and shopping highlights.</h2>
+        </div>
+        <div class="offers-grid">
+          <article class="offer-card">
+            <h3>Opening Week Offers</h3>
+            <p>
+              Selected stores will run opening-week specials. Details are
+              updated at centre level and in-store.
+            </p>
+          </article>
+          <article class="offer-card">
+            <h3>Weekend Shopping Focus</h3>
+            <p>
+              Weekend trade is supported by rotating specials and shopper-first
+              convenience offers.
+            </p>
+          </article>
+          <article class="offer-card">
+            <h3>More Promotions Coming</h3>
+            <p>
+              More store-specific promos will be added as additional tenants are
+              onboarded.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="overview" class="section overview">
+        <div class="section-heading">
+          <p class="eyebrow">About The Centre</p>
+          <h2>Why shoppers visit Pacific Business Park.</h2>
+        </div>
+        <div class="snapshot-grid">
+          <article class="snapshot-card">
+            <h3>All-in-one convenience</h3>
+            <p>
+              Everyday shopping, practical services, and local retailers in one
+              centre.
+            </p>
+          </article>
+          <article class="snapshot-card">
+            <h3>Easy location</h3>
+            <p>1E Jakes Gerwel Drive, Cape Town.</p>
+            <p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=1E+Jakes+Gerwel+Drive,+Cape+Town"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Get directions</a
+              >
+            </p>
+          </article>
+          <article class="snapshot-card">
+            <h3>Trading hours</h3>
+            <p>Mon-Sat: 09:00-18:00</p>
+            <p>Sun: 09:00-13:00</p>
+            <p>Individual store hours may vary.</p>
+          </article>
+          <article class="snapshot-card">
+            <h3>Growing store mix</h3>
+            <p>
+              The centre currently has 25 built units and continues to add more
+              stores in phases.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="section-heading">
+          <p class="eyebrow">Contact & Location</p>
+          <h2>Plan your visit.</h2>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>Pacific Business Park</h3>
+            <p>1E Jakes Gerwel Drive, Cape Town</p>
+            <p>
+              Email:
+              <a href="mailto:info@pacificbusinesspark.co.za"
+                >info@pacificbusinesspark.co.za</a
+              >
+            </p>
+            <p>Mon-Sat: 09:00-18:00 | Sun: 09:00-13:00</p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=1E+Jakes+Gerwel+Drive,+Cape+Town"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary-dark"
+              >Open in Maps</a
+            >
+          </article>
+          <article class="contact-card map-card">
+            <iframe
+              title="Pacific Business Park location map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=1E+Jakes+Gerwel+Drive,+Cape+Town&output=embed"
+            ></iframe>
+          </article>
+        </div>
+      </section>
+
+      <section id="business" class="section business">
+        <div class="section-heading">
+          <p class="eyebrow">Business Enquiries</p>
+          <h2>Interested in opening a store at the centre?</h2>
+        </div>
+        <div class="business-card">
+          <p>
+            If you are interested in retail space, contact the centre team and
+            include your business details and space requirements.
+          </p>
+          <a class="btn btn-primary" href="mailto:info@pacificbusinesspark.co.za"
+            >Email Leasing Team</a
+          >
+        </div>
+      </section>
+
+      <section id="privacy" class="section legal">
+        <div class="legal-grid">
+          <article>
+            <h3>Privacy Notice</h3>
+            <p>
+              Enquiry details submitted via this website are used only for
+              communication regarding Pacific Business Park.
+            </p>
+          </article>
+          <article>
+            <h3>Terms of Use</h3>
+            <p>
+              Information on this website is provided for general visitor and
+              retail guidance and may be updated as the centre expands.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <h3>Pacific Business Park</h3>
+        <p>Cape Town, South Africa</p>
+        <p>
+          <a href="mailto:info@pacificbusinesspark.co.za"
+            >info@pacificbusinesspark.co.za</a
+          >
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="#directory">Store Directory</a>
+        <a href="#opening-day">What's On</a>
+        <a href="#offers">Deals & Offers</a>
+        <a href="#overview">About The Centre</a>
+        <a href="#contact">Visit Us</a>
+        <a href="#business">Business Enquiries</a>
+        <a href="#privacy">Privacy</a>
+      </div>
+      <p class="copyright">&copy; 2026 Pacific Business Park. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/stores-data.js"></script>
+    <script src="assets/site.js" defer></script>
+  </body>
+</html>

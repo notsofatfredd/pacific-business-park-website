@@ -1,0 +1,23 @@
+# Pacific Business Park — cPanel hardening
+# Deliberately no Content-Security-Policy here: a mismatched CSP silently
+# broke inline/external JS on a sibling ATL project (see SPEC.md §0.1) in a
+# way that was invisible from source. Don't add one until the social embeds
+# (SPEC.md §2.4) are actually being wired in, and test with a live CSP check
+# first when that happens.
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+<FilesMatch "\.(bak|old|orig|md)$">
+  Require all denied
+</FilesMatch>

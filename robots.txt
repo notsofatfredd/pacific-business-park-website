@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pacificbusinesspark.co.za/sitemap.xml
