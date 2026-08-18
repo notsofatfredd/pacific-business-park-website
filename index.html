@@ -17,7 +17,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png" />
-    <meta name="theme-color" content="#081d3a" />
+    <meta name="theme-color" content="#f7faff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#203a5c" media="(prefers-color-scheme: dark)" />
+
+    <!-- Synchronous, render-blocking by design — sets data-theme before first
+         paint so there's no flash of the wrong theme. Manual choice wins over
+         system preference; no stored choice means "follow system". -->
+    <script src="assets/theme-init.js"></script>
 
     <!-- Open Graph / social share -->
     <meta property="og:type" content="website" />
@@ -82,15 +88,28 @@
           <a href="#overview">About The Centre</a>
         </nav>
 
-        <button
-          id="mobile-menu-button"
-          class="mobile-menu-button"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          Menu
-        </button>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch to dark theme"
+            aria-pressed="false"
+          >
+            <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+            <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+          </button>
+
+          <button
+            id="mobile-menu-button"
+            class="mobile-menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            Menu
+          </button>
+        </div>
       </div>
 
       <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">

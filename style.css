@@ -1,19 +1,66 @@
 :root {
+  /* Fixed brand palette — 9-step tonal system, locked across all future
+     concepts per Saeed's instruction ("the colour palette has to stay the
+     same across 3 concepts, we already have the brand identity"). Never
+     redefined per theme — only the adaptive tokens below change. */
   --blue-950: #081d3a;
   --blue-900: #0e3569;
   --blue-800: #1b56a3;
   --blue-700: #2f76d6;
   --blue-300: #b8d5ff;
+  --sky-400: #8ed3ff;
   --sky-100: #edf5ff;
   --mint-100: #eefcf7;
-  --text-900: #172133;
-  --text-700: #4b5870;
-  --line: #d8e2f1;
-  --surface: #ffffff;
+  --paper: #ffffff;
+
+  /* Adaptive semantic tokens — light mode (default). Redefined under
+     prefers-color-scheme:dark and [data-theme="dark"] below. Pinned-dark
+     surfaces (hero, footer, top-strip) intentionally keep using the fixed
+     --blue-950/900 tokens directly rather than these, so they stay dark in
+     both themes — same "pinned dark section" pattern used on Xtreme Worx
+     and axiel.co.za. */
+  --surface: var(--paper);
   --surface-soft: #f7faff;
+  --ink: #172133;
+  --ink-soft: #4b5870;
+  --heading: var(--blue-900);
+  --accent: var(--blue-700);
+  --line: #d8e2f1;
   --radius-lg: 18px;
   --radius-md: 12px;
   --shadow: 0 12px 30px rgba(18, 46, 90, 0.12);
+}
+
+/* Dark mode — system preference (no stored override), WCAG-verified via an
+   actual contrast-ratio script, not eyeballed: ink 10.1:1, ink-soft 6.0:1,
+   heading 8.0:1, accent 7.1:1 against --surface (all clear the 4.5:1 body /
+   3:1 large-text thresholds). --surface is deliberately NOT the same navy as
+   the pinned hero/footer (--blue-950) — raw luminance is ~3.3x higher so the
+   general dark background reads as a distinct tone from the pinned-dark
+   sections, not "the same black" (the specific failure mode this pattern is
+   meant to avoid, per the Elysian Labels dark-mode lesson). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --surface: #203a5c;
+    --surface-soft: #28466f;
+    --ink: #eaf1fb;
+    --ink-soft: #a9bcd6;
+    --heading: #bcd9ff;
+    --accent: var(--sky-400);
+    --line: rgba(255, 255, 255, 0.14);
+    --shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  }
+}
+
+:root[data-theme="dark"] {
+  --surface: #203a5c;
+  --surface-soft: #28466f;
+  --ink: #eaf1fb;
+  --ink-soft: #a9bcd6;
+  --heading: #bcd9ff;
+  --accent: var(--sky-400);
+  --line: rgba(255, 255, 255, 0.14);
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -26,7 +73,7 @@ html {
 
 body {
   margin: 0;
-  color: var(--text-900);
+  color: var(--ink);
   font-family: "Manrope", sans-serif;
   background:
     radial-gradient(circle at 6% 4%, rgba(93, 152, 255, 0.1), transparent 25%),
@@ -78,7 +125,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(255, 255, 255, 0.96);
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -120,19 +167,69 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.09em;
   font-weight: 800;
-  color: var(--blue-900);
+  color: var(--heading);
 }
 
 .nav-links a:hover {
-  color: var(--blue-700);
+  color: var(--accent);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--heading);
+  cursor: pointer;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.theme-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.theme-icon--moon {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-icon--sun {
+  display: none;
+}
+:root[data-theme="dark"] .theme-icon--moon {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-icon--sun {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .theme-icon--moon {
+    display: block;
+  }
 }
 
 .mobile-menu-button {
   display: none;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: #ffffff;
-  color: var(--blue-900);
+  background: var(--surface);
+  color: var(--heading);
   padding: 0.7rem 1rem;
   font-size: 0.78rem;
   font-weight: 800;
@@ -148,7 +245,7 @@ p {
   padding: 1rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: #ffffff;
+  background: var(--surface);
   box-shadow: var(--shadow);
   flex-direction: column;
   gap: 0.7rem;
@@ -157,7 +254,7 @@ p {
 .mobile-menu a {
   text-decoration: none;
   font-weight: 700;
-  color: var(--blue-900);
+  color: var(--heading);
 }
 
 .mobile-menu.open {
@@ -319,13 +416,13 @@ p {
   letter-spacing: 0.14em;
   font-size: 0.73rem;
   font-weight: 800;
-  color: var(--blue-700);
+  color: var(--accent);
 }
 
 .section-heading h2 {
   margin-top: 0.52rem;
   font-size: clamp(1.55rem, 3vw, 2.35rem);
-  color: var(--blue-900);
+  color: var(--heading);
 }
 
 .snapshot-grid {
@@ -335,25 +432,25 @@ p {
 }
 
 .snapshot-card {
-  border: 1px solid #dce7f7;
+  border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: linear-gradient(180deg, #fbfdff, #f2f8ff);
+  background: var(--surface-soft);
   padding: 1rem;
 }
 
 .snapshot-card h3 {
   font-size: 1.05rem;
-  color: var(--blue-900);
+  color: var(--heading);
 }
 
 .snapshot-card p {
   margin-top: 0.62rem;
   line-height: 1.62;
-  color: var(--text-700);
+  color: var(--ink-soft);
 }
 
 .snapshot-card a {
-  color: var(--blue-800);
+  color: var(--accent);
   font-weight: 700;
   text-decoration: none;
 }
@@ -375,7 +472,7 @@ p {
   gap: 0.45rem;
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--blue-900);
+  color: var(--heading);
 }
 
 .field input,
@@ -386,8 +483,8 @@ p {
   padding: 0.8rem 0.88rem;
   font-family: inherit;
   font-size: 0.96rem;
-  color: var(--text-900);
-  background: #ffffff;
+  color: var(--ink);
+  background: var(--surface);
 }
 
 .alpha-filter {
@@ -398,13 +495,13 @@ p {
 }
 
 .alpha-btn {
-  border: 1px solid #d4e2f7;
+  border: 1px solid var(--line);
   border-radius: 8px;
   padding: 0.42rem 0.56rem;
   font-size: 0.75rem;
   font-weight: 700;
-  background: #f5f9ff;
-  color: var(--blue-900);
+  background: var(--surface-soft);
+  color: var(--heading);
   cursor: pointer;
 }
 
@@ -416,7 +513,7 @@ p {
 
 .directory-results {
   margin-top: 0.9rem;
-  color: var(--text-700);
+  color: var(--ink-soft);
   font-weight: 600;
   font-size: 0.92rem;
 }
@@ -429,9 +526,9 @@ p {
 }
 
 .store-card {
-  border: 1px solid #d8e4f5;
+  border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: #ffffff;
+  background: var(--surface);
   padding: 0.95rem;
   text-align: center;
   display: grid;
@@ -442,6 +539,12 @@ p {
   display: none;
 }
 
+/* Deliberately NOT adaptive: most store logos are opaque phone-photo crops
+   of physical signage (not transparent PNGs), so this stays a fixed light
+   "photo mat" in both themes — a dark background here would show an ugly
+   white box around every JPEG crop instead of a clean frame. Revisit once
+   Saeed's signage digitization pass replaces these with real transparent
+   logo files (see STORE-INTAKE.md). */
 .store-head {
   margin-bottom: 0.2rem;
   min-height: 168px;
@@ -474,7 +577,7 @@ p {
 
 .store-card h3 {
   font-size: 1.02rem;
-  color: var(--blue-900);
+  color: var(--heading);
   line-height: 1.35;
 }
 
@@ -513,13 +616,13 @@ p {
   margin-top: 0;
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--blue-800);
+  color: var(--accent);
 }
 
 .store-hours {
   margin-top: 0;
   font-size: 0.76rem;
-  color: var(--text-700);
+  color: var(--ink-soft);
   line-height: 1.5;
 }
 
@@ -527,12 +630,12 @@ p {
   margin-top: 0.15rem;
   font-size: 0.86rem;
   line-height: 1.55;
-  color: var(--text-700);
+  color: var(--ink-soft);
 }
 
 .directory-note {
   margin-top: 0.9rem;
-  color: var(--text-700);
+  color: var(--ink-soft);
 }
 
 .offers {
@@ -575,7 +678,7 @@ p {
 .social-note {
   margin-top: 1rem;
   font-size: 0.86rem;
-  color: var(--text-700);
+  color: var(--ink-soft);
 }
 
 @media (max-width: 1100px) {
@@ -594,9 +697,9 @@ p {
 .opening-card,
 .contact-card,
 .business-card {
-  border: 1px solid #d9e5f6;
+  border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: #ffffff;
+  background: var(--surface);
   padding: 1rem;
 }
 
@@ -604,13 +707,13 @@ p {
 .opening-card h3,
 .contact-card h3 {
   font-size: 1.16rem;
-  color: var(--blue-900);
+  color: var(--heading);
 }
 
 .offer-card p {
   margin-top: 0.62rem;
   line-height: 1.66;
-  color: var(--text-700);
+  color: var(--ink-soft);
 }
 
 .opening-grid {
@@ -620,27 +723,27 @@ p {
 }
 
 .opening-card {
-  background: linear-gradient(180deg, #ffffff, #f7fbff);
+  background: linear-gradient(180deg, var(--surface), var(--surface-soft));
 }
 
 .opening-time {
   margin-top: 0.6rem;
   font-size: 1rem;
   font-weight: 800;
-  color: var(--blue-900);
+  color: var(--heading);
 }
 
 .opening-card p {
   margin-top: 0.5rem;
   line-height: 1.62;
-  color: var(--text-700);
+  color: var(--ink-soft);
 }
 
 .opening-vendors {
   margin: 0.8rem 0 0;
   padding-left: 1.1rem;
   line-height: 1.8;
-  color: var(--text-700);
+  color: var(--ink-soft);
   font-weight: 700;
 }
 
@@ -658,11 +761,11 @@ p {
 .contact-card p {
   margin-top: 0.6rem;
   line-height: 1.66;
-  color: var(--text-700);
+  color: var(--ink-soft);
 }
 
 .contact-card a {
-  color: var(--blue-800);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 700;
 }
@@ -675,7 +778,7 @@ p {
 }
 
 .business {
-  background: #f5fbff;
+  background: var(--surface-soft);
 }
 
 .business-card {
@@ -687,12 +790,12 @@ p {
 
 .business-card p {
   line-height: 1.66;
-  color: var(--text-700);
+  color: var(--ink-soft);
   max-width: 72ch;
 }
 
 .legal {
-  background: #f5f9ff;
+  background: var(--surface-soft);
 }
 
 .legal-grid {
@@ -702,21 +805,21 @@ p {
 }
 
 .legal-grid article {
-  border: 1px solid #d9e5f5;
+  border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 1rem;
-  background: #ffffff;
+  background: var(--surface);
 }
 
 .legal-grid h3 {
   font-size: 1.04rem;
-  color: var(--blue-900);
+  color: var(--heading);
 }
 
 .legal-grid p {
   margin-top: 0.55rem;
   line-height: 1.64;
-  color: var(--text-700);
+  color: var(--ink-soft);
 }
 
 .site-footer {

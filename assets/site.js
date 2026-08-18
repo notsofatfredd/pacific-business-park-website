@@ -29,7 +29,41 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   renderDirectory();
+  initThemeToggle();
 });
+
+/* Theme toggle — manual choice overrides system preference and persists.
+   The <head> script (assets/theme-init.js) already applied any stored
+   choice before first paint; this just wires up the click and keeps
+   aria-pressed/label in sync. */
+function initThemeToggle() {
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  const root = document.documentElement;
+  const mql = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function isDark() {
+    const explicit = root.getAttribute('data-theme');
+    if (explicit === 'dark') return true;
+    if (explicit === 'light') return false;
+    return mql.matches;
+  }
+  function sync() {
+    const dark = isDark();
+    btn.setAttribute('aria-pressed', String(dark));
+    btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  sync();
+
+  btn.addEventListener('click', () => {
+    const next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try {
+      localStorage.setItem('pbp-theme', next);
+    } catch (e) {}
+    sync();
+  });
+}
 
 function storeCardHTML(store) {
   const metaParts = [];
