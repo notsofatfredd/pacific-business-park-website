@@ -30,7 +30,98 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderDirectory();
   initThemeToggle();
+  initShowcase();
+  renderUnitGrid();
 });
+
+/* Unit reference grid — only stores with a confirmed unit number, sorted
+   numerically. Deliberately doesn't fabricate units for stores that don't
+   have one yet (see STORE-INTAKE.md) — an honest partial reference, not a
+   full architectural map. */
+function renderUnitGrid() {
+  const grid = document.getElementById('unit-grid');
+  if (!grid || typeof STORES === 'undefined') return;
+
+  const withUnits = STORES.filter((s) => s.unit).sort(
+    (a, b) => parseInt(a.unit, 10) - parseInt(b.unit, 10)
+  );
+  if (!withUnits.length) return;
+
+  grid.innerHTML = withUnits
+    .map(
+      (s) => `
+      <div class="unit-card">
+        <strong>${s.unit}</strong>
+        <span>${s.name}</span>
+      </div>
+    `
+    )
+    .join('');
+}
+
+/* Store showcase — single-box crossfade (ATLAS Web OS §7 standard pattern).
+   Cross-fades every ~4.2s starting from a random slide, respects
+   prefers-reduced-motion (renders one static slide, no timer), pauses on
+   hover/focus so it doesn't fight a reader trying to look at one card. */
+function initShowcase() {
+  const ring = document.querySelector('#storeShowcase .badge-ring');
+  const counter = document.getElementById('showcaseCounter');
+  if (!ring || typeof STORES === 'undefined') return;
+
+  const stores = STORES.filter((s) => s.logo);
+  if (!stores.length) return;
+
+  ring.innerHTML = stores
+    .map(
+      (s, i) => `
+      <div class="badge-slide" data-index="${i}">
+        <div class="badge-slide-logo">
+          <img src="${s.logo}" alt="${s.name} logo" loading="lazy" />
+        </div>
+        <div class="badge-slide-info">
+          <h3>${s.name}</h3>
+          <p>${s.category}</p>
+        </div>
+      </div>
+    `
+    )
+    .join('');
+
+  const slides = Array.from(ring.querySelectorAll('.badge-slide'));
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let index = Math.floor(Math.random() * slides.length);
+  let timer = null;
+
+  function show(i) {
+    slides.forEach((slide, j) => slide.classList.toggle('is-active', j === i));
+    if (counter) counter.textContent = `${String(i + 1).padStart(2, '0')} / ${slides.length}`;
+  }
+
+  show(index);
+
+  if (reduceMotion || slides.length < 2) return;
+
+  function next() {
+    index = (index + 1) % slides.length;
+    show(index);
+  }
+
+  function start() {
+    if (timer) return;
+    timer = setInterval(next, 4200);
+  }
+  function stop() {
+    clearInterval(timer);
+    timer = null;
+  }
+
+  start();
+  const stage = document.getElementById('storeShowcase');
+  stage.addEventListener('mouseenter', stop);
+  stage.addEventListener('mouseleave', start);
+  stage.addEventListener('focusin', stop);
+  stage.addEventListener('focusout', start);
+}
 
 /* Theme toggle — manual choice overrides system preference and persists.
    The <head> script (assets/theme-init.js) already applied any stored

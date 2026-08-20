@@ -26,6 +26,20 @@ Static HTML/CSS/JS, no build step. Deploys via cPanel File Manager to `public_ht
 
 `.htaccess` sets HSTS, nosniff, SAMEORIGIN, referrer-policy, forces HTTPS, and blocks `.bak`/`.old`/`.orig`/`.md` from being served. **Deliberately no CSP** — see the comment at the top of `.htaccess` and `SPEC.md` §0.1 before adding one, especially once the social embeds (§2.4) are wired in.
 
+## 2026-08-18, later same day — dark/light mode, 22→23 stores, CSP fix
+
+- System-aware dark/light mode added (§9 of `SPEC.md`), 9-step tonal palette formalized into fixed brand tokens + adaptive semantic tokens. WCAG-verified via script, not eyeballed.
+- CSP note above is now stale: the live host (shares an account with axiel.co.za) sends an account-wide default CSP that blocked the Instagram embed and Google Maps iframe. Fixed with an explicit per-site override in `.htaccess` — see the comment at the top of that file for the full story.
+- 5 more tenants added (Elysian Labels, MilkUp Ice Creamery — corrected from "Milk Up", Crumble Corner, Zama Zama Auto Fitment Centre, Colorado – Canvas & Comfort, Snyders Packaging), bringing the count to 22.
+
+## `concept-b-canalwalk` branch — Canal Walk-inspired redesign, not merged to `main`
+
+Separate branch, built on Saeed's explicit request after reviewing `concept-B-canalwalk-spec.md` (project root) — a real headless-browser inspection of canalwalk.co.za, not secondhand. **This branch is a different concept from what's live on `main`/the real cPanel host — do not merge without an explicit ask**, same standing policy as every other merge this project.
+
+What changed on this branch: editorial hero (bold headline, styled gradient placeholder — no real photography exists yet, glass-panel text treatment, pill+arrow CTA), shallow top nav (4 items) with a genuinely deep 3-column footer, a single-box crossfade store showcase (reusing the ATLAS Web OS badge-ring pattern), Events promoted front-loaded right after the showcase, a compact one-line Pacific Roadhouse specials strip (PBP's only restaurant tenant — was missing from `stores-data.js` entirely, added with `featured:true`), a unit-reference grid (only the 11 stores with a confirmed unit number — not a fabricated full map), and Directory demoted further down the page. 23 stores total (added Pacific Roadhouse). Verified with Playwright screenshots at 1440px/390px × light/dark — zero console errors across all four.
+
+Per-store detail pages are explicitly deferred to v2 (Saeed's own call). Concept C (Waterfront) is a separate future build, not started.
+
 ## Open items
 
 See `SPEC.md` (in the parent `pacific-business-park/` folder) §5 for the full open-questions list — real opening/launch status, canonical logo confirmation, Instagram/TikTok account ownership, and the CMS-vs-static decision for future tenant updates are all still pending client input.
