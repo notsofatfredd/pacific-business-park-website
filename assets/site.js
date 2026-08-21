@@ -30,7 +30,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderDirectory();
   initThemeToggle();
+  renderHighlights();
+  renderCollections();
 });
+
+/* Curated highlights — a small handpicked selection, not the full list.
+   Picked for real logos + variety of category, matching the "worth knowing
+   about" framing rather than "here is everything" (Waterfront concept). */
+function renderHighlights() {
+  const grid = document.getElementById('highlights-grid');
+  if (!grid || typeof STORES === 'undefined') return;
+
+  const pickIds = ['elysian-labels', 'golden-shilajit', 'vintage-barbershop', 'visfabriek'];
+  const picks = pickIds
+    .map((id) => STORES.find((s) => s.id === id))
+    .filter(Boolean);
+
+  grid.innerHTML = picks
+    .map(
+      (s) => `
+      <article class="highlight-card">
+        <div class="highlight-logo">
+          <img src="${s.logo}" alt="${s.name} logo" loading="lazy" />
+        </div>
+        <h3>${s.name}</h3>
+        <p class="highlight-cat">${s.category}</p>
+        <p class="highlight-desc">${s.description}</p>
+      </article>
+    `
+    )
+    .join('');
+}
+
+/* Category collections — Waterfront's "destinations, not filter results"
+   idea. One card per category with a count and a short blurb, linking down
+   to the full filterable directory rather than duplicating it. */
+function renderCollections() {
+  const grid = document.getElementById('collections-grid');
+  if (!grid || typeof STORES === 'undefined') return;
+
+  const byCategory = {};
+  STORES.forEach((s) => {
+    (byCategory[s.category] = byCategory[s.category] || []).push(s);
+  });
+
+  const categories = Object.keys(byCategory).sort();
+
+  grid.innerHTML = categories
+    .map((cat) => {
+      const items = byCategory[cat];
+      const names = items.map((s) => s.name).slice(0, 3).join(', ');
+      return `
+        <a class="collection-card" href="#directory">
+          <h3>${cat}</h3>
+          <p class="collection-count">${items.length} store${items.length === 1 ? '' : 's'}</p>
+          <p class="collection-names">${names}${items.length > 3 ? '…' : ''}</p>
+        </a>
+      `;
+    })
+    .join('');
+}
 
 /* Theme toggle — manual choice overrides system preference and persists.
    The <head> script (assets/theme-init.js) already applied any stored

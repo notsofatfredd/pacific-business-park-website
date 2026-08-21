@@ -195,4 +195,13 @@ const STORES = [
     logo: "images/stores/snyders-packaging.jpg",
     description: "Corrugated cartons, biscuit trays, pads and divisions, fish trays and boxes, samoosa trays, apple boxes and used boxes.",
   },
+  {
+    id: "pacific-roadhouse",
+    name: "Pacific Roadhouse",
+    category: "Restaurant",
+    phone: "021 370 9914",
+    logo: null,
+    description: "Pacific Business Park's own restaurant, part of the Pacific family.",
+    featured: true,
+  },
 ];

@@ -370,6 +370,18 @@ p {
   color: #0b335f;
 }
 
+/* Waterfront concept: quiet hero — no stat-card grid, no punchy CTA, just
+   the narrative line and one soft link. Understated, per the spec's own
+   "authenticity over flash" framing (opposite instinct from a Canal Walk
+   style hero). */
+.hero-quiet .hero-content {
+  max-width: 640px;
+}
+
+.hero-quiet .hero-copy {
+  max-width: 56ch;
+}
+
 .hero-meta {
   margin-top: 1.4rem;
   display: grid;
@@ -423,6 +435,112 @@ p {
   margin-top: 0.52rem;
   font-size: clamp(1.55rem, 3vw, 2.35rem);
   color: var(--heading);
+}
+
+/* Curated highlights — a small handpicked set, not the full directory.
+   Waterfront's "unique finds" framing over exhaustive listing. */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.highlight-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-soft);
+  padding: 1rem;
+  text-align: center;
+}
+
+.highlight-logo {
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+.highlight-logo img {
+  max-width: 90%;
+  max-height: 90px;
+  object-fit: contain;
+}
+
+.highlight-card h3 {
+  font-size: 1rem;
+  color: var(--heading);
+}
+
+.highlight-cat {
+  margin-top: 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.highlight-desc {
+  margin-top: 0.5rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.highlights-note {
+  margin-top: 1rem;
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+}
+
+.highlights-note a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Category collections — destinations, not filter results. Each card
+   summarizes a category and links down to the full filterable directory. */
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.collection-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  padding: 1rem;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.collection-card:hover {
+  border-color: var(--accent);
+}
+
+.collection-card h3 {
+  font-size: 1.02rem;
+  color: var(--heading);
+}
+
+.collection-count {
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.collection-names {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
 }
 
 .snapshot-grid {
@@ -903,7 +1021,9 @@ p {
   .offers-grid,
   .opening-grid,
   .contact-grid,
-  .legal-grid {
+  .legal-grid,
+  .highlights-grid,
+  .collections-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -942,7 +1062,9 @@ p {
   .offers-grid,
   .opening-grid,
   .contact-grid,
-  .legal-grid {
+  .legal-grid,
+  .highlights-grid,
+  .collections-grid {
     grid-template-columns: 1fr;
   }
 
