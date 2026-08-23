@@ -71,6 +71,73 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Concept switcher — same working mechanism as the coldcall-demo pattern
+   (~/projects/coldcall-demo/always-plumbing-drainage): a single shared page
+   with all 3 concepts' markup present at once, shown/hidden via the
+   html[data-concept] attribute. Unlike that reference, PBP's palette is
+   LOCKED across concepts (Saeed: "the colour pallete has to stay the same
+   across 3 concepts") — only structure/copy/layout differ here, not color. */
+.concept-copy {
+  display: none;
+}
+html[data-concept="trusted"] .copy-trusted {
+  display: block;
+}
+html[data-concept="canalwalk"] .copy-canalwalk {
+  display: block;
+}
+html[data-concept="waterfront"] .copy-waterfront {
+  display: block;
+}
+
+.switcher-bar {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0.85rem 1.4rem;
+  background: var(--blue-950);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.switcher-bar .label {
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.switcher-tabs {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.switcher-tabs button {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.switcher-tabs button.active {
+  background: var(--sky-400);
+  color: #042b56;
+  border-color: var(--sky-400);
+}
+
 body {
   margin: 0;
   color: var(--ink);
@@ -320,6 +387,27 @@ p {
   border-radius: 20px;
 }
 
+/* .hero-content: used by the Trusted and Waterfront concepts (Canal Walk
+   uses .hero-panel above instead) — restored here since this stylesheet
+   now serves all 3 concepts at once in the switcher preview. */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  color: #ffffff;
+  padding: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Waterfront concept: quiet hero — no stat-card grid, no punchy CTA, just
+   the narrative line and one soft link. */
+.hero-quiet .hero-content {
+  max-width: 640px;
+}
+
+.hero-quiet .hero-copy {
+  max-width: 56ch;
+}
+
 .hero-kicker {
   font-size: 0.79rem;
   text-transform: uppercase;
@@ -566,6 +654,111 @@ p {
   margin-top: 0.9rem;
   font-size: 0.82rem;
   color: var(--ink-soft);
+}
+
+/* Curated highlights — a small handpicked set, not the full directory.
+   Waterfront's "unique finds" framing over exhaustive listing. */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.highlight-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-soft);
+  padding: 1rem;
+  text-align: center;
+}
+
+.highlight-logo {
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+.highlight-logo img {
+  max-width: 90%;
+  max-height: 90px;
+  object-fit: contain;
+}
+
+.highlight-card h3 {
+  font-size: 1rem;
+  color: var(--heading);
+}
+
+.highlight-cat {
+  margin-top: 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.highlight-desc {
+  margin-top: 0.5rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.highlights-note {
+  margin-top: 1rem;
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+}
+
+.highlights-note a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Category collections — destinations, not filter results. */
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.collection-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  padding: 1rem;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.collection-card:hover {
+  border-color: var(--accent);
+}
+
+.collection-card h3 {
+  font-size: 1.02rem;
+  color: var(--heading);
+}
+
+.collection-count {
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.collection-names {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
 }
 
 .snapshot-grid {
@@ -1090,7 +1283,9 @@ p {
   .offers-grid,
   .opening-grid,
   .contact-grid,
-  .legal-grid {
+  .legal-grid,
+  .highlights-grid,
+  .collections-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1138,7 +1333,9 @@ p {
   .opening-grid,
   .contact-grid,
   .legal-grid,
-  .footer-groups {
+  .footer-groups,
+  .highlights-grid,
+  .collections-grid {
     grid-template-columns: 1fr;
   }
 
