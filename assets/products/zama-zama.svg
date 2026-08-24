@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="zama-zama placeholder product illustration">
+
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#20262a" flood-opacity="0.14"/>
+    </filter>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbfaf7"/>
+      <stop offset="100%" stop-color="#ebe7de"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <rect x="0" y="0" width="800" height="800" rx="0" fill="#f6f3ed"/><circle cx="132" cy="120" r="64" fill="#ece8df" opacity="0.65"/><circle cx="678" cy="166" r="94" fill="#ece8df" opacity="0.45"/><ellipse cx="400" cy="675" rx="255" ry="34" fill="#20262a" opacity="0.10"/><rect x="96" y="136" width="608" height="498" rx="38" fill="url(#card)" stroke="#ded9cf" stroke-width="2"/><ellipse cx="402" cy="626" rx="230" ry="40" fill="#d9d6cf" stroke="#c7c1b8" stroke-width="3"/><ellipse cx="402" cy="619" rx="196" ry="23" fill="#fbfaf7" stroke="#d4cec4" stroke-width="2"/><circle cx="292" cy="454" r="96" fill="#3e474b" stroke="#2f3740" stroke-width="6"/><circle cx="292" cy="454" r="48" fill="#ece8df" stroke="#2f3740" stroke-width="5"/><circle cx="292" cy="454" r="14" fill="#2f3740"/><rect x="420" y="394" width="150" height="72" rx="14" fill="#fbfaf7" stroke="#2f3740" stroke-width="5"/><line x1="442" y1="430" x2="548" y2="430" stroke="#9aa3a3" stroke-width="4" stroke-linecap="round"/><path d="M480 512 C540 520 614 506 654 468" fill="none" stroke="#8aa1a8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><polygon points="654,468 620,466 640,492" fill="#8aa1a8" stroke="#2f3740" stroke-width="3" stroke-linejoin="round"/><line x1="440" y1="548" x2="548" y2="440" stroke="#2f3740" stroke-width="8" stroke-linecap="round"/><line x1="518" y1="548" x2="626" y2="440" stroke="#2f3740" stroke-width="8" stroke-linecap="round"/><circle cx="430" cy="558" r="20" fill="none" stroke="#2f3740" stroke-width="5"/><circle cx="632" cy="430" r="20" fill="none" stroke="#2f3740" stroke-width="5"/><rect x="192" y="324" width="150" height="58" rx="12" fill="#ece8df" stroke="#2f3740" stroke-width="4"/>
+  </g>
+</svg>

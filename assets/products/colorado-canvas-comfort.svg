@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="colorado-canvas-comfort placeholder product illustration">
+
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#20262a" flood-opacity="0.14"/>
+    </filter>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbfaf7"/>
+      <stop offset="100%" stop-color="#ebe7de"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <rect x="0" y="0" width="800" height="800" rx="0" fill="#f6f3ed"/><circle cx="132" cy="120" r="64" fill="#ece8df" opacity="0.65"/><circle cx="678" cy="166" r="94" fill="#ece8df" opacity="0.45"/><ellipse cx="400" cy="675" rx="255" ry="34" fill="#20262a" opacity="0.10"/><rect x="96" y="136" width="608" height="498" rx="38" fill="url(#card)" stroke="#ded9cf" stroke-width="2"/><ellipse cx="402" cy="595" rx="230" ry="40" fill="#d9d6cf" stroke="#c7c1b8" stroke-width="3"/><ellipse cx="402" cy="588" rx="196" ry="23" fill="#fbfaf7" stroke="#d4cec4" stroke-width="2"/><rect x="210" y="378" width="92" height="132" rx="8" fill="#fbfaf7" stroke="#2f3740" stroke-width="4"/><line x1="230" y1="404" x2="282" y2="404" stroke="#9aa3a3" stroke-width="3" stroke-linecap="round"/><line x1="230" y1="430" x2="282" y2="430" stroke="#9aa3a3" stroke-width="3" stroke-linecap="round"/><line x1="230" y1="456" x2="270" y2="456" stroke="#9aa3a3" stroke-width="3" stroke-linecap="round"/><rect x="322" y="324" width="112" height="184" rx="16" fill="#d8cbb7" stroke="#2f3740" stroke-width="4"/><ellipse cx="378" cy="326" rx="58" ry="18" fill="#fbfaf7" stroke="#2f3740" stroke-width="4"/><rect x="470" y="364" width="104" height="154" rx="14" fill="#fbfaf7" stroke="#2f3740" stroke-width="4"/><path d="M574 406 C636 394 646 470 580 474" fill="none" stroke="#2f3740" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><rect x="552" y="270" width="86" height="102" rx="14" fill="#ece8df" stroke="#2f3740" stroke-width="4"/><circle cx="595" cy="318" r="26" fill="#8aa1a8" stroke="#2f3740" stroke-width="4"/><rect x="176" y="532" width="116" height="62" rx="8" fill="#c9b8a2" stroke="#2f3740" stroke-width="4"/><path d="M234 532 L234 594" fill="none" stroke="#2f3740" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M176 562 L292 562" fill="none" stroke="#2f3740" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

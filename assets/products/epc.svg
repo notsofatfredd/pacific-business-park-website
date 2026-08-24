@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="epc placeholder product illustration">
+
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#20262a" flood-opacity="0.14"/>
+    </filter>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbfaf7"/>
+      <stop offset="100%" stop-color="#ebe7de"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <rect x="0" y="0" width="800" height="800" rx="0" fill="#f6f3ed"/><circle cx="132" cy="120" r="64" fill="#ece8df" opacity="0.65"/><circle cx="678" cy="166" r="94" fill="#ece8df" opacity="0.45"/><ellipse cx="400" cy="675" rx="255" ry="34" fill="#20262a" opacity="0.10"/><rect x="96" y="136" width="608" height="498" rx="38" fill="url(#card)" stroke="#ded9cf" stroke-width="2"/><ellipse cx="404" cy="612" rx="230" ry="40" fill="#d9d6cf" stroke="#c7c1b8" stroke-width="3"/><ellipse cx="404" cy="605" rx="196" ry="23" fill="#fbfaf7" stroke="#d4cec4" stroke-width="2"/><rect x="230" y="368" width="70" height="22" rx="6" fill="#8aa1a8" stroke="#2f3740" stroke-width="3"/><rect x="216" y="386" width="98" height="160" rx="24" fill="#ece8df" stroke="#2f3740" stroke-width="4"/><ellipse cx="265.0" cy="400" rx="37.24" ry="12" fill="#ffffff" opacity="0.28"/><rect x="232" y="469.2" width="66" height="38.4" rx="10" fill="#ece8df" stroke="#cfc8bd" stroke-width="2"/><rect x="385.5" y="278" width="27.0" height="54" rx="4" fill="#3e474b"/><rect x="354" y="326" width="90" height="220" rx="18" fill="#fbfaf7" stroke="#2f3740" stroke-width="4"/><rect x="368" y="425.0" width="62" height="57.2" rx="10" fill="#ece8df" stroke="#cfc8bd" stroke-width="2"/><ellipse cx="399" cy="326" rx="44" ry="16" fill="#8aa1a8" stroke="#2f3740" stroke-width="4"/><rect x="494" y="390" width="94" height="156" rx="18" fill="#d8cbb7" stroke="#2f3740" stroke-width="4"/><path d="M494 420 C520 398 560 398 588 420" fill="none" stroke="#fbfaf7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="584" y="474" width="82" height="70" rx="18" fill="#ece8df" stroke="#2f3740" stroke-width="4"/><circle cx="625" cy="474" r="18" fill="#fbfaf7" stroke="#2f3740" stroke-width="3"/><path d="M234 334 C280 292 334 292 374 330" fill="none" stroke="#8aa1a8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
