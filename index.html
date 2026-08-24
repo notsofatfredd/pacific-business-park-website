@@ -13,12 +13,35 @@
 </head>
 <body>
 
-<nav class="topnav">
+<nav class="topnav" id="site-nav">
   <div class="topnav-inner">
-    <a class="wordmark" href="#top">Pacific Business Park</a>
+    <a class="wordmark" href="#top"><img class="nav-logo" src="assets/brand/pacific-business-park-logo.svg" alt="Pacific Business Park" height="28"></a>
     <div class="topnav-links">
-      <a href="#storefronts">Storefronts</a>
+      <button class="mega-toggle" id="mega-toggle" type="button" aria-expanded="false" aria-controls="mega-menu">
+        Storefronts
+        <svg class="mega-chev" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
       <a href="#about">About</a>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-menu" hidden>
+    <div class="mega-menu-inner">
+      <a href="#cat-automotive-care">Automotive Care</a>
+      <a href="#cat-baby-family">Baby &amp; Family</a>
+      <a href="#cat-bakery-desserts">Bakery &amp; Desserts</a>
+      <a href="#cat-beauty-personal-care">Beauty &amp; Personal Care</a>
+      <a href="#cat-cellular-electronics">Cellular &amp; Electronics</a>
+      <a href="#cat-fabric-trims">Fabric &amp; Trims</a>
+      <a href="#cat-florist-gifts">Florist &amp; Gifts</a>
+      <a href="#cat-food-retail">Food Retail</a>
+      <a href="#cat-grocery-snack">Grocery &amp; Snack</a>
+      <a href="#cat-hardware-furniture">Hardware &amp; Furniture</a>
+      <a href="#cat-health-wellness">Health &amp; Wellness</a>
+      <a href="#cat-home-decor">Home &amp; Decor</a>
+      <a href="#cat-packaging-labels">Packaging &amp; Labels</a>
+      <a href="#cat-printing-signage">Printing &amp; Signage</a>
+      <a href="#cat-restaurant">Restaurant</a>
+      <a href="#cat-travel-services">Travel &amp; Services</a>
     </div>
   </div>
 </nav>
@@ -26,14 +49,34 @@
 <div class="wrap">
 
   <section class="hero" id="top">
+    <svg class="hero-watermark" viewBox="0 0 210 220" aria-hidden="true">
+      <path d="M0 150 L210 150 L188 158 L22 158 Z"/>
+      <path d="M24 146 L24 62 L96 34 L96 146 Z"/>
+      <path d="M96 34 L118 46 L118 146 L96 146 Z"/>
+      <path d="M186 146 L186 48 L116 22 L116 146 Z"/>
+      <path d="M116 22 L96 34 L96 146 L116 146 Z"/>
+    </svg>
     <p class="eyebrow">Weltevreden Valley, Cape Town</p>
     <h1 class="hero-line">A showcase of the businesses that make up Pacific Business Park, not a landlord's directory.</h1>
-    <p class="hero-sub">Twenty-three real tenants, presented as the park's own storefronts, not a list of businesses linking away from it.</p>
     <a class="hero-link" href="#storefronts">See the storefronts &#8595;</a>
   </section>
 
+  <div class="attr-marquee" aria-hidden="true">
+    <div class="attr-marquee-track">
+      <span>23 real tenants</span>
+      <span>Jakes Gerwel Drive, Weltevreden Valley</span>
+      <span>16 categories under one roof</span>
+      <span>Pacific Roadhouse — part of the Pacific family</span>
+      <span>23 real tenants</span>
+      <span>Jakes Gerwel Drive, Weltevreden Valley</span>
+      <span>16 categories under one roof</span>
+      <span>Pacific Roadhouse — part of the Pacific family</span>
+    </div>
+  </div>
+
   <section class="about" id="about">
-    <p>Pacific Business Park sits on Jakes Gerwel Drive in Weltevreden Valley, home to independent tenants and the park's own family brands, including Pacific Roadhouse, side by side.</p>
+    <p class="about-lead">Pacific Business Park is one site built from 23 independent storefronts, not a landlord's directory pointing away from them.</p>
+    <p>Each business on Jakes Gerwel Drive in Weltevreden Valley keeps its own name, its own storefront, and its own way of doing things — including the park's own restaurant, Pacific Roadhouse, run the same way as every other tenant here.</p>
   </section>
 
   <section class="directory-section" id="storefronts">
@@ -47,513 +90,673 @@
     <p class="no-results" hidden>No storefronts match your search.</p>
     <div class="directory">
 
-    <!-- Pacific Roadhouse -->
-    <section class="card" data-open="true">
-      <button class="card-head">
-        <span class="mark">PR</span>
-        <span class="meta">
-          <span class="name">Pacific Roadhouse</span>
-          <span class="cat">Restaurant</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p class="rh-claim">Pacific Business Park's own restaurant, part of the Pacific family.</p>
-        <div class="marquee" aria-hidden="true">
-          <div class="marquee-track">
-            <span>Part of the Pacific family</span>
-            <span>Pacific Business Park's own restaurant</span>
-            <span>Open Mon–Sat 9–6, Sun 9–1</span>
-            <span>Part of the Pacific family</span>
-            <span>Pacific Business Park's own restaurant</span>
-            <span>Open Mon–Sat 9–6, Sun 9–1</span>
+    <div class="category-group" id="cat-automotive-care">
+      <div class="category-head">
+        <h3>Automotive Care</h3>
+        <p class="category-intro">Two storefronts keep vehicles running — cleaning and care, tyres and fitment.</p>
+      </div>
+      <div class="category-cards">
+
+      <!-- Detail Corner -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">DC</span>
+          <span class="meta">
+            <span class="name">Detail Corner</span>
+            <span class="cat">Automotive Care · Unit 5</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p class="paired-phrase">Car care. Household care.</p>
+          <p class="detail-line">Premium car and household cleaning products.</p>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0828986893">Call · 082 898 6893</a>
           </div>
         </div>
-        <p class="rh-story">Pacific Roadhouse is the park's own restaurant, not a tenant passing through. It's part of the Pacific family itself.</p>
-        <p class="rh-note">Menu details aren't listed yet. Call ahead for what's on.</p>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0213709914">Call · 021 370 9914</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Elysian Labels (elevated) -->
-    <section class="card elevated" data-open="true">
-      <button class="card-head">
-        <img class="mark mark-logo" src="assets/logos/elysian-labels.svg" alt="Elysian Labels logo" width="44" height="44" loading="lazy">
-        <span class="meta">
-          <span class="name">Elysian Labels</span>
-          <span class="cat">Packaging &amp; Labels <span class="featured-badge">Featured</span></span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <img class="panel-banner" src="assets/banners/elysian-labels.svg" alt="Elysian Labels" loading="lazy">
-        <div class="ely-grid">
-          <p class="ely-desc">Barcode and thermal label rolls, ribbons, and custom garment labelling for retail and logistics.</p>
-          <div class="ely-value">Barcode and thermal labels aren't a discretionary purchase for the retailers and logistics operators around them. They're what keeps stock scanning, shipment tracking, and garment tagging running day to day.</div>
-        </div>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0788932544">Call · 078 893 2544</a>
-          <a class="cta" href="https://elysianlabels.co.za" target="_blank" rel="noopener">Visit elysianlabels.co.za</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- MilkUp Ice Creamery -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <img class="mark mark-logo" src="assets/logos/milk-up.svg" alt="MilkUp Ice Creamery logo" width="44" height="44" loading="lazy">
-        <span class="meta">
-          <span class="name">MilkUp Ice Creamery</span>
-          <span class="cat">Bakery &amp; Desserts · Unit 6</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <img class="panel-banner" src="assets/banners/milk-up.svg" alt="MilkUp Ice Creamery" loading="lazy">
-        <p>Ice cream, waffles, milkshakes, desserts and popcorn.</p>
-        <div class="highlights">
-          <span>Ice cream</span><span>Waffles</span><span>Milkshakes</span><span>Desserts</span><span>Popcorn</span>
-        </div>
-        <p class="detail-line">Unit 6 · 078 455 9058</p>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0784559058">Call · 078 455 9058</a>
-          <a class="cta" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- The Gadget Shop -->
-    <section class="card" data-open="true">
-      <button class="card-head">
-        <img class="mark mark-logo" src="assets/logos/the-gadget-shop.svg" alt="The Gadget Shop logo" width="44" height="44" loading="lazy">
-        <span class="meta">
-          <span class="name">The Gadget Shop</span>
-          <span class="cat">Cellular &amp; Electronics · Unit 24</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <img class="panel-banner" src="assets/banners/the-gadget-shop.svg" alt="The Gadget Shop" loading="lazy">
-        <p>Cellphone accessories and repairs for iPhone, Samsung, Huawei, Honor, Oppo and Vivo, plus speakers, headsets, amplifiers, TVs, cameras and chargers.</p>
-        <nav class="subnav" aria-label="Jump to category">
-          <a href="#gs-brands">Phone Brands</a>
-          <a href="#gs-audio">Audio</a>
-          <a href="#gs-screens">Screens &amp; Cameras</a>
-          <a href="#gs-power">Power</a>
-        </nav>
-        <div class="groups">
-          <div class="group" id="gs-brands"><h4>Phone Brands Serviced</h4><p>iPhone, Samsung, Huawei, Honor, Oppo, Vivo</p></div>
-          <div class="group" id="gs-audio"><h4>Audio</h4><p>Speakers, Headsets, Amplifiers</p></div>
-          <div class="group" id="gs-screens"><h4>Screens &amp; Cameras</h4><p>TVs, Cameras</p></div>
-          <div class="group" id="gs-power"><h4>Power</h4><p>Chargers</p></div>
-        </div>
-        <div class="cta-row">
-          <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vintage Barbershop -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <img class="mark mark-logo" src="assets/logos/vintage-barbershop.svg" alt="Vintage Barbershop logo" width="44" height="44" loading="lazy">
-        <span class="meta">
-          <span class="name">Vintage Barbershop</span>
-          <span class="cat">Beauty &amp; Personal Care · Unit 22</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <img class="panel-banner" src="assets/banners/vintage-barbershop.svg" alt="Vintage Barbershop" loading="lazy">
-        <div class="vb-hours">Mon–Fri 8:30–18:00 · Sat 8:30–17:00 · Sun 8:30–14:00</div>
-        <p class="vb-desc">Est. 2020 — cuts, shaves, waxing and grooming for the whole family.</p>
-        <div class="cta-row">
-          <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Siyabonga Builders -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <img class="mark mark-logo" src="assets/logos/siyabonga-builders.svg" alt="Siyabonga Builders logo" width="44" height="44" loading="lazy">
-        <span class="meta">
-          <span class="name">Siyabonga Builders</span>
-          <span class="cat">Hardware &amp; Furniture</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <img class="panel-banner" src="assets/banners/siyabonga-builders.svg" alt="Siyabonga Builders" loading="lazy">
-        <p class="sb-desc">Hardware and furniture — roofing sheets, taps and basins, doors, windows, mattresses, sofas and bunk beds.</p>
-        <div class="stocklist">Roofing sheets · Taps · Basins · Doors · Windows · Mattresses · Sofas · Bunk beds</div>
-        <div class="cta-row">
-          <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions to Pacific Business Park</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Visfabriek -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">VF</span>
-        <span class="meta">
-          <span class="name">Visfabriek</span>
-          <span class="cat">Food Retail</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p class="vf-tagline">Fresh and frozen fish, seafood, and quick-frozen meal essentials.</p>
-        <div class="cta-row">
-          <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pacific Dried Fruit -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">PD</span>
-        <span class="meta">
-          <span class="name">Pacific Dried Fruit</span>
-          <span class="cat">Grocery &amp; Snack</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <div class="split-panel">
-          <div class="split-col">
-            <h4>Retail</h4>
-            <p>Dried fruit, nuts, and seeds for snacking.</p>
+      <!-- Zama Zama -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">ZZ</span>
+          <span class="meta">
+            <span class="name">Zama Zama Auto Fitment Centre</span>
+            <span class="cat">Automotive Care · Unit 11</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p>New and used tyre fitment, truck tyres, wheel alignment and balancing, suspension repairs, tyre and rim repairs, vehicle service and diagnostics.</p>
+          <div class="two-col-list">
+            <div>New and used tyre fitment</div>
+            <div>Tyre and rim repairs</div>
+            <div>Truck tyres</div>
+            <div>Vehicle service and diagnostics</div>
+            <div>Wheel alignment and balancing</div>
+            <div>Suspension repairs</div>
           </div>
-          <div class="split-col">
-            <h4>Wholesale</h4>
-            <p>Dried fruit, nuts, and seeds for wholesale.</p>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0718956445">Call · 071 895 6445</a>
           </div>
         </div>
-        <div class="cta-row">
-          <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- EPC -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">EP</span>
-        <span class="meta">
-          <span class="name">EPC (Emily's Perfume Collection)</span>
-          <span class="cat">Beauty &amp; Personal Care</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p>Factory shop for oil-based perfumes, bath salts, shower gel, room &amp; linen sprays, body wash and lotions.</p>
-        <div class="eg-group">
-          <p class="eg-head">Bath &amp; Home</p>
-          <p>Bath salts, shower gel, room &amp; linen sprays</p>
-        </div>
-        <div class="eg-group">
-          <p class="eg-head">Body</p>
-          <p>Oil-based perfumes, body wash, lotions</p>
-        </div>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0727059874">Call · 072 705 9874</a>
-        </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Golden Shilajit -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <img class="mark mark-logo" src="assets/logos/golden-shilajit.svg" alt="Golden Shilajit logo" width="44" height="44" loading="lazy">
-        <span class="meta">
-          <span class="name">Golden Shilajit</span>
-          <span class="cat">Health &amp; Wellness · Unit 21</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <img class="panel-banner" src="assets/banners/golden-shilajit.svg" alt="Golden Shilajit" loading="lazy">
-        <p>Purified Himalayan shilajit and natural supplements for energy, strength and stamina.</p>
-        <div class="pill-row">
-          <span class="pill">Energy</span>
-          <span class="pill">Strength</span>
-          <span class="pill">Stamina</span>
-        </div>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0839909467">Call · 083 990 9467</a>
-        </div>
+    <div class="category-group" id="cat-baby-family">
+      <div class="category-head">
+        <h3>Baby &amp; Family</h3>
+        <p class="category-intro">One storefront, factory prices on baby and adult essentials.</p>
       </div>
-    </section>
+      <div class="category-cards">
 
-    <!-- Miller's Travel & Tours -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">MT</span>
-        <span class="meta">
-          <span class="name">Miller's Travel &amp; Tours</span>
-          <span class="cat">Travel &amp; Services · Unit 20</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p>Travel bookings and tour packages.</p>
-        <div class="hours-table">
-          <div class="hours-row"><span>Mon–Thu</span><span>9:00–16:30</span></div>
-          <div class="hours-row"><span>Fri</span><span>9:00–12:00 &amp; 14:00–16:30</span></div>
-          <div class="hours-row"><span>Sat</span><span>9:00–12:30</span></div>
-          <div class="hours-row"><span>Sun</span><span>Closed</span></div>
+      <!-- The Nappy Warehouse -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">NW</span>
+          <span class="meta">
+            <span class="name">The Nappy Warehouse</span>
+            <span class="cat">Baby &amp; Family</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p>Baby and adult diapers, pull-up pants, sanitary pads and linings at factory prices.</p>
+          <div class="value-strip">Factory prices.</div>
+          <div class="flat-list">Baby diapers · Adult diapers · Pull-up pants · Sanitary pads · Linings</div>
+          <div class="cta-row">
+            <a class="cta primary" href="https://thenappywarehouse.co.za" target="_blank" rel="noopener">Visit thenappywarehouse.co.za</a>
+          </div>
         </div>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0630544583">Call to book · 063 054 4583</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Plain Fabrics & Trim -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">PF</span>
-        <span class="meta">
-          <span class="name">Plain Fabrics &amp; Trim</span>
-          <span class="cat">Fabric &amp; Trims</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p>Fabrics and trims for <strong>sewing</strong>, <strong>upholstery</strong> and <strong>craft</strong> projects.</p>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0829947514">Call · 082 994 7514</a>
-        </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Zaira -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">ZA</span>
-        <span class="meta">
-          <span class="name">Zaira – Blooming Flower</span>
-          <span class="cat">Florist &amp; Gifts</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p class="za-desc">Flowers and gifting — your one-stop concept shop.</p>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0670901549">Call · 067 090 1549</a>
-        </div>
+    <div class="category-group" id="cat-bakery-desserts">
+      <div class="category-head">
+        <h3>Bakery &amp; Desserts</h3>
+        <p class="category-intro">Ice cream and baked treats, from two of the park's dessert storefronts.</p>
       </div>
-    </section>
+      <div class="category-cards">
 
-    <!-- The Nappy Warehouse -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">NW</span>
-        <span class="meta">
-          <span class="name">The Nappy Warehouse</span>
-          <span class="cat">Baby &amp; Family</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p>Baby and adult diapers, pull-up pants, sanitary pads and linings at factory prices.</p>
-        <div class="value-strip">Factory prices.</div>
-        <div class="flat-list">Baby diapers · Adult diapers · Pull-up pants · Sanitary pads · Linings</div>
-        <div class="cta-row">
-          <a class="cta primary" href="https://thenappywarehouse.co.za" target="_blank" rel="noopener">Visit thenappywarehouse.co.za</a>
+      <!-- MilkUp Ice Creamery -->
+      <section class="card" data-open="true">
+        <button class="card-head">
+          <img class="mark mark-logo" src="assets/logos/milk-up.svg" alt="MilkUp Ice Creamery logo" width="44" height="44" loading="lazy">
+          <span class="meta">
+            <span class="name">MilkUp Ice Creamery</span>
+            <span class="cat">Bakery &amp; Desserts · Unit 6</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <img class="panel-banner" src="assets/banners/milk-up.svg" alt="MilkUp Ice Creamery" loading="lazy">
+          <p>Ice cream, waffles, milkshakes, desserts and popcorn.</p>
+          <div class="highlights">
+            <span>Ice cream</span><span>Waffles</span><span>Milkshakes</span><span>Desserts</span><span>Popcorn</span>
+          </div>
+          <p class="detail-line">Unit 6 · 078 455 9058</p>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0784559058">Call · 078 455 9058</a>
+            <a class="cta" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Pagemasters Graphix -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">PG</span>
-        <span class="meta">
-          <span class="name">Pagemasters Graphix</span>
-          <span class="cat">Printing &amp; Signage · Unit 4</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p class="blockquote-aside">"Signage and printing for businesses across the centre and beyond."</p>
-        <p class="detail-line">082 526 0816 · pagemastersgraphix.com</p>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0825260816">Call · 082 526 0816</a>
+      <!-- Crumble Corner -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">CR</span>
+          <span class="meta">
+            <span class="name">Crumble Corner</span>
+            <span class="cat">Bakery &amp; Desserts</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p class="lead-quiet">Sweet crumble moments</p>
+          <p>Baked treats and desserts.</p>
+          <div class="cta-row">
+            <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Detail Corner -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">DC</span>
-        <span class="meta">
-          <span class="name">Detail Corner</span>
-          <span class="cat">Automotive Care · Unit 5</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p class="paired-phrase">Car care. Household care.</p>
-        <p class="detail-line">Premium car and household cleaning products.</p>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0828986893">Call · 082 898 6893</a>
-        </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Cozy Collection -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">CC</span>
-        <span class="meta">
-          <span class="name">Cozy Collection</span>
-          <span class="cat">Home &amp; Decor</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p><strong>Home</strong> and <strong>lifestyle</strong> collection.</p>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0659062887">Call · 065 906 2887</a>
-        </div>
+    <div class="category-group" id="cat-beauty-personal-care">
+      <div class="category-head">
+        <h3>Beauty &amp; Personal Care</h3>
+        <p class="category-intro">A perfume factory shop and a barbershop, both real personal-care storefronts here.</p>
       </div>
-    </section>
+      <div class="category-cards">
 
-    <!-- Curtains On Us -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">CU</span>
-        <span class="meta">
-          <span class="name">Curtains On Us</span>
-          <span class="cat">Home &amp; Decor · Unit 3</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p class="display-tagline">find the perfect pieces to match your unique taste</p>
-        <p class="detail-line">Curtains, blinds and home textiles. Sewing alterations done here.</p>
-        <div class="cta-row">
-          <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
+      <!-- EPC -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">EP</span>
+          <span class="meta">
+            <span class="name">EPC (Emily's Perfume Collection)</span>
+            <span class="cat">Beauty &amp; Personal Care</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p>Factory shop for oil-based perfumes, bath salts, shower gel, room &amp; linen sprays, body wash and lotions.</p>
+          <div class="eg-group">
+            <p class="eg-head">Bath &amp; Home</p>
+            <p>Bath salts, shower gel, room &amp; linen sprays</p>
+          </div>
+          <div class="eg-group">
+            <p class="eg-head">Body</p>
+            <p>Oil-based perfumes, body wash, lotions</p>
+          </div>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0727059874">Call · 072 705 9874</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- The Farm Fruit and Veg -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">FF</span>
-        <span class="meta">
-          <span class="name">The Farm Fruit and Veg</span>
-          <span class="cat">Grocery &amp; Snack</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p class="quiet-line">Fresh fruit and vegetables.</p>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0836216770">Call · 083 621 6770</a>
+      <!-- Vintage Barbershop -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <img class="mark mark-logo" src="assets/logos/vintage-barbershop.svg" alt="Vintage Barbershop logo" width="44" height="44" loading="lazy">
+          <span class="meta">
+            <span class="name">Vintage Barbershop</span>
+            <span class="cat">Beauty &amp; Personal Care · Unit 22</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <img class="panel-banner" src="assets/banners/vintage-barbershop.svg" alt="Vintage Barbershop" loading="lazy">
+          <div class="vb-hours">Mon–Fri 8:30–18:00 · Sat 8:30–17:00 · Sun 8:30–14:00</div>
+          <p class="vb-desc">Est. 2020 — cuts, shaves, waxing and grooming for the whole family.</p>
+          <div class="cta-row">
+            <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Crumble Corner -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">CR</span>
-        <span class="meta">
-          <span class="name">Crumble Corner</span>
-          <span class="cat">Bakery &amp; Desserts</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p class="lead-quiet">Sweet crumble moments</p>
-        <p>Baked treats and desserts.</p>
-        <div class="cta-row">
-          <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
-        </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Zama Zama -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">ZZ</span>
-        <span class="meta">
-          <span class="name">Zama Zama Auto Fitment Centre</span>
-          <span class="cat">Automotive Care · Unit 11</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p>New and used tyre fitment, truck tyres, wheel alignment and balancing, suspension repairs, tyre and rim repairs, vehicle service and diagnostics.</p>
-        <div class="two-col-list">
-          <div>New and used tyre fitment</div>
-          <div>Tyre and rim repairs</div>
-          <div>Truck tyres</div>
-          <div>Vehicle service and diagnostics</div>
-          <div>Wheel alignment and balancing</div>
-          <div>Suspension repairs</div>
-        </div>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0718956445">Call · 071 895 6445</a>
-        </div>
+    <div class="category-group" id="cat-cellular-electronics">
+      <div class="category-head">
+        <h3>Cellular &amp; Electronics</h3>
+        <p class="category-intro">One storefront for phone repairs, accessories, and electronics.</p>
       </div>
-    </section>
+      <div class="category-cards">
 
-    <!-- Colorado -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">CO</span>
-        <span class="meta">
-          <span class="name">Colorado – Canvas &amp; Comfort</span>
-          <span class="cat">Home &amp; Decor · Unit 9</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p>Stationery and homeware — kitchen essentials, storage solutions, decor, accessories and gifts.</p>
-        <div class="word-row">Kitchen essentials &middot; Storage solutions &middot; Decor &middot; Accessories &middot; Gifts</div>
-        <div class="cta-row">
-          <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
+      <!-- The Gadget Shop -->
+      <section class="card" data-open="true">
+        <button class="card-head">
+          <img class="mark mark-logo" src="assets/logos/the-gadget-shop.svg" alt="The Gadget Shop logo" width="44" height="44" loading="lazy">
+          <span class="meta">
+            <span class="name">The Gadget Shop</span>
+            <span class="cat">Cellular &amp; Electronics · Unit 24</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <img class="panel-banner" src="assets/banners/the-gadget-shop.svg" alt="The Gadget Shop" loading="lazy">
+          <p>Cellphone accessories and repairs for iPhone, Samsung, Huawei, Honor, Oppo and Vivo, plus speakers, headsets, amplifiers, TVs, cameras and chargers.</p>
+          <nav class="subnav" aria-label="Jump to category">
+            <a href="#gs-brands">Phone Brands</a>
+            <a href="#gs-audio">Audio</a>
+            <a href="#gs-screens">Screens &amp; Cameras</a>
+            <a href="#gs-power">Power</a>
+          </nav>
+          <div class="groups">
+            <div class="group" id="gs-brands"><h4>Phone Brands Serviced</h4><p>iPhone, Samsung, Huawei, Honor, Oppo, Vivo</p></div>
+            <div class="group" id="gs-audio"><h4>Audio</h4><p>Speakers, Headsets, Amplifiers</p></div>
+            <div class="group" id="gs-screens"><h4>Screens &amp; Cameras</h4><p>TVs, Cameras</p></div>
+            <div class="group" id="gs-power"><h4>Power</h4><p>Chargers</p></div>
+          </div>
+          <div class="cta-row">
+            <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Snyders Packaging -->
-    <section class="card" data-open="false">
-      <button class="card-head">
-        <span class="mark">SN</span>
-        <span class="meta">
-          <span class="name">Snyders Packaging</span>
-          <span class="cat">Packaging &amp; Labels · Unit 8</span>
-        </span>
-        <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="panel">
-        <p>Corrugated cartons, biscuit trays, pads and divisions, fish trays and boxes, samoosa trays, apple boxes and used boxes.</p>
-        <div class="spec-list">
-          <div class="spec-row">Corrugated cartons</div>
-          <div class="spec-row">Biscuit trays</div>
-          <div class="spec-row">Pads and divisions</div>
-          <div class="spec-row">Fish trays and boxes</div>
-          <div class="spec-row">Samoosa trays</div>
-          <div class="spec-row">Apple boxes</div>
-          <div class="spec-row">Used boxes</div>
-        </div>
-        <div class="cta-row">
-          <a class="cta primary" href="tel:0718848130">Call · 071 884 8130</a>
-          <a class="cta" href="mailto:snydersb28@gmail.com">Email</a>
-        </div>
       </div>
-    </section>
+    </div>
+
+    <div class="category-group" id="cat-fabric-trims">
+      <div class="category-head">
+        <h3>Fabric &amp; Trims</h3>
+        <p class="category-intro">One storefront for sewing, upholstery, and craft fabric.</p>
+      </div>
+      <div class="category-cards">
+
+      <!-- Plain Fabrics & Trim -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">PF</span>
+          <span class="meta">
+            <span class="name">Plain Fabrics &amp; Trim</span>
+            <span class="cat">Fabric &amp; Trims</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p>Fabrics and trims for <strong>sewing</strong>, <strong>upholstery</strong> and <strong>craft</strong> projects.</p>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0829947514">Call · 082 994 7514</a>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+
+    <div class="category-group" id="cat-florist-gifts">
+      <div class="category-head">
+        <h3>Florist &amp; Gifts</h3>
+        <p class="category-intro">One storefront for flowers and gifting.</p>
+      </div>
+      <div class="category-cards">
+
+      <!-- Zaira -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">ZA</span>
+          <span class="meta">
+            <span class="name">Zaira – Blooming Flower</span>
+            <span class="cat">Florist &amp; Gifts</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p class="za-desc">Flowers and gifting — your one-stop concept shop.</p>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0670901549">Call · 067 090 1549</a>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+
+    <div class="category-group" id="cat-food-retail">
+      <div class="category-head">
+        <h3>Food Retail</h3>
+        <p class="category-intro">One storefront for fresh and frozen seafood.</p>
+      </div>
+      <div class="category-cards">
+
+      <!-- Visfabriek -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">VF</span>
+          <span class="meta">
+            <span class="name">Visfabriek</span>
+            <span class="cat">Food Retail</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p class="vf-tagline">Fresh and frozen fish, seafood, and quick-frozen meal essentials.</p>
+          <div class="cta-row">
+            <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+
+    <div class="category-group" id="cat-grocery-snack">
+      <div class="category-head">
+        <h3>Grocery &amp; Snack</h3>
+        <p class="category-intro">Dried fruit and nuts, fresh fruit and veg — two grocery storefronts.</p>
+      </div>
+      <div class="category-cards">
+
+      <!-- Pacific Dried Fruit -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">PD</span>
+          <span class="meta">
+            <span class="name">Pacific Dried Fruit</span>
+            <span class="cat">Grocery &amp; Snack</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <div class="split-panel">
+            <div class="split-col">
+              <h4>Retail</h4>
+              <p>Dried fruit, nuts, and seeds for snacking.</p>
+            </div>
+            <div class="split-col">
+              <h4>Wholesale</h4>
+              <p>Dried fruit, nuts, and seeds for wholesale.</p>
+            </div>
+          </div>
+          <div class="cta-row">
+            <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Farm Fruit and Veg -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">FF</span>
+          <span class="meta">
+            <span class="name">The Farm Fruit and Veg</span>
+            <span class="cat">Grocery &amp; Snack</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p class="quiet-line">Fresh fruit and vegetables.</p>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0836216770">Call · 083 621 6770</a>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+
+    <div class="category-group" id="cat-hardware-furniture">
+      <div class="category-head">
+        <h3>Hardware &amp; Furniture</h3>
+        <p class="category-intro">One storefront for hardware and furniture essentials.</p>
+      </div>
+      <div class="category-cards">
+
+      <!-- Siyabonga Builders -->
+      <section class="card" data-open="true">
+        <button class="card-head">
+          <img class="mark mark-logo" src="assets/logos/siyabonga-builders.svg" alt="Siyabonga Builders logo" width="44" height="44" loading="lazy">
+          <span class="meta">
+            <span class="name">Siyabonga Builders</span>
+            <span class="cat">Hardware &amp; Furniture</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <img class="panel-banner" src="assets/banners/siyabonga-builders.svg" alt="Siyabonga Builders" loading="lazy">
+          <p class="sb-desc">Hardware and furniture — roofing sheets, taps and basins, doors, windows, mattresses, sofas and bunk beds.</p>
+          <div class="stocklist">Roofing sheets · Taps · Basins · Doors · Windows · Mattresses · Sofas · Bunk beds</div>
+          <div class="cta-row">
+            <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions to Pacific Business Park</a>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+
+    <div class="category-group" id="cat-health-wellness">
+      <div class="category-head">
+        <h3>Health &amp; Wellness</h3>
+        <p class="category-intro">One storefront for natural supplements.</p>
+      </div>
+      <div class="category-cards">
+
+      <!-- Golden Shilajit -->
+      <section class="card" data-open="true">
+        <button class="card-head">
+          <img class="mark mark-logo" src="assets/logos/golden-shilajit.svg" alt="Golden Shilajit logo" width="44" height="44" loading="lazy">
+          <span class="meta">
+            <span class="name">Golden Shilajit</span>
+            <span class="cat">Health &amp; Wellness · Unit 21</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <img class="panel-banner" src="assets/banners/golden-shilajit.svg" alt="Golden Shilajit" loading="lazy">
+          <p>Purified Himalayan shilajit and natural supplements for energy, strength and stamina.</p>
+          <div class="pill-row">
+            <span class="pill">Energy</span>
+            <span class="pill">Strength</span>
+            <span class="pill">Stamina</span>
+          </div>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0839909467">Call · 083 990 9467</a>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+
+    <div class="category-group" id="cat-home-decor">
+      <div class="category-head">
+        <h3>Home &amp; Decor</h3>
+        <p class="category-intro">Three storefronts for the home — textiles, décor, and lifestyle goods.</p>
+      </div>
+      <div class="category-cards">
+
+      <!-- Cozy Collection -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">CC</span>
+          <span class="meta">
+            <span class="name">Cozy Collection</span>
+            <span class="cat">Home &amp; Decor</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p><strong>Home</strong> and <strong>lifestyle</strong> collection.</p>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0659062887">Call · 065 906 2887</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Curtains On Us -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">CU</span>
+          <span class="meta">
+            <span class="name">Curtains On Us</span>
+            <span class="cat">Home &amp; Decor · Unit 3</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p class="display-tagline">find the perfect pieces to match your unique taste</p>
+          <p class="detail-line">Curtains, blinds and home textiles. Sewing alterations done here.</p>
+          <div class="cta-row">
+            <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Colorado -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">CO</span>
+          <span class="meta">
+            <span class="name">Colorado – Canvas &amp; Comfort</span>
+            <span class="cat">Home &amp; Decor · Unit 9</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p>Stationery and homeware — kitchen essentials, storage solutions, decor, accessories and gifts.</p>
+          <div class="word-row">Kitchen essentials &middot; Storage solutions &middot; Decor &middot; Accessories &middot; Gifts</div>
+          <div class="cta-row">
+            <a class="cta primary" href="https://maps.google.com/?q=Pacific+Business+Park,+Jakes+Gerwel+Drive,+Weltevreden+Valley" target="_blank" rel="noopener">Get directions</a>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+
+    <div class="category-group" id="cat-packaging-labels">
+      <div class="category-head">
+        <h3>Packaging &amp; Labels</h3>
+        <p class="category-intro">Two storefronts behind the scenes for other businesses — labels and packaging.</p>
+      </div>
+      <div class="category-cards">
+
+      <!-- Elysian Labels (elevated) -->
+      <section class="card elevated" data-open="true">
+        <button class="card-head">
+          <img class="mark mark-logo" src="assets/logos/elysian-labels.svg" alt="Elysian Labels logo" width="44" height="44" loading="lazy">
+          <span class="meta">
+            <span class="name">Elysian Labels</span>
+            <span class="cat">Packaging &amp; Labels <span class="featured-badge">Featured</span></span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <img class="panel-banner" src="assets/banners/elysian-labels.svg" alt="Elysian Labels" loading="lazy">
+          <div class="ely-grid">
+            <p class="ely-desc">Barcode and thermal label rolls, ribbons, and custom garment labelling for retail and logistics.</p>
+            <div class="ely-value">Barcode and thermal labels aren't a discretionary purchase for the retailers and logistics operators around them. They're what keeps stock scanning, shipment tracking, and garment tagging running day to day.</div>
+          </div>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0788932544">Call · 078 893 2544</a>
+            <a class="cta" href="https://elysianlabels.co.za" target="_blank" rel="noopener">Visit elysianlabels.co.za</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Snyders Packaging -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">SN</span>
+          <span class="meta">
+            <span class="name">Snyders Packaging</span>
+            <span class="cat">Packaging &amp; Labels · Unit 8</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p>Corrugated cartons, biscuit trays, pads and divisions, fish trays and boxes, samoosa trays, apple boxes and used boxes.</p>
+          <div class="spec-list">
+            <div class="spec-row">Corrugated cartons</div>
+            <div class="spec-row">Biscuit trays</div>
+            <div class="spec-row">Pads and divisions</div>
+            <div class="spec-row">Fish trays and boxes</div>
+            <div class="spec-row">Samoosa trays</div>
+            <div class="spec-row">Apple boxes</div>
+            <div class="spec-row">Used boxes</div>
+          </div>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0718848130">Call · 071 884 8130</a>
+            <a class="cta" href="mailto:snydersb28@gmail.com">Email</a>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+
+    <div class="category-group" id="cat-printing-signage">
+      <div class="category-head">
+        <h3>Printing &amp; Signage</h3>
+        <p class="category-intro">One storefront for signage and printing.</p>
+      </div>
+      <div class="category-cards">
+
+      <!-- Pagemasters Graphix -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">PG</span>
+          <span class="meta">
+            <span class="name">Pagemasters Graphix</span>
+            <span class="cat">Printing &amp; Signage · Unit 4</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p class="blockquote-aside">"Signage and printing for businesses across the centre and beyond."</p>
+          <p class="detail-line">082 526 0816 · pagemastersgraphix.com</p>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0825260816">Call · 082 526 0816</a>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+
+    <div class="category-group" id="cat-restaurant">
+      <div class="category-head">
+        <h3>Restaurant</h3>
+        <p class="category-intro">The park's own restaurant.</p>
+      </div>
+      <div class="category-cards">
+
+      <!-- Pacific Roadhouse -->
+      <section class="card" data-open="true">
+        <button class="card-head">
+          <span class="mark">PR</span>
+          <span class="meta">
+            <span class="name">Pacific Roadhouse</span>
+            <span class="cat">Restaurant</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p class="rh-claim">Pacific Business Park's own restaurant, part of the Pacific family.</p>
+          <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+              <span>Part of the Pacific family</span>
+              <span>Pacific Business Park's own restaurant</span>
+              <span>Open Mon–Sat 9–6, Sun 9–1</span>
+              <span>Part of the Pacific family</span>
+              <span>Pacific Business Park's own restaurant</span>
+              <span>Open Mon–Sat 9–6, Sun 9–1</span>
+            </div>
+          </div>
+          <p class="rh-story">Pacific Roadhouse is the park's own restaurant, not a tenant passing through. It's part of the Pacific family itself.</p>
+          <p class="rh-note">Menu details aren't listed yet. Call ahead for what's on.</p>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0213709914">Call · 021 370 9914</a>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+
+    <div class="category-group" id="cat-travel-services">
+      <div class="category-head">
+        <h3>Travel &amp; Services</h3>
+        <p class="category-intro">One storefront for travel bookings and tours.</p>
+      </div>
+      <div class="category-cards">
+
+      <!-- Miller's Travel & Tours -->
+      <section class="card" data-open="false">
+        <button class="card-head">
+          <span class="mark">MT</span>
+          <span class="meta">
+            <span class="name">Miller's Travel &amp; Tours</span>
+            <span class="cat">Travel &amp; Services · Unit 20</span>
+          </span>
+          <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel">
+          <p>Travel bookings and tour packages.</p>
+          <div class="hours-table">
+            <div class="hours-row"><span>Mon–Thu</span><span>9:00–16:30</span></div>
+            <div class="hours-row"><span>Fri</span><span>9:00–12:00 &amp; 14:00–16:30</span></div>
+            <div class="hours-row"><span>Sat</span><span>9:00–12:30</span></div>
+            <div class="hours-row"><span>Sun</span><span>Closed</span></div>
+          </div>
+          <div class="cta-row">
+            <a class="cta primary" href="tel:0630544583">Call to book · 063 054 4583</a>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </div>
 
     </div>
   </section>
