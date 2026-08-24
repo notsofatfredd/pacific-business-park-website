@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#ffffff"/>
+<rect x="38" y="54" width="1524" height="512" rx="10" fill="#ffffff" stroke="#d7dde8" stroke-width="4"/>
+<polygon points="158,292 238,212 338,228 394,172 455,250 392,332 282,332" fill="#151a21"/>
+<ellipse cx="275.0" cy="221.0" rx="65.0" ry="47.0" fill="#151a21"/>
+<polyline points="190,198 118,142 220,188 150,100" fill="none" stroke="#151a21" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="515" y="205" fill="#111111" font-family="Georgia" font-size="150" font-weight="700" text-anchor="start" dominant-baseline="middle">epc</text>
+<text x="516" y="296" fill="#111111" font-family="Times New Roman" font-size="46" font-weight="700" text-anchor="start" dominant-baseline="middle">Emily's Perfume Collection</text>
+<text x="516" y="374" fill="#111111" font-family="Arial Black" font-size="62" font-weight="700" text-anchor="start" dominant-baseline="middle">FACTORY SHOP</text>
+<text x="800" y="462" fill="#111111" font-family="Arial" font-size="39" font-weight="700" text-anchor="middle" dominant-baseline="middle">Perfumes   Bath salts   Room &amp; Linen Spray   Hand Wash Lotion and Much More</text>
+<text x="800" y="536" fill="#111111" font-family="Arial" font-size="56" font-weight="700" text-anchor="middle" dominant-baseline="middle">073 705 9874</text>
+</svg>

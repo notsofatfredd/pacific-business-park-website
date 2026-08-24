@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#087fbd"/>
+<rect x="0" y="0" width="1600" height="620" fill="#087fbd"/>
+<ellipse cx="800.0" cy="116.0" rx="64.0" ry="64.0" fill="#cc2e4e" stroke="#ffffff" stroke-width="8"/>
+<ellipse cx="818.0" cy="100.0" rx="9.0" ry="9.0" fill="#f8e6c4"/>
+<ellipse cx="785.0" cy="129.0" rx="7.0" ry="7.0" fill="#f8e6c4"/>
+<ellipse cx="831.0" cy="138.0" rx="6.0" ry="6.0" fill="#f8e6c4"/>
+<ellipse cx="775.0" cy="91.0" rx="6.0" ry="6.0" fill="#f8e6c4"/>
+<ellipse cx="797.0" cy="81.0" rx="5.0" ry="5.0" fill="#f8e6c4"/>
+<ellipse cx="845.0" cy="82.0" rx="17.0" ry="17.0" fill="#087fbd"/>
+<ellipse cx="862.0" cy="108.0" rx="13.0" ry="13.0" fill="#087fbd"/>
+<ellipse cx="852.0" cy="134.0" rx="11.0" ry="11.0" fill="#087fbd"/>
+<text x="800" y="316" fill="#ffffff" font-family="Arial Black" font-size="112" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">CRUMBLE CORNER</text>
+<rect x="1158" y="270" width="80" height="74" rx="6" fill="#ffffff"/>
+<polyline points="1170,290 1226,296" fill="none" stroke="#cc304b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1170,312 1226,318" fill="none" stroke="#cc304b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1170,334 1226,340" fill="none" stroke="#cc304b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="800" y="452" fill="#ffffff" font-family="Arial" font-size="48" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="15">SWEET CRUMBLE MOMENTS</text>
+</svg>

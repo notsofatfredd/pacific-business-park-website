@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#ffffff"/>
+<rect x="40" y="40" width="1520" height="540" rx="22" fill="#ffffff" stroke="#d8dee8" stroke-width="3"/>
+<rect x="160" y="126" width="210" height="210" rx="22" fill="#4d9fd7"/>
+<rect x="245" y="165" width="40" height="132" rx="10" fill="#ffffff"/>
+<rect x="199" y="211" width="132" height="40" rx="10" fill="#ffffff"/>
+<text x="430" y="205" fill="#2f69ad" font-family="Arial" font-size="72" font-weight="700" text-anchor="start" dominant-baseline="middle" letter-spacing="4">THE NAPPY</text>
+<text x="430" y="305" fill="#2f69ad" font-family="Arial" font-size="80" font-weight="700" text-anchor="start" dominant-baseline="middle" letter-spacing="4">WAREHOUSE</text>
+<text x="800" y="412" fill="#19325c" font-family="Arial Black" font-size="38" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">MARKET LEADERS IN ADULT INCONTINENCE</text>
+<text x="800" y="512" fill="#72a83a" font-family="Segoe Print" font-size="42" font-weight="700" text-anchor="middle" dominant-baseline="middle">Comfort, care and everyday confidence</text>
+</svg>

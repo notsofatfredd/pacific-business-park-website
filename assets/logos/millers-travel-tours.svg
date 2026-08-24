@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#303849"/>
+<rect x="0" y="0" width="1600" height="620" fill="#303849"/>
+<ellipse cx="816.0" cy="309.0" rx="251.0" ry="231.0" fill="none" stroke="#d6d653" stroke-width="10"/>
+<ellipse cx="817.0" cy="309.0" rx="213.0" ry="201.0" fill="none" stroke="#9a42aa" stroke-width="8"/>
+<ellipse cx="817.0" cy="309.0" rx="179.0" ry="175.0" fill="none" stroke="#f0d83d" stroke-width="5"/>
+<polyline points="145,386 280,320 420,290 560,352 670,278 800,348 960,320 1148,278 1428,246" fill="none" stroke="#e8eef5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="258,438 408,370 575,390 742,350 940,386 1185,340" fill="none" stroke="#e8eef5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="800" y="314" fill="#e8eef5" font-family="Segoe Print" font-size="190" font-weight="700" text-anchor="middle" dominant-baseline="middle">Miller's</text>
+<text x="1012" y="424" fill="#e8eef5" font-family="Arial" font-size="50" font-weight="700" text-anchor="middle" dominant-baseline="middle">Travel &amp; Tours</text>
+</svg>
