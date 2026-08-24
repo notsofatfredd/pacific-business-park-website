@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pacific Business Park — Visual Direction Compare</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#15171a;
+    --surface:#1c1f24;
+    --border:#2a2e35;
+    --ink:#e7e9ec;
+    --muted:#8b929c;
+    --accent:#6fd3c7;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;margin:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    display:flex;flex-direction:column;
+  }
+  .bar{
+    display:flex;align-items:center;gap:4px;
+    padding:10px 16px;
+    background:var(--surface);
+    border-bottom:1px solid var(--border);
+    flex-shrink:0;
+    overflow-x:auto;
+  }
+  .bar-label{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--muted);
+    margin-right:14px;white-space:nowrap;
+  }
+  .tab{
+    display:flex;flex-direction:column;align-items:flex-start;gap:2px;
+    padding:8px 16px;
+    background:none;border:1px solid transparent;border-radius:6px;
+    color:var(--muted);cursor:pointer;
+    font-family:inherit;
+    white-space:nowrap;
+  }
+  .tab:hover{color:var(--ink);border-color:var(--border);}
+  .tab.is-active{color:var(--ink);background:var(--bg);border-color:var(--accent);}
+  .tab-name{font-size:.86rem;font-weight:600;}
+  .tab-branch{font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:var(--muted);}
+  .tab.is-active .tab-branch{color:var(--accent);}
+  .frame-wrap{flex:1;position:relative;}
+  iframe{
+    position:absolute;inset:0;
+    width:100%;height:100%;
+    border:0;
+    background:#fff;
+    display:none;
+  }
+  iframe.is-active{display:block;}
+  .loading{
+    position:absolute;inset:0;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--muted);font-family:"IBM Plex Mono",monospace;font-size:.8rem;
+    pointer-events:none;
+  }
+</style>
+</head>
+<body>
+
+<div class="bar" role="tablist" aria-label="Visual direction">
+  <span class="bar-label">PBP &middot; visual direction compare</span>
+  <button class="tab is-active" type="button" role="tab" aria-selected="true" data-target="frame-editorial">
+    <span class="tab-name">Editorial</span>
+    <span class="tab-branch">concept-d-visual-editorial</span>
+  </button>
+  <button class="tab" type="button" role="tab" aria-selected="false" data-target="frame-bold">
+    <span class="tab-name">Bold Marketplace</span>
+    <span class="tab-branch">concept-d-visual-bold-marketplace</span>
+  </button>
+  <button class="tab" type="button" role="tab" aria-selected="false" data-target="frame-moody">
+    <span class="tab-name">Moody Premium</span>
+    <span class="tab-branch">concept-d-visual-moody-premium</span>
+  </button>
+</div>
+
+<div class="frame-wrap">
+  <div class="loading" id="loading-msg">Loading…</div>
+  <iframe id="frame-editorial" class="is-active" title="Editorial direction" loading="eager"
+    src="https://cdn.jsdelivr.net/gh/notsofatfredd/pacific-business-park-website@concept-d-visual-editorial/index.html"></iframe>
+  <iframe id="frame-bold" title="Bold Marketplace direction"
+    src="https://cdn.jsdelivr.net/gh/notsofatfredd/pacific-business-park-website@concept-d-visual-bold-marketplace/index.html"></iframe>
+  <iframe id="frame-moody" title="Moody Premium direction"
+    src="https://cdn.jsdelivr.net/gh/notsofatfredd/pacific-business-park-website@concept-d-visual-moody-premium/index.html"></iframe>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+    var frames = Array.prototype.slice.call(document.querySelectorAll('iframe'));
+    var loadingMsg = document.getElementById('loading-msg');
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
+        frames.forEach(function (f) { f.classList.remove('is-active'); });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+        document.getElementById(tab.getAttribute('data-target')).classList.add('is-active');
+      });
+    });
+
+    var loaded = 0;
+    frames.forEach(function (f) {
+      f.addEventListener('load', function () {
+        loaded += 1;
+        if (loaded >= frames.length && loadingMsg) loadingMsg.remove();
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
