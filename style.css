@@ -136,19 +136,14 @@ button{font:inherit;color:inherit;}
 /* ================= STORE SHOWCASE CAROUSEL ================= */
 .showcase{max-width:var(--col-wide);margin:0 auto;padding:0 24px 8px;}
 .showcase-inner{position:relative;}
-.showcase-track{position:relative;height:min(46vw,380px);min-height:220px;border-radius:10px;overflow:hidden;}
+.showcase-track{position:relative;border-radius:10px;overflow:hidden;background:var(--surface-soft);border:1px solid var(--line);}
 .showcase-slide{
-  position:absolute;inset:0;
-  display:flex;align-items:flex-end;
-  border:0;cursor:pointer;text-align:left;
-  background-size:cover;background-position:center;
-  opacity:0;pointer-events:none;
-  transition:opacity .6s ease;
+  display:none;flex-direction:column;width:100%;
+  border:0;cursor:pointer;text-align:left;background:var(--surface);
 }
-.showcase-slide.is-active{opacity:1;pointer-events:auto;}
-@media (prefers-reduced-motion:reduce){.showcase-slide{transition:none;}}
-.showcase-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.1) 60%,rgba(0,0,0,0) 100%);}
-.showcase-name{position:relative;z-index:1;padding:20px 24px;font-family:"Sora",sans-serif;font-weight:700;font-size:clamp(1.2rem,2.6vw,1.7rem);color:#fff;}
+.showcase-slide.is-active{display:flex;}
+.showcase-banner{display:block;width:100%;height:auto;}
+.showcase-name{padding:16px 20px;font-family:"Sora",sans-serif;font-weight:700;font-size:clamp(1.1rem,2.4vw,1.5rem);color:var(--heading);}
 .showcase-dots{display:flex;justify-content:center;gap:8px;margin-top:14px;}
 .showcase-dot{width:8px;height:8px;border-radius:50%;border:0;background:var(--line);cursor:pointer;padding:0;}
 .showcase-dot.is-active{background:var(--accent);width:22px;border-radius:4px;transition:width .25s ease;}
@@ -249,37 +244,21 @@ button{font:inherit;color:inherit;}
   color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:2px 7px;vertical-align:middle;
 }
 
-/* Featured tiles: real banner as background, span 2 columns on wide viewports */
+/* Featured tiles: real banner shown in full (no crop), text sits below it, never on top of it */
 .tile-featured{
   grid-column:span 2;
-  min-height:200px;max-width:none;
+  max-width:none;
   padding:0;
   overflow:hidden;
-  justify-content:flex-end;
-  color:#fff;
-  background-size:cover;background-position:center;
+  display:flex;flex-direction:column;
   transition:transform .12s ease-out,border-color .18s ease;
   will-change:transform;
 }
 @media(max-width:520px){.tile-featured{grid-column:span 1;}}
-.tile-featured[data-store="milk-up"]{background-image:url('assets/banners/milk-up.svg');}
-.tile-featured[data-store="the-gadget-shop"]{background-image:url('assets/banners/the-gadget-shop.svg');}
-.tile-featured[data-store="vintage-barbershop"]{background-image:url('assets/banners/vintage-barbershop.svg');}
-.tile-featured[data-store="siyabonga-builders"]{background-image:url('assets/banners/siyabonga-builders.svg');}
-.tile-featured[data-store="golden-shilajit"]{background-image:url('assets/banners/golden-shilajit.svg');}
-.tile-featured[data-store="elysian-labels"]{background-image:url('assets/banners/elysian-labels.svg');}
-.tile-featured-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.15) 55%,rgba(0,0,0,0) 100%);
-}
-.tile-featured-logo{
-  position:relative;z-index:1;
-  max-width:120px;max-height:44px;width:auto;height:auto;object-fit:contain;
-  margin:16px 0 0 16px;align-self:flex-start;
-}
-.tile-featured-meta{position:relative;z-index:1;display:flex;flex-direction:column;gap:2px;padding:14px 16px;}
-.tile-featured-meta .tile-name{color:#fff;}
-.tile-featured-meta .tile-cat{color:rgba(255,255,255,.82);}
+.tile-featured-banner{display:block;width:100%;height:auto;background:var(--surface-soft);}
+.tile-featured-meta{display:flex;flex-direction:column;gap:2px;padding:14px 16px;}
+.tile-featured-meta .tile-name{color:var(--heading);}
+.tile-featured-meta .tile-cat{color:var(--ink-soft);}
 .tile-elevated{outline:2px solid var(--accent);outline-offset:-2px;}
 
 /* ================= MODAL ================= */
