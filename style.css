@@ -1,0 +1,304 @@
+:root{
+  --bg:#f6f4ef;
+  --surface:#ffffff;
+  --surface-soft:#eeebe2;
+  --ink:#1c2530;
+  --ink-soft:#5b6472;
+  --heading:#081d3a;
+  --accent:#081d3a;
+  --accent-soft:rgba(8,29,58,.07);
+  --accent-soft-2:rgba(8,29,58,.14);
+  --line:#ddd7c9;
+  --line-soft:#e8e3d6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a1420;
+    --surface:#0f1b2b;
+    --surface-soft:#152337;
+    --ink:#e7ebf1;
+    --ink-soft:#9fabbc;
+    --heading:#d7e0ee;
+    --accent:#6f93c6;
+    --accent-soft:rgba(111,147,198,.14);
+    --accent-soft-2:rgba(111,147,198,.24);
+    --line:#233149;
+    --line-soft:#1b283c;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0a1420;
+  --surface:#0f1b2b;
+  --surface-soft:#152337;
+  --ink:#e7ebf1;
+  --ink-soft:#9fabbc;
+  --heading:#d7e0ee;
+  --accent:#6f93c6;
+  --accent-soft:rgba(111,147,198,.14);
+  --accent-soft-2:rgba(111,147,198,.24);
+  --line:#233149;
+  --line-soft:#1b283c;
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.55;
+}
+h1,h2,h3,.head{
+  font-family:"Sora",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--heading);
+  text-wrap:balance;
+  margin:0;
+}
+a{color:inherit;}
+button{font:inherit;color:inherit;}
+
+.wrap{max-width:920px;margin:0 auto;padding:0 20px 80px;}
+
+/* ---- top nav ---- */
+.topnav{border-bottom:1px solid var(--line);background:var(--surface);}
+.topnav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 20px;max-width:920px;margin:0 auto;
+}
+.wordmark{font-family:"Sora",sans-serif;font-weight:700;font-size:1rem;text-decoration:none;color:var(--heading);}
+.topnav-links{display:flex;gap:22px;}
+.topnav-links a{font-size:.86rem;font-weight:600;text-decoration:none;color:var(--ink-soft);}
+.topnav-links a:hover{color:var(--accent);}
+
+/* ---- hero ---- */
+.hero{padding:64px 0 44px;}
+.eyebrow{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 14px;}
+.hero-line{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:700;line-height:1.25;max-width:21ch;}
+.hero-sub{margin:16px 0 0;color:var(--ink-soft);font-size:1rem;max-width:52ch;}
+.hero-link{display:inline-block;margin-top:22px;font-size:.9rem;font-weight:600;color:var(--accent);text-decoration:underline;text-underline-offset:3px;}
+
+/* ---- about ---- */
+.about{padding:0 0 40px;border-bottom:1px solid var(--line);}
+.about p{margin:0;max-width:60ch;color:var(--ink-soft);font-size:.98rem;}
+
+/* ---- directory section ---- */
+.directory-section{padding-top:36px;}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:16px;}
+.section-head h2{font-size:1.1rem;}
+.pilot-tag{
+  display:inline-block;
+  font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-soft);
+  border:1px solid var(--line);border-radius:3px;
+  padding:3px 8px;
+}
+
+/* ---- directory grid ---- */
+.directory{padding:0 0 8px;display:grid;gap:14px;}
+.card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:4px;
+  overflow:hidden;
+}
+.card-head{
+  width:100%;
+  display:grid;
+  grid-template-columns:44px 1fr auto;
+  gap:14px;
+  align-items:center;
+  padding:16px 18px;
+  background:none;border:0;cursor:pointer;
+  text-align:left;
+}
+.card-head:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;}
+.mark{
+  width:44px;height:44px;border-radius:3px;
+  background:var(--accent-soft);
+  color:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Sora",sans-serif;font-weight:600;font-size:1.05rem;
+  flex-shrink:0;
+}
+.card-head .meta{min-width:0;}
+.card-head .name{font-family:"Sora",sans-serif;font-weight:600;font-size:1.02rem;color:var(--heading);}
+.card-head .cat{font-size:.82rem;color:var(--ink-soft);margin-top:2px;}
+.chev{
+  width:20px;height:20px;flex-shrink:0;
+  transition:transform .18s ease;
+  color:var(--ink-soft);
+}
+.card[data-open="true"] .chev{transform:rotate(180deg);}
+
+.panel{
+  border-top:1px solid var(--line);
+  padding:22px 18px 26px;
+  display:none;
+}
+.card[data-open="true"] .panel{display:block;}
+
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+.cta{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:9px 14px;
+  border:1px solid var(--accent);
+  border-radius:3px;
+  font-size:.88rem;font-weight:600;
+  text-decoration:none;
+  color:var(--accent);
+}
+.cta.primary{background:var(--accent);color:var(--surface);}
+.detail-line{font-size:.85rem;color:var(--ink-soft);margin-top:10px;}
+
+/* ---- Roadhouse: hero claim + marquee + story ---- */
+.rh-claim{font-family:"Sora",sans-serif;font-weight:600;font-size:1.3rem;color:var(--heading);max-width:32ch;}
+.marquee{
+  margin:18px 0;overflow:hidden;
+  border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
+  padding:9px 0;
+}
+.marquee-track{display:flex;gap:48px;width:max-content;animation:scroll-left 18s linear infinite;}
+.marquee:hover .marquee-track{animation-play-state:paused;}
+.marquee span{font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;}
+@keyframes scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none;flex-wrap:wrap;}}
+.rh-story{margin-top:16px;font-size:.98rem;max-width:56ch;}
+.rh-note{margin-top:12px;font-size:.88rem;color:var(--ink-soft);font-style:normal;}
+
+/* ---- Elysian: asymmetric two-column, elevated ---- */
+.card.elevated{border-color:var(--accent);}
+.card.elevated .card-head{background:var(--accent-soft);}
+.ely-grid{display:grid;grid-template-columns:1fr;gap:22px;}
+@media(min-width:600px){.ely-grid{grid-template-columns:1.1fr 1.3fr;}}
+.ely-desc{font-size:1.02rem;max-width:38ch;}
+.ely-value{
+  background:var(--surface-soft);
+  border-left:3px solid var(--accent);
+  padding:14px 16px;
+  font-size:.92rem;color:var(--ink-soft);
+}
+
+/* ---- MilkUp: highlights row w/ micro-delight ---- */
+.highlights{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:14px;font-family:"Sora",sans-serif;font-weight:600;font-size:1.05rem;}
+.highlights span{cursor:default;display:inline-block;transition:transform .22s ease;}
+@media (hover:hover) and (not (prefers-reduced-motion: reduce)){
+  .highlights span:hover{transform:translateY(-3px) rotate(-2deg);color:var(--accent);}
+}
+@media (prefers-reduced-motion: reduce){
+  .highlights span:hover{text-decoration:underline;}
+}
+
+/* ---- Gadget Shop: anchor sub-nav + grouped lists ---- */
+.subnav{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin:16px 0 4px;
+  padding:10px 0;
+  border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
+  position:sticky;top:0;background:var(--surface);
+}
+.subnav a{
+  font-size:.78rem;font-weight:600;letter-spacing:.02em;
+  padding:5px 10px;border-radius:3px;
+  background:var(--surface-soft);
+  text-decoration:none;
+}
+@media (prefers-reduced-motion: no-preference){
+  html{scroll-behavior:smooth;}
+}
+.groups{margin-top:14px;display:grid;gap:16px;}
+.group h4{font-family:"Sora",sans-serif;font-size:.86rem;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px;}
+.group p{margin:0;font-size:.98rem;}
+
+/* ---- Vintage Barbershop: hours-dominant single stack ---- */
+.vb-hours{font-family:"Sora",sans-serif;font-weight:600;font-size:1.15rem;color:var(--heading);margin-top:4px;}
+.vb-desc{margin-top:12px;font-size:.95rem;color:var(--ink-soft);max-width:44ch;}
+
+/* ---- Siyabonga: stock list as hero ---- */
+.sb-desc{font-size:.9rem;color:var(--ink-soft);max-width:52ch;}
+.stocklist{
+  margin-top:16px;
+  font-family:"Sora",sans-serif;font-weight:600;font-size:1.4rem;line-height:1.4;
+  color:var(--heading);
+  max-width:36ch;
+}
+
+footer{
+  margin-top:30px;padding-top:18px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  font-size:.8rem;color:var(--ink-soft);
+}
+footer a{text-decoration:underline;text-underline-offset:2px;}
+
+/* ---- Visfabriek: emphasized real-description eyebrow line ---- */
+.vf-tagline{font-family:"Sora",sans-serif;font-weight:600;font-size:1.15rem;color:var(--heading);max-width:30ch;}
+
+/* ---- Pacific Dried Fruit: split panel ---- */
+.split-panel{display:grid;grid-template-columns:1fr;gap:0;margin-top:14px;border-top:1px solid var(--line-soft);}
+@media(min-width:520px){.split-panel{grid-template-columns:1fr 1fr;}}
+.split-col{padding:14px 0;}
+@media(min-width:520px){.split-col:first-child{border-right:1px solid var(--line-soft);padding-right:20px;}
+.split-col:last-child{padding-left:20px;}}
+.split-col h4{font-family:"Sora",sans-serif;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px;}
+.split-col p{margin:0;font-size:.95rem;}
+
+/* ---- EPC: label-style small-caps group headers ---- */
+.eg-group{margin-top:16px;}
+.eg-head{font-family:"Sora",sans-serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--heading);margin:0 0 4px;}
+.eg-group p{margin:0;font-size:1rem;}
+
+/* ---- Golden Shilajit: benefit pills ---- */
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.pill{
+  background:var(--accent);color:var(--surface);
+  border-radius:999px;padding:5px 14px;
+  font-family:"Sora",sans-serif;font-weight:600;font-size:.82rem;
+}
+
+/* ---- Miller's: weekly hours table ---- */
+.hours-table{margin-top:14px;border-top:1px solid var(--line-soft);}
+.hours-row{display:grid;grid-template-columns:1fr 1.4fr;gap:12px;padding:8px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem;}
+.hours-row span:first-child{font-family:"Sora",sans-serif;font-weight:600;color:var(--heading);}
+
+/* ---- Zaira: focal description, quiet rest ---- */
+.za-desc{font-family:"Sora",sans-serif;font-weight:600;font-size:1.2rem;color:var(--heading);max-width:34ch;}
+
+/* ---- Nappy Warehouse: full-bleed value strip ---- */
+.value-strip{
+  background:var(--accent);color:var(--surface);
+  margin:16px -18px 0;padding:16px 18px;
+  font-family:"Sora",sans-serif;font-weight:600;font-size:1.05rem;
+}
+.flat-list{margin-top:14px;font-size:.95rem;line-height:1.9;}
+
+/* ---- Pagemasters: blockquote aside ---- */
+.blockquote-aside{
+  border-left:2px solid var(--accent);
+  padding-left:14px;margin-top:14px;
+  font-style:italic;font-size:.95rem;color:var(--ink-soft);
+  max-width:48ch;
+}
+
+/* ---- Detail Corner: single-line paired phrase ---- */
+.paired-phrase{margin-top:12px;font-size:1rem;}
+
+/* ---- Curtains On Us: large display tagline ---- */
+.display-tagline{font-family:"Sora",sans-serif;font-weight:700;font-size:clamp(1.3rem,3vw,1.7rem);line-height:1.3;color:var(--heading);max-width:22ch;}
+
+/* ---- Farm Fruit and Veg: deliberately quiet line ---- */
+.quiet-line{font-size:.85rem;color:var(--ink-soft);margin-top:8px;}
+
+/* ---- Crumble Corner: understated lead ---- */
+.lead-quiet{font-size:.85rem;letter-spacing:.02em;color:var(--ink-soft);margin:0 0 4px;}
+
+/* ---- Zama Zama: flat two-column list ---- */
+.two-col-list{display:grid;grid-template-columns:1fr;gap:4px 20px;margin-top:14px;font-size:.95rem;}
+@media(min-width:480px){.two-col-list{grid-template-columns:1fr 1fr;}}
+.two-col-list div{padding:4px 0;}
+
+/* ---- Colorado: small-caps word row ---- */
+.word-row{margin-top:12px;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
+
+/* ---- Snyders: dense spec list ---- */
+.spec-list{margin-top:14px;border-top:1px solid var(--line-soft);}
+.spec-row{padding:7px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem;}
