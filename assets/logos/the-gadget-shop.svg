@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#c2d5e1"/>
+<rect x="48" y="54" width="1504" height="512" fill="#d2e0e8" stroke="#66798a" stroke-width="6"/>
+<text x="502" y="154" fill="#0b1e34" font-family="Arial Black" font-size="42" font-weight="700" text-anchor="middle" dominant-baseline="middle">THE</text>
+<text x="492" y="276" fill="#2c9ee4" font-family="Comic Sans MS" font-size="156" font-weight="700" text-anchor="middle" dominant-baseline="middle" stroke="#263f58" stroke-width="6" paint-order="stroke">GADGET</text>
+<text x="594" y="378" fill="#1b2938" font-family="Arial Black" font-size="78" font-weight="700" text-anchor="middle" dominant-baseline="middle" stroke="#ffffff" stroke-width="3" paint-order="stroke">SHOP</text>
+<text x="600" y="450" fill="#ffffff" font-family="Arial Black" font-size="45" font-weight="700" text-anchor="middle" dominant-baseline="middle" stroke="#344a60" stroke-width="3" paint-order="stroke">CELL PHONE ACCESSORIES</text>
+<text x="600" y="504" fill="#ffffff" font-family="Arial Black" font-size="45" font-weight="700" text-anchor="middle" dominant-baseline="middle" stroke="#344a60" stroke-width="3" paint-order="stroke">&amp; CELLPHONE REPAIRS</text>
+<rect x="1015" y="132" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1091" y="132" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1167" y="132" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1243" y="132" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1319" y="132" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1395" y="132" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1015" y="206" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1091" y="206" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1167" y="206" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1243" y="206" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1319" y="206" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1395" y="206" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1015" y="280" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1091" y="280" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1167" y="280" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1243" y="280" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1319" y="280" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="1395" y="280" width="48" height="30" rx="5" fill="#708594" stroke="#eef3f6" stroke-width="2"/>
+<rect x="58" y="548" width="238" height="46" rx="2" fill="#1465a8"/>
+<text x="177" y="571" fill="#ffffff" font-family="Arial Black" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">SPEAKERS</text>
+<rect x="307" y="548" width="238" height="46" rx="2" fill="#c72f4a"/>
+<text x="426" y="571" fill="#ffffff" font-family="Arial Black" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">HEADSETS</text>
+<rect x="556" y="548" width="238" height="46" rx="2" fill="#3f8f3e"/>
+<text x="675" y="571" fill="#ffffff" font-family="Arial Black" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">AMPLIFIERS</text>
+<rect x="805" y="548" width="238" height="46" rx="2" fill="#7857a8"/>
+<text x="924" y="571" fill="#ffffff" font-family="Arial Black" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">TVS</text>
+<rect x="1054" y="548" width="238" height="46" rx="2" fill="#2c86c1"/>
+<text x="1173" y="571" fill="#ffffff" font-family="Arial Black" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">CAMERAS</text>
+<rect x="1303" y="548" width="238" height="46" rx="2" fill="#7d5799"/>
+<text x="1422" y="571" fill="#ffffff" font-family="Arial Black" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">CHARGERS</text>
+</svg>

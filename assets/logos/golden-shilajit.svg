@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#1d315c"/>
+<rect x="52" y="70" width="1496" height="480" fill="#263e71" stroke="#d9c98f" stroke-width="6"/>
+<polygon points="190,280 382,128 510,210 628,132 794,250 948,112 1246,280" fill="#d8c990"/>
+<polygon points="376,130 428,164 386,158" fill="#ffffff"/>
+<polygon points="943,115 1005,154 953,150" fill="#ffffff"/>
+<text x="800" y="402" fill="#f2e2a5" font-family="Arial Black" font-size="134" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="3">GOLDEN SHILAJIT</text>
+</svg>

@@ -137,6 +137,16 @@ button{font:inherit;color:inherit;}
   font-family:"Sora",sans-serif;font-weight:600;font-size:1.05rem;
   flex-shrink:0;
 }
+.mark-logo{object-fit:contain;padding:4px;box-sizing:border-box;}
+.panel-logo{
+  display:block;
+  max-width:220px;
+  max-height:84px;
+  width:auto;height:auto;
+  margin:0 0 18px;
+  object-fit:contain;
+  border-radius:3px;
+}
 .card-head .meta{min-width:0;display:flex;flex-direction:column;gap:2px;}
 .card-head .name{font-family:"Sora",sans-serif;font-weight:600;font-size:1.02rem;color:var(--heading);}
 .card-head .cat{font-size:.82rem;color:var(--ink-soft);}
