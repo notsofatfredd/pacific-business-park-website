@@ -73,13 +73,10 @@ button{font:inherit;color:inherit;}
 }
 .wordmark{display:inline-flex;align-items:center;text-decoration:none;}
 .nav-logo{display:block;height:28px;width:auto;}
-:root:not([data-theme="light"]) .nav-logo,
-:root[data-theme="dark"] .nav-logo{
-  background:#fff;border-radius:4px;padding:3px 6px;
-}
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]) .nav-logo{background:#fff;border-radius:4px;padding:3px 6px;}
 }
+:root[data-theme="dark"] .nav-logo{background:#fff;border-radius:4px;padding:3px 6px;}
 .topnav-links{display:flex;align-items:center;gap:22px;}
 .topnav-links a{font-size:.86rem;font-weight:600;text-decoration:none;color:var(--ink-soft);}
 .topnav-links a:hover{color:var(--accent);}
