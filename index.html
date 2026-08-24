@@ -58,6 +58,42 @@
     <p class="eyebrow">Weltevreden Valley, Cape Town</p>
     <h1 class="hero-line">A showcase of the businesses that make up Pacific Business Park, not a landlord's directory.</h1>
     <a class="hero-link" href="#storefronts">See the storefronts &#8595;</a>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num" data-count-to="23">0</span><span class="stat-label">Real tenants</span></div>
+      <div class="stat"><span class="stat-num" data-count-to="16">0</span><span class="stat-label">Categories</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="showcase" aria-label="Featured storefronts" data-reveal>
+  <div class="showcase-inner">
+    <div class="showcase-track" id="showcase-track">
+      <button class="showcase-slide is-active" type="button" data-store="elysian-labels" data-name="Elysian Labels" data-cat="Packaging &amp; Labels" style="background-image:url('assets/banners/elysian-labels.svg')">
+        <span class="showcase-overlay"></span>
+        <span class="showcase-name">Elysian Labels</span>
+      </button>
+      <button class="showcase-slide" type="button" data-store="milk-up" data-name="MilkUp Ice Creamery" data-cat="Bakery &amp; Desserts · Unit 6" style="background-image:url('assets/banners/milk-up.svg')">
+        <span class="showcase-overlay"></span>
+        <span class="showcase-name">MilkUp Ice Creamery</span>
+      </button>
+      <button class="showcase-slide" type="button" data-store="the-gadget-shop" data-name="The Gadget Shop" data-cat="Cellular &amp; Electronics · Unit 24" style="background-image:url('assets/banners/the-gadget-shop.svg')">
+        <span class="showcase-overlay"></span>
+        <span class="showcase-name">The Gadget Shop</span>
+      </button>
+      <button class="showcase-slide" type="button" data-store="vintage-barbershop" data-name="Vintage Barbershop" data-cat="Beauty &amp; Personal Care · Unit 22" style="background-image:url('assets/banners/vintage-barbershop.svg')">
+        <span class="showcase-overlay"></span>
+        <span class="showcase-name">Vintage Barbershop</span>
+      </button>
+      <button class="showcase-slide" type="button" data-store="siyabonga-builders" data-name="Siyabonga Builders" data-cat="Hardware &amp; Furniture" style="background-image:url('assets/banners/siyabonga-builders.svg')">
+        <span class="showcase-overlay"></span>
+        <span class="showcase-name">Siyabonga Builders</span>
+      </button>
+      <button class="showcase-slide" type="button" data-store="golden-shilajit" data-name="Golden Shilajit" data-cat="Health &amp; Wellness · Unit 21" style="background-image:url('assets/banners/golden-shilajit.svg')">
+        <span class="showcase-overlay"></span>
+        <span class="showcase-name">Golden Shilajit</span>
+      </button>
+    </div>
+    <div class="showcase-dots" id="showcase-dots" role="tablist" aria-label="Featured storefronts"></div>
   </div>
 </section>
 
@@ -74,7 +110,18 @@
   </div>
 </div>
 
-<section class="about" id="about">
+<section class="specials-strip" aria-label="Pacific Roadhouse specials" data-reveal>
+  <div class="specials-inner">
+    <div>
+      <p class="eyebrow">On The Menu</p>
+      <h3>Pacific Roadhouse — ask about today's specials</h3>
+      <p>The park's own restaurant, part of the Pacific family. Menu details aren't listed yet — call ahead for what's on.</p>
+    </div>
+    <a class="cta primary" href="tel:0213709914">Call · 021 370 9914</a>
+  </div>
+</section>
+
+<section class="about" id="about" data-reveal>
   <div class="about-inner">
     <p class="about-lead">Pacific Business Park is one site built from 23 independent storefronts, not a landlord's directory pointing away from them.</p>
     <p class="about-body">Each business on Jakes Gerwel Drive in Weltevreden Valley keeps its own name, its own storefront, and its own way of doing things — including the park's own restaurant, Pacific Roadhouse, run the same way as every other tenant here.</p>
@@ -93,7 +140,7 @@
 
   <div class="directory">
 
-  <section class="category-group" id="cat-automotive-care">
+  <section class="category-group" id="cat-automotive-care" data-reveal>
     <div class="category-head"><h3>Automotive Care</h3><p class="category-intro">Two storefronts keep vehicles running — cleaning and care, tyres and fitment.</p></div>
     <div class="tile-grid">
       <button class="tile" type="button" data-store="detail-corner" data-name="Detail Corner" data-cat="Automotive Care · Unit 5">
@@ -111,7 +158,7 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-baby-family">
+  <section class="category-group" id="cat-baby-family" data-reveal>
     <div class="category-head"><h3>Baby &amp; Family</h3><p class="category-intro">One storefront, factory prices on baby and adult essentials.</p></div>
     <div class="tile-grid">
       <button class="tile" type="button" data-store="the-nappy-warehouse" data-name="The Nappy Warehouse" data-cat="Baby &amp; Family">
@@ -123,12 +170,11 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-bakery-desserts">
+  <section class="category-group" id="cat-bakery-desserts" data-reveal>
     <div class="category-head"><h3>Bakery &amp; Desserts</h3><p class="category-intro">Ice cream and baked treats, from two of the park's dessert storefronts.</p></div>
     <div class="tile-grid">
       <button class="tile tile-featured" type="button" data-store="milk-up" data-name="MilkUp Ice Creamery" data-cat="Bakery &amp; Desserts · Unit 6">
         <span class="tile-featured-overlay"></span>
-        <img class="tile-featured-logo" src="assets/logos/milk-up.svg" alt="MilkUp Ice Creamery" loading="lazy">
         <span class="tile-featured-meta">
           <span class="tile-name">MilkUp Ice Creamery</span>
           <span class="tile-cat">Bakery &amp; Desserts · Unit 6</span>
@@ -143,7 +189,7 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-beauty-personal-care">
+  <section class="category-group" id="cat-beauty-personal-care" data-reveal>
     <div class="category-head"><h3>Beauty &amp; Personal Care</h3><p class="category-intro">A perfume factory shop and a barbershop, both real personal-care storefronts here.</p></div>
     <div class="tile-grid">
       <button class="tile" type="button" data-store="epc" data-name="EPC (Emily's Perfume Collection)" data-cat="Beauty &amp; Personal Care">
@@ -154,7 +200,6 @@
       </button>
       <button class="tile tile-featured" type="button" data-store="vintage-barbershop" data-name="Vintage Barbershop" data-cat="Beauty &amp; Personal Care · Unit 22">
         <span class="tile-featured-overlay"></span>
-        <img class="tile-featured-logo" src="assets/logos/vintage-barbershop.svg" alt="Vintage Barbershop" loading="lazy">
         <span class="tile-featured-meta">
           <span class="tile-name">Vintage Barbershop</span>
           <span class="tile-cat">Beauty &amp; Personal Care · Unit 22</span>
@@ -163,12 +208,11 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-cellular-electronics">
+  <section class="category-group" id="cat-cellular-electronics" data-reveal>
     <div class="category-head"><h3>Cellular &amp; Electronics</h3><p class="category-intro">One storefront for phone repairs, accessories, and electronics.</p></div>
     <div class="tile-grid">
       <button class="tile tile-featured" type="button" data-store="the-gadget-shop" data-name="The Gadget Shop" data-cat="Cellular &amp; Electronics · Unit 24">
         <span class="tile-featured-overlay"></span>
-        <img class="tile-featured-logo" src="assets/logos/the-gadget-shop.svg" alt="The Gadget Shop" loading="lazy">
         <span class="tile-featured-meta">
           <span class="tile-name">The Gadget Shop</span>
           <span class="tile-cat">Cellular &amp; Electronics · Unit 24</span>
@@ -177,7 +221,7 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-fabric-trims">
+  <section class="category-group" id="cat-fabric-trims" data-reveal>
     <div class="category-head"><h3>Fabric &amp; Trims</h3><p class="category-intro">One storefront for sewing, upholstery, and craft fabric.</p></div>
     <div class="tile-grid">
       <button class="tile" type="button" data-store="plain-fabrics-trim" data-name="Plain Fabrics &amp; Trim" data-cat="Fabric &amp; Trims">
@@ -189,7 +233,7 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-florist-gifts">
+  <section class="category-group" id="cat-florist-gifts" data-reveal>
     <div class="category-head"><h3>Florist &amp; Gifts</h3><p class="category-intro">One storefront for flowers and gifting.</p></div>
     <div class="tile-grid">
       <button class="tile" type="button" data-store="zaira" data-name="Zaira – Blooming Flower" data-cat="Florist &amp; Gifts">
@@ -201,7 +245,7 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-food-retail">
+  <section class="category-group" id="cat-food-retail" data-reveal>
     <div class="category-head"><h3>Food Retail</h3><p class="category-intro">One storefront for fresh and frozen seafood.</p></div>
     <div class="tile-grid">
       <button class="tile" type="button" data-store="visfabriek" data-name="Visfabriek" data-cat="Food Retail">
@@ -213,7 +257,7 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-grocery-snack">
+  <section class="category-group" id="cat-grocery-snack" data-reveal>
     <div class="category-head"><h3>Grocery &amp; Snack</h3><p class="category-intro">Dried fruit and nuts, fresh fruit and veg — two grocery storefronts.</p></div>
     <div class="tile-grid">
       <button class="tile" type="button" data-store="pacific-dried-fruit" data-name="Pacific Dried Fruit" data-cat="Grocery &amp; Snack">
@@ -231,12 +275,11 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-hardware-furniture">
+  <section class="category-group" id="cat-hardware-furniture" data-reveal>
     <div class="category-head"><h3>Hardware &amp; Furniture</h3><p class="category-intro">One storefront for hardware and furniture essentials.</p></div>
     <div class="tile-grid">
       <button class="tile tile-featured" type="button" data-store="siyabonga-builders" data-name="Siyabonga Builders" data-cat="Hardware &amp; Furniture">
         <span class="tile-featured-overlay"></span>
-        <img class="tile-featured-logo" src="assets/logos/siyabonga-builders.svg" alt="Siyabonga Builders" loading="lazy">
         <span class="tile-featured-meta">
           <span class="tile-name">Siyabonga Builders</span>
           <span class="tile-cat">Hardware &amp; Furniture</span>
@@ -245,12 +288,11 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-health-wellness">
+  <section class="category-group" id="cat-health-wellness" data-reveal>
     <div class="category-head"><h3>Health &amp; Wellness</h3><p class="category-intro">One storefront for natural supplements.</p></div>
     <div class="tile-grid">
       <button class="tile tile-featured" type="button" data-store="golden-shilajit" data-name="Golden Shilajit" data-cat="Health &amp; Wellness · Unit 21">
         <span class="tile-featured-overlay"></span>
-        <img class="tile-featured-logo" src="assets/logos/golden-shilajit.svg" alt="Golden Shilajit" loading="lazy">
         <span class="tile-featured-meta">
           <span class="tile-name">Golden Shilajit</span>
           <span class="tile-cat">Health &amp; Wellness · Unit 21</span>
@@ -259,7 +301,7 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-home-decor">
+  <section class="category-group" id="cat-home-decor" data-reveal>
     <div class="category-head"><h3>Home &amp; Decor</h3><p class="category-intro">Three storefronts for the home — textiles, décor, and lifestyle goods.</p></div>
     <div class="tile-grid">
       <button class="tile" type="button" data-store="cozy-collection" data-name="Cozy Collection" data-cat="Home &amp; Decor">
@@ -283,12 +325,11 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-packaging-labels">
+  <section class="category-group" id="cat-packaging-labels" data-reveal>
     <div class="category-head"><h3>Packaging &amp; Labels</h3><p class="category-intro">Two storefronts behind the scenes for other businesses — labels and packaging.</p></div>
     <div class="tile-grid">
       <button class="tile tile-featured tile-elevated" type="button" data-store="elysian-labels" data-name="Elysian Labels" data-cat="Packaging &amp; Labels">
         <span class="tile-featured-overlay"></span>
-        <img class="tile-featured-logo" src="assets/logos/elysian-labels.svg" alt="Elysian Labels" loading="lazy">
         <span class="tile-featured-meta">
           <span class="tile-name">Elysian Labels</span>
           <span class="tile-cat">Packaging &amp; Labels <span class="featured-badge">Featured</span></span>
@@ -303,7 +344,7 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-printing-signage">
+  <section class="category-group" id="cat-printing-signage" data-reveal>
     <div class="category-head"><h3>Printing &amp; Signage</h3><p class="category-intro">One storefront for signage and printing.</p></div>
     <div class="tile-grid">
       <button class="tile" type="button" data-store="pagemasters-graphix" data-name="Pagemasters Graphix" data-cat="Printing &amp; Signage · Unit 4">
@@ -315,7 +356,7 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-restaurant">
+  <section class="category-group" id="cat-restaurant" data-reveal>
     <div class="category-head"><h3>Restaurant</h3><p class="category-intro">The park's own restaurant.</p></div>
     <div class="tile-grid">
       <button class="tile" type="button" data-store="pacific-roadhouse" data-name="Pacific Roadhouse" data-cat="Restaurant">
@@ -327,7 +368,7 @@
     </div>
   </section>
 
-  <section class="category-group" id="cat-travel-services">
+  <section class="category-group" id="cat-travel-services" data-reveal>
     <div class="category-head"><h3>Travel &amp; Services</h3><p class="category-intro">One storefront for travel bookings and tours.</p></div>
     <div class="tile-grid">
       <button class="tile" type="button" data-store="millers-travel-tours" data-name="Miller's Travel &amp; Tours" data-cat="Travel &amp; Services · Unit 20">
