@@ -94,8 +94,24 @@ button{font:inherit;color:inherit;}
   padding:3px 8px;
 }
 
+/* ---- search ---- */
+.search-row{margin-bottom:16px;}
+.search-input{
+  width:100%;
+  padding:11px 14px;
+  border:1px solid var(--line);
+  border-radius:4px;
+  background:var(--surface);
+  color:var(--ink);
+  font:inherit;
+  font-size:.95rem;
+}
+.search-input:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;}
+.no-results{color:var(--ink-soft);font-size:.9rem;padding:4px 0 20px;}
+
 /* ---- directory grid ---- */
 .directory{padding:0 0 8px;display:grid;gap:14px;}
+.card.hidden-by-search{display:none;}
 .card{
   background:var(--surface);
   border:1px solid var(--line);
@@ -121,9 +137,19 @@ button{font:inherit;color:inherit;}
   font-family:"Sora",sans-serif;font-weight:600;font-size:1.05rem;
   flex-shrink:0;
 }
-.card-head .meta{min-width:0;}
+.card-head .meta{min-width:0;display:flex;flex-direction:column;gap:2px;}
 .card-head .name{font-family:"Sora",sans-serif;font-weight:600;font-size:1.02rem;color:var(--heading);}
-.card-head .cat{font-size:.82rem;color:var(--ink-soft);margin-top:2px;}
+.card-head .cat{font-size:.82rem;color:var(--ink-soft);}
+.featured-badge{
+  display:inline-block;
+  margin-left:8px;
+  font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--accent);
+  border:1px solid var(--accent);
+  border-radius:999px;
+  padding:2px 8px;
+  vertical-align:middle;
+}
 .chev{
   width:20px;height:20px;flex-shrink:0;
   transition:transform .18s ease;

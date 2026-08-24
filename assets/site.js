@@ -13,4 +13,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     card.setAttribute('data-open', isOpen ? 'false' : 'true');
   });
+
+  var search = document.getElementById('store-search');
+  var noResults = document.querySelector('.no-results');
+  if (!search) return;
+
+  var cards = Array.prototype.slice.call(directory.querySelectorAll('.card'));
+
+  search.addEventListener('input', function () {
+    var query = search.value.trim().toLowerCase();
+    var visibleCount = 0;
+
+    cards.forEach(function (card) {
+      var name = card.querySelector('.name');
+      var cat = card.querySelector('.cat');
+      var text = ((name ? name.textContent : '') + ' ' + (cat ? cat.textContent : '')).toLowerCase();
+      var matches = query === '' || text.indexOf(query) !== -1;
+      card.classList.toggle('hidden-by-search', !matches);
+      if (matches) visibleCount += 1;
+    });
+
+    if (noResults) noResults.hidden = visibleCount !== 0;
+  });
 });
