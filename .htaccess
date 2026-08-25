@@ -23,6 +23,23 @@
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://www.instagram.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.cdninstagram.com https://*.fbcdn.net https://*.google.com https://*.gstatic.com; frame-src 'self' https://www.instagram.com https://www.google.com https://maps.google.com; connect-src 'self' https://www.instagram.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+
+  # Host runs LiteSpeed with its own server-side page cache (LSCache),
+  # invisible from this file — confirmed live on 2026-08-25: identical
+  # requests (same URL, same user-agent) returned different HTML on
+  # different hits, one of them a stale copy of an old A/B/C concept
+  # switcher that predates this rebuild entirely. Force the HTML shell to
+  # revalidate on every request so a deploy is never masked by a stale
+  # cached page again. Static assets (images/CSS/JS) are untouched by
+  # this and keep caching normally.
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+    Header set X-LiteSpeed-Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+<IfModule LiteSpeed>
+  CacheLookup off
 </IfModule>
 
 <IfModule mod_rewrite.c>
