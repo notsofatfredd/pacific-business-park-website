@@ -131,13 +131,31 @@ a:focus-visible {
   width: max-content;
   display: inline-flex;
   align-items: center;
+  gap: 12px;
   color: var(--white);
   text-decoration: none;
 }
 
+.wordmark-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--white);
+}
+
 .wordmark-logo {
-  height: 38px;
-  width: auto;
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+.wordmark-text {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .desktop-nav {
@@ -987,15 +1005,14 @@ a.event-card:hover {
 
 .site-footer div {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
+  align-items: center;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
-.site-footer strong {
-  font-family: Bahnschrift, "Arial Narrow", "Segoe UI", sans-serif;
-  font-size: 18px;
-  text-transform: uppercase;
+.footer-logo {
+  height: 64px;
+  width: auto;
 }
 
 .site-footer span {
@@ -1101,9 +1118,18 @@ body.event-mode .ticker-track {
     padding: 0 16px;
   }
 
-  .wordmark span,
-  .wordmark strong {
-    font-size: 15px;
+  .wordmark-text {
+    font-size: 13px;
+  }
+
+  .wordmark-chip {
+    width: 34px;
+    height: 34px;
+  }
+
+  .wordmark-logo {
+    height: 25px;
+    width: 25px;
   }
 
   .hero {
