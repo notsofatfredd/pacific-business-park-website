@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#ffffff"/>
+<rect x="40" y="40" width="1520" height="540" rx="22" fill="#ffffff" stroke="#d8dee8" stroke-width="3"/>
+<rect x="130" y="140" width="515" height="130" rx="6" fill="#cf1f32"/>
+<rect x="645" y="140" width="825" height="130" rx="6" fill="#2796d5"/>
+<text x="388" y="205" fill="#ffffff" font-family="Arial Black" font-size="86" font-weight="700" text-anchor="middle" dominant-baseline="middle" stroke="#22384c" stroke-width="3" paint-order="stroke">SIYABONGA</text>
+<text x="1058" y="205" fill="#ffffff" font-family="Arial Black" font-size="88" font-weight="700" text-anchor="middle" dominant-baseline="middle">BUILDERS</text>
+<rect x="205" y="292" width="1190" height="78" rx="6" fill="#8ec640"/>
+<text x="800" y="331" fill="#1f2c21" font-family="Arial Black" font-size="58" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">HARDWARE &amp; FURNITURE</text>
+<rect x="250" y="418" width="150" height="78" rx="8" fill="#f4f6f0" stroke="#9eb1aa" stroke-width="3"/>
+<text x="325" y="458" fill="#334155" font-family="Arial" font-size="30" font-weight="700" text-anchor="middle" dominant-baseline="middle">PAINT</text>
+<rect x="480" y="418" width="150" height="78" rx="8" fill="#f4f6f0" stroke="#9eb1aa" stroke-width="3"/>
+<text x="555" y="458" fill="#334155" font-family="Arial" font-size="30" font-weight="700" text-anchor="middle" dominant-baseline="middle">TOOLS</text>
+<rect x="710" y="418" width="150" height="78" rx="8" fill="#f4f6f0" stroke="#9eb1aa" stroke-width="3"/>
+<text x="785" y="458" fill="#334155" font-family="Arial" font-size="30" font-weight="700" text-anchor="middle" dominant-baseline="middle">DOORS</text>
+<rect x="940" y="418" width="150" height="78" rx="8" fill="#f4f6f0" stroke="#9eb1aa" stroke-width="3"/>
+<text x="1015" y="458" fill="#334155" font-family="Arial" font-size="30" font-weight="700" text-anchor="middle" dominant-baseline="middle">TILES</text>
+<rect x="1170" y="418" width="150" height="78" rx="8" fill="#f4f6f0" stroke="#9eb1aa" stroke-width="3"/>
+<text x="1245" y="458" fill="#334155" font-family="Arial" font-size="30" font-weight="700" text-anchor="middle" dominant-baseline="middle">HOME</text>
+</svg>

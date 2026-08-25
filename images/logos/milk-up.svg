@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#ffffff"/>
+<rect x="38" y="54" width="1524" height="512" rx="10" fill="#ffffff" stroke="#d7dde8" stroke-width="4"/>
+<ellipse cx="802.0" cy="290.0" rx="564.0" ry="196.0" fill="#bceff3" stroke="#1f6089" stroke-width="5"/>
+<polygon points="125,320 230,545 335,320" fill="#e1ab6c" stroke="#3c2a1f" stroke-width="1"/>
+<polyline points="150,336 230,535" fill="none" stroke="#8b5e34" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="200,336 230,535" fill="none" stroke="#8b5e34" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="250,336 230,535" fill="none" stroke="#8b5e34" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="164.0" cy="288.0" rx="56.0" ry="56.0" fill="#f7badb" stroke="#3c2a1f" stroke-width="3"/>
+<ellipse cx="246.5" cy="260.5" rx="62.5" ry="62.5" fill="#f4e37b" stroke="#3c2a1f" stroke-width="3"/>
+<ellipse cx="300.0" cy="290.0" rx="52.0" ry="52.0" fill="#8adbf7" stroke="#3c2a1f" stroke-width="3"/>
+<ellipse cx="237.0" cy="331.0" rx="83.0" ry="37.0" fill="#f7badb" stroke="#3c2a1f" stroke-width="3"/>
+<text x="768" y="250" fill="#281568" font-family="Georgia" font-size="126" font-weight="700" text-anchor="middle" dominant-baseline="middle" stroke="#ffffff" stroke-width="3" paint-order="stroke">MilkUp</text>
+<text x="770" y="362" fill="#281568" font-family="Georgia" font-size="74" font-weight="700" text-anchor="middle" dominant-baseline="middle">Ice Creamery</text>
+<text x="800" y="475" fill="#281568" font-family="Arial" font-size="31" font-weight="700" text-anchor="middle" dominant-baseline="middle">ICE CREAM      WAFFLES      MILKSHAKES      POPCORN      DESSERTS</text>
+</svg>

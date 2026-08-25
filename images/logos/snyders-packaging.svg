@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#ffffff"/>
+<rect x="40" y="40" width="1520" height="540" rx="22" fill="#ffffff" stroke="#d8dee8" stroke-width="3"/>
+<text x="510" y="250" fill="#111827" font-family="Arial" font-size="100" font-weight="700" text-anchor="middle" dominant-baseline="middle">Snyders</text>
+<text x="980" y="250" fill="#111827" font-family="Arial" font-size="100" font-weight="700" text-anchor="middle" dominant-baseline="middle">packaging</text>
+<polyline points="165,332 1435,332" fill="none" stroke="#d5d9df" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="800" y="420" fill="#111827" font-family="Arial" font-size="42" font-weight="700" text-anchor="middle" dominant-baseline="middle">Biscuit Trays     Pads &amp; Divisions</text>
+</svg>

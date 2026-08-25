@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#f7f8f6"/>
+<rect x="38" y="54" width="1524" height="512" rx="10" fill="#ffffff" stroke="#d7dde8" stroke-width="4"/>
+<ellipse cx="800.0" cy="263.0" rx="562.0" ry="189.0" fill="#117455" stroke="#0d3e34" stroke-width="10"/>
+<polyline points="520,82 520,450" fill="none" stroke="#d9eee7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="980,82 980,450" fill="none" stroke="#d9eee7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="606" y="124" width="132" height="282" fill="#f4f8f5" stroke="#e1ece6" stroke-width="3"/>
+<text x="672" y="265" fill="#1f483e" font-family="Georgia" font-size="140" font-weight="700" text-anchor="middle" dominant-baseline="middle">C</text>
+<text x="772" y="206" fill="#ffffff" font-family="Arial" font-size="78" font-weight="700" text-anchor="start" dominant-baseline="middle">COZY</text>
+<text x="772" y="314" fill="#ffffff" font-family="Arial" font-size="70" font-weight="700" text-anchor="start" dominant-baseline="middle">COLLECTION</text>
+<text x="800" y="540" fill="#111111" font-family="Arial" font-size="82" font-weight="700" text-anchor="middle" dominant-baseline="middle">065 906 2887</text>
+</svg>

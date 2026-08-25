@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#ffffff"/>
+<rect x="38" y="54" width="1524" height="512" rx="10" fill="#ffffff" stroke="#d7dde8" stroke-width="4"/>
+<polygon points="130,250 386,112 314,272 430,372 150,334" fill="#bd2839"/>
+<polyline points="160,205 350,130" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="160,238 350,163" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="160,272 350,197" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="160,306 350,231" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="900" y="236" fill="#bd2839" font-family="Arial Black" font-size="104" font-weight="700" text-anchor="middle" dominant-baseline="middle" stroke="#ffffff" stroke-width="3" paint-order="stroke">PAGEMASTERS</text>
+<text x="900" y="344" fill="#20232a" font-family="Arial Black" font-size="132" font-weight="700" text-anchor="middle" dominant-baseline="middle">GRAPHIX</text>
+<text x="900" y="428" fill="#111111" font-family="Arial" font-size="42" font-weight="700" text-anchor="middle" dominant-baseline="middle">For all your signage and printing requirements</text>
+<ellipse cx="682.0" cy="492.0" rx="20.0" ry="20.0" fill="#bd2839"/>
+<text x="682" y="492" fill="#ffffff" font-family="Arial Black" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="middle">IG</text>
+<ellipse cx="754.0" cy="492.0" rx="20.0" ry="20.0" fill="#bd2839"/>
+<text x="754" y="492" fill="#ffffff" font-family="Arial Black" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="middle">TW</text>
+<ellipse cx="826.0" cy="492.0" rx="20.0" ry="20.0" fill="#bd2839"/>
+<text x="826" y="492" fill="#ffffff" font-family="Arial Black" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="middle">WA</text>
+<ellipse cx="898.0" cy="492.0" rx="20.0" ry="20.0" fill="#bd2839"/>
+<text x="898" y="492" fill="#ffffff" font-family="Arial Black" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="middle">FB</text>
+<text x="900" y="552" fill="#111111" font-family="Arial" font-size="29" font-weight="700" text-anchor="middle" dominant-baseline="middle">Call Us On 082 526 8166 / 083 825 2211  |  www.pagemastersgraphix.com</text>
+</svg>

@@ -72,11 +72,10 @@
     <header class="site-header">
       <div class="nav-shell">
         <a class="brand" href="#home" aria-label="Pacific Business Park home">
-          <img
-            src="images/pacific-business-park-logo.png"
-            alt="Pacific Business Park logo"
-            class="brand-logo"
-          />
+          <span class="brand-chip">
+            <img src="images/pacific-symbol-with-building.png" alt="" class="brand-logo" />
+          </span>
+          <span class="brand-text">Pacific Business Park</span>
         </a>
 
         <nav class="nav-links" aria-label="Main navigation">
@@ -87,6 +86,11 @@
         </nav>
 
         <div class="header-actions">
+          <div class="live-status" id="header-status" aria-live="polite">
+            <span class="status-dot"></span>
+            <span id="header-status-label">Checking hours</span>
+          </div>
+
           <button
             class="theme-toggle"
             id="themeToggle"
@@ -120,6 +124,7 @@
 
     <main id="home">
       <section class="hero">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
         <div class="hero-overlay"></div>
         <div class="hero-panel">
           <p class="hero-kicker">Weltevreden Valley, Cape Town</p>
@@ -227,12 +232,10 @@
               autocomplete="off"
             />
           </label>
-          <label class="field">
-            <span>Category</span>
-            <select id="category-filter">
-              <option value="all">All categories</option>
-            </select>
-          </label>
+        </div>
+
+        <div class="category-tabs" id="category-tabs" role="group" aria-label="Filter by category">
+          <button type="button" class="category-tab active" data-category="all">All</button>
         </div>
 
         <div class="alpha-filter" id="alpha-filter" aria-label="A to Z filter">
@@ -357,14 +360,26 @@
       <section id="map" class="section unit-map">
         <div class="section-heading">
           <p class="eyebrow">Find Your Store</p>
-          <h2>Unit reference.</h2>
+          <h2>25 units, phase one.</h2>
+          <p>
+            A schematic of the centre's units, not a surveyed floor plan.
+            Click a unit to see what's trading there — or, if it's still
+            open, to enquire.
+          </p>
         </div>
-        <div class="unit-grid" id="unit-grid">
-          <!-- Rendered from assets/stores-data.js by assets/site.js -->
+        <div class="plan-layout">
+          <div class="plan-grid" id="plan-grid" role="list" aria-label="Phase one units"></div>
+          <aside class="plan-detail" id="plan-detail" aria-live="polite">
+            <p class="plan-detail-number" id="plan-detail-number">Unit 01</p>
+            <p class="plan-detail-status" id="plan-detail-status"></p>
+            <h3 id="plan-detail-name"></h3>
+            <p id="plan-detail-desc"></p>
+            <div class="plan-detail-actions" id="plan-detail-actions"></div>
+          </aside>
         </div>
         <p class="unit-note">
-          Confirmed unit numbers shown — more are added as they're confirmed
-          on-site. Not a full centre map.
+          11 units confirmed on-site. The other trading stores' unit numbers
+          are placeholders pending confirmation — flagged "TBC" until then.
         </p>
       </section>
 
@@ -482,7 +497,12 @@
 
     <footer class="site-footer">
       <div class="footer-main">
-        <h3>Pacific Business Park</h3>
+        <h3 class="footer-brand">
+          <span class="brand-chip">
+            <img src="images/pacific-symbol-with-building.png" alt="" class="brand-logo" />
+          </span>
+          <span>Pacific Business Park</span>
+        </h3>
         <p>Cape Town, South Africa</p>
         <p>
           <a href="mailto:info@pacificbusinesspark.co.za"
@@ -526,6 +546,19 @@
       </div>
       <p class="copyright">&copy; 2026 Pacific Business Park. All rights reserved.</p>
     </footer>
+
+    <dialog class="store-dialog" id="store-dialog" aria-labelledby="dialog-name">
+      <div class="dialog-shell">
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="Close store details">&times;</button>
+        <div class="dialog-brand" id="dialog-brand"></div>
+        <p class="dialog-category" id="dialog-category"></p>
+        <h2 id="dialog-name"></h2>
+        <p class="dialog-meta" id="dialog-meta"></p>
+        <p class="dialog-hours" id="dialog-hours"></p>
+        <p id="dialog-description"></p>
+        <div class="dialog-actions" id="dialog-actions"></div>
+      </div>
+    </dialog>
 
     <script src="assets/stores-data.js"></script>
     <script src="assets/site.js" defer></script>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#ffffff"/>
+<rect x="40" y="40" width="1520" height="540" rx="22" fill="#ffffff" stroke="#d8dee8" stroke-width="3"/>
+<polygon points="700,116 736,116 744,152 708,152" fill="#111827"/>
+<polygon points="736,116 772,116 780,152 744,152" fill="#ffffff"/>
+<polygon points="772,116 808,116 816,152 780,152" fill="#111827"/>
+<polygon points="808,116 844,116 852,152 816,152" fill="#ffffff"/>
+<polygon points="844,116 880,116 888,152 852,152" fill="#111827"/>
+<polygon points="880,116 916,116 924,152 888,152" fill="#ffffff"/>
+<polygon points="916,116 952,116 960,152 924,152" fill="#111827"/>
+<polygon points="708,152 744,152 752,188 716,188" fill="#ffffff"/>
+<polygon points="744,152 780,152 788,188 752,188" fill="#111827"/>
+<polygon points="780,152 816,152 824,188 788,188" fill="#ffffff"/>
+<polygon points="816,152 852,152 860,188 824,188" fill="#111827"/>
+<polygon points="852,152 888,152 896,188 860,188" fill="#ffffff"/>
+<polygon points="888,152 924,152 932,188 896,188" fill="#111827"/>
+<polygon points="924,152 960,152 968,188 932,188" fill="#ffffff"/>
+<polygon points="716,188 752,188 760,224 724,224" fill="#111827"/>
+<polygon points="752,188 788,188 796,224 760,224" fill="#ffffff"/>
+<polygon points="788,188 824,188 832,224 796,224" fill="#111827"/>
+<polygon points="824,188 860,188 868,224 832,224" fill="#ffffff"/>
+<polygon points="860,188 896,188 904,224 868,224" fill="#111827"/>
+<polygon points="896,188 932,188 940,224 904,224" fill="#ffffff"/>
+<polygon points="932,188 968,188 976,224 940,224" fill="#111827"/>
+<polygon points="724,224 760,224 768,260 732,260" fill="#ffffff"/>
+<polygon points="760,224 796,224 804,260 768,260" fill="#111827"/>
+<polygon points="796,224 832,224 840,260 804,260" fill="#ffffff"/>
+<polygon points="832,224 868,224 876,260 840,260" fill="#111827"/>
+<polygon points="868,224 904,224 912,260 876,260" fill="#ffffff"/>
+<polygon points="904,224 940,224 948,260 912,260" fill="#111827"/>
+<polygon points="940,224 976,224 984,260 948,260" fill="#ffffff"/>
+<polygon points="732,260 768,260 776,296 740,296" fill="#111827"/>
+<polygon points="768,260 804,260 812,296 776,296" fill="#ffffff"/>
+<polygon points="804,260 840,260 848,296 812,296" fill="#111827"/>
+<polygon points="840,260 876,260 884,296 848,296" fill="#ffffff"/>
+<polygon points="876,260 912,260 920,296 884,296" fill="#111827"/>
+<polygon points="912,260 948,260 956,296 920,296" fill="#ffffff"/>
+<polygon points="948,260 984,260 992,296 956,296" fill="#111827"/>
+<text x="364" y="292" fill="#1b2330" font-family="Arial Black" font-size="104" font-weight="700" text-anchor="middle" dominant-baseline="middle" stroke="#ffffff" stroke-width="2" paint-order="stroke">DETAIL</text>
+<text x="914" y="292" fill="#116ab5" font-family="Arial Black" font-size="104" font-weight="700" text-anchor="middle" dominant-baseline="middle" stroke="#ffffff" stroke-width="2" paint-order="stroke">CORNER</text>
+<text x="800" y="390" fill="#d12d36" font-family="Arial Black" font-size="44" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">PREMIUM CAR AND HOUSEHOLD PRODUCTS</text>
+<text x="800" y="474" fill="#d12d36" font-family="Arial" font-size="48" font-weight="700" text-anchor="middle" dominant-baseline="middle">082 898 6893 / 076 559 5639</text>
+</svg>

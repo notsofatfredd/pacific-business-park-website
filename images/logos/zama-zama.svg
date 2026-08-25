@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#1f252e"/>
+<rect x="38" y="66" width="1524" height="488" fill="#202630" stroke="#aeb5bf" stroke-width="5"/>
+<polygon points="0,128 1600,60 1600,246 0,330" fill="#b02031"/>
+<ellipse cx="295.0" cy="360.0" rx="175.0" ry="100.0" fill="#111820" stroke="#3b4654" stroke-width="4"/>
+<polygon points="165,390 245,308 392,304 492,356 558,370 566,412 178,412" fill="#2a313c" stroke="#8d97a3" stroke-width="4"/>
+<rect x="285" y="318" width="86" height="42" fill="#71869a"/>
+<rect x="380" y="324" width="72" height="36" fill="#71869a"/>
+<ellipse cx="269.0" cy="419.0" rx="33.0" ry="33.0" fill="#0b0f14" stroke="#bcc4cf" stroke-width="4"/>
+<ellipse cx="509.0" cy="419.0" rx="33.0" ry="33.0" fill="#0b0f14" stroke="#bcc4cf" stroke-width="4"/>
+<text x="910" y="214" fill="#d73c44" font-family="Arial Black" font-size="128" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="4" stroke="#ffffff" stroke-width="5" paint-order="stroke">ZAMA ZAMA</text>
+<text x="910" y="332" fill="#ffffff" font-family="Arial Black" font-size="66" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="8">AUTO FITMENT CENTRE</text>
+<text x="910" y="424" fill="#ffffff" font-family="Arial" font-size="44" font-weight="700" text-anchor="middle" dominant-baseline="middle">CALL 071 895 6445</text>
+<text x="910" y="506" fill="#ffffff" font-family="Arial" font-size="36" font-weight="700" text-anchor="middle" dominant-baseline="middle">WHEELS   TYRES   SOUND   SUSPENSION   ACCESSORIES</text>
+<rect x="1296" y="72" width="246" height="154" fill="#b02031" stroke="#ffffff" stroke-width="2"/>
+<text x="1419" y="124" fill="#ffffff" font-family="Arial Black" font-size="27" font-weight="700" text-anchor="middle" dominant-baseline="middle">TUNE-UPS</text>
+<text x="1419" y="166" fill="#ffffff" font-family="Arial Black" font-size="27" font-weight="700" text-anchor="middle" dominant-baseline="middle">SHOCKS</text>
+<text x="1419" y="207" fill="#ffffff" font-family="Arial Black" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">ACCESSORIES</text>
+</svg>

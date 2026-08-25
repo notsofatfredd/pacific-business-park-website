@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#ffffff"/>
+<rect x="0" y="0" width="1600" height="620" fill="#2d3742"/>
+<polyline points="0,0 1600,0" fill="none" stroke="#394552" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="0,86 1600,86" fill="none" stroke="#394552" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="0,172 1600,172" fill="none" stroke="#394552" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="0,258 1600,258" fill="none" stroke="#394552" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="0,344 1600,344" fill="none" stroke="#394552" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="0,430 1600,430" fill="none" stroke="#394552" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="0,516 1600,516" fill="none" stroke="#394552" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="0,602 1600,602" fill="none" stroke="#394552" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="0,0 0,620" fill="none" stroke="#34404c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="150,0 150,620" fill="none" stroke="#34404c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="300,0 300,620" fill="none" stroke="#34404c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="450,0 450,620" fill="none" stroke="#34404c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="600,0 600,620" fill="none" stroke="#34404c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="750,0 750,620" fill="none" stroke="#34404c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="900,0 900,620" fill="none" stroke="#34404c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1050,0 1050,620" fill="none" stroke="#34404c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1200,0 1200,620" fill="none" stroke="#34404c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1350,0 1350,620" fill="none" stroke="#34404c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1500,0 1500,620" fill="none" stroke="#34404c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="800.0" cy="249.0" rx="402.0" ry="153.0" fill="#30404c" stroke="#e5a37d" stroke-width="12"/>
+<ellipse cx="800.0" cy="249.0" rx="370.0" ry="127.0" fill="none" stroke="#f5dfc9" stroke-width="3"/>
+<text x="800" y="205" fill="#ffffff" font-family="Georgia" font-size="94" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="3">COLORADO</text>
+<text x="800" y="292" fill="#ffffff" font-family="Segoe Print" font-size="62" font-weight="700" text-anchor="middle" dominant-baseline="middle">canvas &amp; comfort</text>
+<text x="800" y="366" fill="#ffffff" font-family="Arial" font-size="30" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="4">STATIONERY &amp; HOMEWARE</text>
+<rect x="122" y="480" width="565" height="86" rx="8" fill="#1f2833" stroke="#e5a37d" stroke-width="3"/>
+<rect x="913" y="480" width="565" height="86" rx="8" fill="#1f2833" stroke="#e5a37d" stroke-width="3"/>
+<text x="405" y="525" fill="#ffffff" font-family="Arial" font-size="42" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="3">STATIONERY</text>
+<text x="1196" y="525" fill="#ffffff" font-family="Arial" font-size="42" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="3">HOMEWARE</text>
+</svg>

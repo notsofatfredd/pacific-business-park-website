@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#ffffff"/>
+<rect x="40" y="40" width="1520" height="540" rx="22" fill="#f9fbff" stroke="#d8dee8" stroke-width="3"/>
+<text x="800" y="205" fill="#102d5a" font-family="Arial Black" font-size="174" font-weight="700" text-anchor="middle" dominant-baseline="middle" letter-spacing="8" stroke="#9fc52c" stroke-width="8" paint-order="stroke">PLAIN</text>
+<text x="800" y="342" fill="#2c4e29" font-family="Segoe Print" font-size="84" font-weight="700" text-anchor="middle" dominant-baseline="middle" stroke="#d4e477" stroke-width="5" paint-order="stroke">Fabrics &amp; Trim</text>
+<text x="800" y="450" fill="#9fc52c" font-family="Arial Black" font-size="66" font-weight="700" text-anchor="middle" dominant-baseline="middle" stroke="#31404c" stroke-width="3" paint-order="stroke">082 994 7514</text>
+<text x="800" y="535" fill="#9fc52c" font-family="Arial Black" font-size="66" font-weight="700" text-anchor="middle" dominant-baseline="middle" stroke="#31404c" stroke-width="3" paint-order="stroke">062 664 2244</text>
+</svg>

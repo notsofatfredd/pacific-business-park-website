@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" shape-rendering="geometricPrecision">
+<rect width="1600" height="620" fill="#ffffff"/>
+<rect x="38" y="54" width="1524" height="512" rx="10" fill="#ffffff" stroke="#d7dde8" stroke-width="4"/>
+<rect x="110" y="145" width="315" height="240" rx="8" fill="#101a45"/>
+<rect x="144" y="199" width="244" height="138" rx="3" fill="#f3f8fb"/>
+<polygon points="158,201 194,201 180,335 142,335" fill="#2b77b9"/>
+<polygon points="204,201 240,201 226,335 188,335" fill="#2b77b9"/>
+<polygon points="250,201 286,201 272,335 234,335" fill="#2b77b9"/>
+<polygon points="296,201 332,201 318,335 280,335" fill="#2b77b9"/>
+<polygon points="342,201 378,201 364,335 326,335" fill="#2b77b9"/>
+<polyline points="132,183 402,183" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="500" y="230" fill="#0d1745" font-family="Arial Black" font-size="118" font-weight="700" text-anchor="start" dominant-baseline="middle" letter-spacing="3">CURTAINS</text>
+<text x="508" y="342" fill="#1871b7" font-family="Arial Black" font-size="72" font-weight="700" text-anchor="start" dominant-baseline="middle" letter-spacing="5">ON US</text>
+<text x="800" y="498" fill="#111111" font-family="Arial" font-size="46" font-weight="700" text-anchor="middle" dominant-baseline="middle">Find The Perfect Pieces To Match Your Unique Taste</text>
+</svg>
