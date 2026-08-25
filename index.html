@@ -1,536 +1,309 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Pacific Business Park | Stores, Events & Shopping in Cape Town</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#050505" />
+    <title>Pacific Roadhouse | Pacific Business Park's Own Restaurant</title>
     <meta
       name="description"
-      content="Pacific Business Park in Cape Town. Explore stores, events, opening day activity, trading hours, and visitor information."
+      content="Pacific Roadhouse — Pacific Business Park's own restaurant, part of the Pacific family. Find us at 1E Jakes Gerwel Drive, Weltevreden Valley, Cape Town."
     />
-    <link rel="canonical" href="https://pacificbusinesspark.co.za/" />
 
-    <!-- Favicons / home-screen icons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png" />
-    <meta name="theme-color" content="#f7faff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#203a5c" media="(prefers-color-scheme: dark)" />
 
-    <!-- Synchronous, render-blocking by design — sets data-theme before first
-         paint so there's no flash of the wrong theme. Manual choice wins over
-         system preference; no stored choice means "follow system". -->
-    <script src="assets/theme-init.js"></script>
-
-    <!-- Open Graph / social share -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Pacific Business Park" />
-    <meta property="og:title" content="Pacific Business Park | Stores, Events & Shopping in Cape Town" />
-    <meta
-      property="og:description"
-      content="Pacific Business Park in Cape Town. Explore stores, events, opening day activity, trading hours, and visitor information."
-    />
-    <meta property="og:image" content="https://pacificbusinesspark.co.za/images/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://pacificbusinesspark.co.za/" />
-    <meta property="og:locale" content="en_ZA" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Pacific Business Park | Stores, Events & Shopping in Cape Town" />
-    <meta
-      name="twitter:description"
-      content="Pacific Business Park in Cape Town. Explore stores, events, opening day activity, trading hours, and visitor information."
-    />
-    <meta name="twitter:image" content="https://pacificbusinesspark.co.za/images/og-image.jpg" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="vendor/lucide.min.js" defer></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <div class="top-strip">
-      <a
-        class="top-address"
-        href="https://www.google.com/maps/search/?api=1&query=1E+Jakes+Gerwel+Drive,+Cape+Town"
-        target="_blank"
-        rel="noopener noreferrer"
-        >1E Jakes Gerwel Drive, Cape Town</a
-      >
-      <p>Mon-Sat: 09:00-18:00 | Sun: 09:00-13:00</p>
-      <a href="mailto:info@pacificbusinesspark.co.za"
-        >info@pacificbusinesspark.co.za</a
-      >
-    </div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
 
-    <header class="site-header">
-      <div class="nav-shell">
-        <a class="brand" href="#home" aria-label="Pacific Business Park home">
-          <img
-            src="images/pacific-business-park-logo.png"
-            alt="Pacific Business Park logo"
-            class="brand-logo"
-          />
-        </a>
+    <header class="site-header" id="site-header">
+      <a class="wordmark" href="#home" aria-label="Pacific Roadhouse home">
+        <img class="wordmark-logo" src="images/pacific-roadhouse-logo-white.png" alt="Pacific Roadhouse" />
+      </a>
 
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#directory">Shops</a>
-          <a href="#opening-day">What's On</a>
-          <a href="#social">Follow</a>
-          <a href="#contact">Visit Us</a>
-        </nav>
-
-        <div class="header-actions">
-          <button
-            class="theme-toggle"
-            id="themeToggle"
-            type="button"
-            aria-label="Switch to dark theme"
-            aria-pressed="false"
-          >
-            <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
-            <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
-          </button>
-
-          <button
-            id="mobile-menu-button"
-            class="mobile-menu-button"
-            type="button"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            Menu
-          </button>
-        </div>
-      </div>
-
-      <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
-        <a href="#directory">Shops</a>
-        <a href="#opening-day">What's On</a>
-        <a href="#social">Follow</a>
-        <a href="#contact">Visit Us</a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#today">Today</a>
+        <a href="#social">What's on</a>
+        <a href="#pulse">Rhythm</a>
+        <a href="#visit">Visit</a>
       </nav>
+
+      <div class="header-actions">
+        <div class="status-pill" id="status-pill" aria-live="polite">
+          <span class="status-dot"></span>
+          <span id="status-label">Checking hours</span>
+        </div>
+        <button class="icon-button nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
     </header>
 
-    <main id="home">
-      <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-panel">
-          <p class="hero-kicker">Weltevreden Valley, Cape Town</p>
-          <h1>Everything you need, close to home.</h1>
-          <p class="hero-copy">
-            23 stores and counting at Pacific Business Park — Jakes Gerwel
-            Drive's everyday shopping destination.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#directory"
-              >Browse Stores <span aria-hidden="true">&rarr;</span></a
-            >
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="#today"><span>Today</span><i data-lucide="arrow-up-right"></i></a>
+      <a href="#social"><span>What's on</span><i data-lucide="arrow-up-right"></i></a>
+      <a href="#pulse"><span>Rhythm</span><i data-lucide="arrow-up-right"></i></a>
+      <a href="#visit"><span>Visit</span><i data-lucide="arrow-up-right"></i></a>
+    </nav>
+
+    <main id="main-content">
+      <section class="hero" id="home" aria-label="Pacific Roadhouse">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="texture-screen" aria-hidden="true"></div>
+
+        <div class="hero-shell">
+          <div class="hero-topline" data-reveal>
+            <span class="live-chip">
+              <i data-lucide="clock-3"></i>
+              <span id="hero-hours-chip">Mon-Sat 09:00-18:00 · Sun 09:00-13:00</span>
+            </span>
+            <button class="mode-switch" id="event-mode-button" type="button" aria-pressed="false">
+              <i data-lucide="moon"></i>
+              <span>Night mode</span>
+            </button>
           </div>
-          <div class="hero-meta">
-            <article>
-              <strong>25</strong>
-              <span>Retail units in phase one</span>
-            </article>
-            <article>
-              <strong>23 Confirmed</strong>
-              <span>Stores currently trading</span>
-            </article>
-            <article>
-              <strong>Spring Market</strong>
-              <span>29 August 2026</span>
-            </article>
+
+          <div class="hero-grid">
+            <div class="hero-copy" data-reveal>
+              <p class="eyebrow">The centre's own restaurant</p>
+              <h1>Pacific Roadhouse</h1>
+              <p class="hero-intro">
+                Part of the Pacific family, serving Pacific Business Park every day. Ask in-store for what's on the board today.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-light" href="#today">
+                  <span>See today</span>
+                  <i data-lucide="arrow-down-right"></i>
+                </a>
+                <a class="button button-ghost" href="tel:0213709914">
+                  <i data-lucide="phone"></i>
+                  <span>Call 021 370 9914</span>
+                </a>
+              </div>
+            </div>
+
+            <aside class="counter-board" aria-label="Find us" data-reveal>
+              <div class="board-header">
+                <span>Pacific family</span>
+                <strong>Roadhouse</strong>
+              </div>
+              <div class="order-row">
+                <span><i data-lucide="phone"></i></span>
+                <strong>021 370 9914</strong>
+                <em>Call</em>
+              </div>
+              <div class="order-row muted">
+                <span><i data-lucide="map-pin"></i></span>
+                <strong>1E Jakes Gerwel Dr</strong>
+                <em>Unit</em>
+              </div>
+              <div class="order-row muted">
+                <span><i data-lucide="calendar"></i></span>
+                <strong>Mon-Sat 9-6</strong>
+                <em>Hours</em>
+              </div>
+              <div class="board-footer">
+                <span id="live-clock">--:--</span>
+                <span>Cape Town time</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <a class="hero-peek" href="#today" aria-label="Jump to today's specials">
+          <span>Today's board</span>
+          <i data-lucide="chevrons-down"></i>
+        </a>
+      </section>
+
+      <section class="ticker-band" aria-label="Pacific Roadhouse">
+        <div class="ticker-track">
+          <span>Pacific family</span><b></b>
+          <span>Pacific Business Park</span><b></b>
+          <span>Ask in-store for today's board</span><b></b>
+          <span>021 370 9914</span><b></b>
+          <span>Weltevreden Valley</span><b></b>
+          <span aria-hidden="true">Pacific family</span><b aria-hidden="true"></b>
+          <span aria-hidden="true">Pacific Business Park</span><b aria-hidden="true"></b>
+          <span aria-hidden="true">Ask in-store for today's board</span><b aria-hidden="true"></b>
+          <span aria-hidden="true">021 370 9914</span><b aria-hidden="true"></b>
+          <span aria-hidden="true">Weltevreden Valley</span><b aria-hidden="true"></b>
+        </div>
+      </section>
+
+      <section class="section today-section" id="today">
+        <div class="section-shell today-layout">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Today only</p>
+            <h2>Pick a moment. The board reacts.</h2>
+            <p>
+              Morning, midday, or evening — the counter changes through the day. Ask in-store for exactly what's on right now.
+            </p>
+          </div>
+
+          <div class="special-stage" data-reveal aria-live="polite">
+            <div class="stage-meta">
+              <span id="special-time">09:00 - 12:00</span>
+              <span id="special-pace">Doors open</span>
+            </div>
+            <h3 id="special-title">Morning counter</h3>
+            <p id="special-copy">
+              The day starts here — ask in-store for what's fresh on the board this morning.
+            </p>
+            <div class="stage-bottom">
+              <a class="button button-dark" href="tel:0213709914">
+                <span>Call 021 370 9914</span>
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="ticket-stack" id="ticket-stack" data-reveal>
+            <button class="special-ticket active" type="button" data-special="morning">
+              <span class="ticket-number">01</span>
+              <strong>Morning</strong>
+              <small>09:00 - 12:00</small>
+            </button>
+            <button class="special-ticket" type="button" data-special="midday">
+              <span class="ticket-number">02</span>
+              <strong>Midday</strong>
+              <small>12:00 - 15:00</small>
+            </button>
+            <button class="special-ticket" type="button" data-special="evening">
+              <span class="ticket-number">03</span>
+              <strong>Evening</strong>
+              <small>15:00 - 18:00</small>
+            </button>
           </div>
         </div>
       </section>
 
-      <section class="section showcase" aria-label="Store showcase">
-        <div class="badge-stage" id="storeShowcase">
-          <div class="badge-ring"></div>
-          <p class="badge-counter" id="showcaseCounter"></p>
-        </div>
-      </section>
+      <section class="section events-section" id="social">
+        <div class="section-shell">
+          <div class="section-heading section-heading-dark" data-reveal>
+            <p class="eyebrow">Stay close</p>
+            <h2>Follow along for what's on.</h2>
+            <p>
+              Specials, events, and the day-to-day at the counter — the fastest way to see it is where the centre already posts.
+            </p>
+          </div>
 
-      <section id="opening-day" class="section opening-day">
-        <div class="section-heading">
-          <p class="eyebrow">What's On</p>
-          <h2>Events and activations at the centre.</h2>
-        </div>
-        <div class="opening-grid">
-          <article class="opening-card">
-            <h3>Spring Market — Saturday, 29 August 2026</h3>
-            <p class="opening-time">9:00 AM - 9:00 PM</p>
-            <p>Food, vendors, shopping and entertainment at Pacific Business Park.</p>
+          <div class="events-grid">
             <a
-              href="https://www.google.com/maps/search/?api=1&query=1E+Jakes+Gerwel+Drive,+Cape+Town"
-              class="btn btn-primary"
+              class="event-card tall"
+              href="https://www.instagram.com/pacific_business_park/"
               target="_blank"
               rel="noopener noreferrer"
-              >Get Directions</a
+              data-reveal
             >
-          </article>
-          <article class="opening-card">
-            <h3>Vendors wanted for Spring Market</h3>
-            <p>
-              Food trucks, food vendors, small businesses and stall owners —
-              join us on the day.
-            </p>
-            <p class="opening-note">
-              Contact <a href="mailto:pacificbp786@gmail.com">pacificbp786@gmail.com</a>
-              or WhatsApp 066 421 4085 to take part.
-            </p>
-          </article>
-          <article class="opening-card">
-            <h3>Upcoming Centre Activity</h3>
-            <ul class="opening-vendors">
-              <li>Weekend in-store specials announcements</li>
-              <li>School holiday family activation updates</li>
-              <li>Seasonal retail promotions and centre events</li>
-            </ul>
-            <p class="opening-note">
-              Follow our updates for new event announcements.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section roadhouse" aria-label="Pacific Roadhouse specials">
-        <div class="roadhouse-strip">
-          <div class="roadhouse-info">
-            <p class="eyebrow">On The Menu</p>
-            <h3>Pacific Roadhouse — today's specials</h3>
-            <p>The centre's own restaurant, part of the Pacific family. Ask in-store for the current specials board.</p>
+              <span>Instagram</span>
+              <h3>@pacific_business_park</h3>
+              <p>Real posts from the centre — specials, events, and tenant spotlights. Follow for what's new.</p>
+              <span class="event-card-link">Open Instagram <i data-lucide="arrow-up-right"></i></span>
+            </a>
+            <article class="event-card" data-reveal>
+              <span>Ask in-store</span>
+              <h3>The board changes daily</h3>
+              <p>No two days run the same board — the surest way to know what's on is to ask at the counter.</p>
+            </article>
+            <a class="event-card inverted" href="tel:0213709914" data-reveal>
+              <span>Call ahead</span>
+              <h3>021 370 9914</h3>
+              <p>Ring the centre's own restaurant directly for today's board or to check before you visit.</p>
+            </a>
           </div>
-          <a href="tel:0213709914" class="btn btn-secondary-dark">Call 021 370 9914</a>
         </div>
       </section>
 
-      <section id="directory" class="section directory">
-        <div class="section-heading">
-          <p class="eyebrow">Store Directory</p>
-          <h2>Stores currently trading.</h2>
-        </div>
-
-        <div class="directory-controls">
-          <label class="field">
-            <span>Search stores</span>
-            <input
-              type="search"
-              id="store-search"
-              placeholder="Search by store name..."
-              autocomplete="off"
-            />
-          </label>
-          <label class="field">
-            <span>Category</span>
-            <select id="category-filter">
-              <option value="all">All categories</option>
-            </select>
-          </label>
-        </div>
-
-        <div class="alpha-filter" id="alpha-filter" aria-label="A to Z filter">
-          <button type="button" class="alpha-btn active" data-letter="all">
-            All
-          </button>
-          <button type="button" class="alpha-btn" data-letter="a">A</button>
-          <button type="button" class="alpha-btn" data-letter="b">B</button>
-          <button type="button" class="alpha-btn" data-letter="c">C</button>
-          <button type="button" class="alpha-btn" data-letter="d">D</button>
-          <button type="button" class="alpha-btn" data-letter="e">E</button>
-          <button type="button" class="alpha-btn" data-letter="f">F</button>
-          <button type="button" class="alpha-btn" data-letter="g">G</button>
-          <button type="button" class="alpha-btn" data-letter="h">H</button>
-          <button type="button" class="alpha-btn" data-letter="i">I</button>
-          <button type="button" class="alpha-btn" data-letter="j">J</button>
-          <button type="button" class="alpha-btn" data-letter="k">K</button>
-          <button type="button" class="alpha-btn" data-letter="l">L</button>
-          <button type="button" class="alpha-btn" data-letter="m">M</button>
-          <button type="button" class="alpha-btn" data-letter="n">N</button>
-          <button type="button" class="alpha-btn" data-letter="o">O</button>
-          <button type="button" class="alpha-btn" data-letter="p">P</button>
-          <button type="button" class="alpha-btn" data-letter="q">Q</button>
-          <button type="button" class="alpha-btn" data-letter="r">R</button>
-          <button type="button" class="alpha-btn" data-letter="s">S</button>
-          <button type="button" class="alpha-btn" data-letter="t">T</button>
-          <button type="button" class="alpha-btn" data-letter="u">U</button>
-          <button type="button" class="alpha-btn" data-letter="v">V</button>
-          <button type="button" class="alpha-btn" data-letter="w">W</button>
-          <button type="button" class="alpha-btn" data-letter="x">X</button>
-          <button type="button" class="alpha-btn" data-letter="y">Y</button>
-          <button type="button" class="alpha-btn" data-letter="z">Z</button>
-        </div>
-
-        <p class="directory-results" id="directory-results">
-          Showing 23 of 23 confirmed stores.
-        </p>
-
-        <div class="directory-grid" id="directory-grid">
-          <!-- Rendered from assets/stores-data.js by assets/site.js -->
-        </div>
-
-        <p class="directory-note">
-          More logos and store website links will be added as they are finalized.
-        </p>
-      </section>
-
-      <section id="social" class="section social">
-        <div class="section-heading">
-          <p class="eyebrow">Follow Along</p>
-          <h2>What's happening at the centre right now.</h2>
-        </div>
-        <div class="social-links">
-          <a
-            class="btn btn-secondary-dark"
-            href="https://www.instagram.com/pacific_business_park/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Instagram — @pacific_business_park</a
-          >
-          <a
-            class="btn btn-secondary-dark"
-            href="https://www.tiktok.com/@pacific_business_park"
-            target="_blank"
-            rel="noopener noreferrer"
-            >TikTok — @pacific_business_park</a
-          >
-        </div>
-        <div class="social-embeds">
-          <blockquote
-            class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/DcLfaQmOnMs/"
-            data-instgrm-version="14"
-          ></blockquote>
-          <blockquote
-            class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/Db8OtkZNNbn/"
-            data-instgrm-version="14"
-          ></blockquote>
-          <blockquote
-            class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/Db5RuIoOkkD/"
-            data-instgrm-version="14"
-          ></blockquote>
-        </div>
-        <p class="social-note">
-          Facebook and a live TikTok feed are coming soon — for now, follow
-          Instagram and TikTok directly for the latest updates.
-        </p>
-      </section>
-
-      <section id="offers" class="section offers">
-        <div class="section-heading">
-          <p class="eyebrow">Deals & Offers</p>
-          <h2>Promotions and shopping highlights.</h2>
-        </div>
-        <div class="offers-grid">
-          <article class="offer-card">
-            <h3>Spring Market Specials</h3>
+      <section class="section pulse-section" id="pulse">
+        <div class="section-shell pulse-layout">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">The rhythm</p>
+            <h2>Part of the daily flow at the park.</h2>
             <p>
-              Selected stores will run specials for Spring Market weekend.
-              Details are updated at centre level and in-store.
+              From the morning open to the evening close, Pacific Roadhouse runs alongside the rest of the centre.
             </p>
-          </article>
-          <article class="offer-card">
-            <h3>Weekend Shopping Focus</h3>
-            <p>
-              Weekend trade is supported by rotating specials and shopper-first
-              convenience offers.
+          </div>
+
+          <div class="timeline" data-reveal>
+            <button class="time-slot active" type="button" data-pulse="open">
+              <span>09:00</span>
+              <strong>Doors open</strong>
+            </button>
+            <button class="time-slot" type="button" data-pulse="midday">
+              <span>Midday</span>
+              <strong>Lunch at the park</strong>
+            </button>
+            <button class="time-slot" type="button" data-pulse="afternoon">
+              <span>Afternoon</span>
+              <strong>Steady trade</strong>
+            </button>
+            <button class="time-slot" type="button" data-pulse="close">
+              <span>18:00</span>
+              <strong>Doors close</strong>
+            </button>
+          </div>
+
+          <aside class="pulse-display" data-reveal aria-live="polite">
+            <span id="pulse-kicker">Doors open</span>
+            <strong id="pulse-title">09:00, Monday to Saturday.</strong>
+            <p id="pulse-copy">
+              The centre's own restaurant opens with the rest of Pacific Business Park — Sunday hours run shorter, 09:00 to 13:00.
             </p>
-          </article>
-          <article class="offer-card">
-            <h3>More Promotions Coming</h3>
-            <p>
-              More store-specific promos will be added as additional tenants are
-              onboarded.
-            </p>
-          </article>
+          </aside>
         </div>
       </section>
 
-      <section id="map" class="section unit-map">
-        <div class="section-heading">
-          <p class="eyebrow">Find Your Store</p>
-          <h2>Unit reference.</h2>
-        </div>
-        <div class="unit-grid" id="unit-grid">
-          <!-- Rendered from assets/stores-data.js by assets/site.js -->
-        </div>
-        <p class="unit-note">
-          Confirmed unit numbers shown — more are added as they're confirmed
-          on-site. Not a full centre map.
-        </p>
-      </section>
-
-      <section id="overview" class="section overview">
-        <div class="section-heading">
-          <p class="eyebrow">About The Centre</p>
-          <h2>Why shoppers visit Pacific Business Park.</h2>
-        </div>
-        <div class="snapshot-grid">
-          <article class="snapshot-card">
-            <h3>All-in-one convenience</h3>
+      <section class="section visit-section" id="visit">
+        <div class="section-shell visit-layout">
+          <div class="visit-copy" data-reveal>
+            <p class="eyebrow">Make the stop</p>
+            <h2>Part of the Pacific family, easy to find.</h2>
             <p>
-              Everyday shopping, practical services, and local retailers in one
-              centre.
+              Pacific Roadhouse trades from Pacific Business Park, 1E Jakes Gerwel Drive, Weltevreden Valley, Cape Town.
             </p>
-          </article>
-          <article class="snapshot-card">
-            <h3>Easy location</h3>
-            <p>1E Jakes Gerwel Drive, Cape Town.</p>
-            <p>
+            <div class="visit-actions">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=1E+Jakes+Gerwel+Drive,+Cape+Town"
+                class="button button-light"
+                href="https://www.google.com/maps/search/?api=1&query=1E+Jakes+Gerwel+Drive%2C+Weltevreden+Valley%2C+Cape+Town"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Get directions</a
               >
-            </p>
-          </article>
-          <article class="snapshot-card">
-            <h3>Trading hours</h3>
-            <p>Mon-Sat: 09:00-18:00</p>
-            <p>Sun: 09:00-13:00</p>
-            <p>Individual store hours may vary.</p>
-          </article>
-          <article class="snapshot-card">
-            <h3>Growing store mix</h3>
-            <p>
-              The centre currently has 25 built units and continues to add more
-              stores in phases.
-            </p>
-          </article>
-        </div>
-      </section>
+                <i data-lucide="navigation"></i>
+                <span>Get directions</span>
+              </a>
+              <a class="button button-ghost" href="mailto:info@pacificbusinesspark.co.za?subject=Pacific%20Roadhouse%20enquiry">
+                <i data-lucide="mail"></i>
+                <span>Email the centre</span>
+              </a>
+            </div>
+          </div>
 
-      <section id="contact" class="section contact">
-        <div class="section-heading">
-          <p class="eyebrow">Contact & Location</p>
-          <h2>Plan your visit.</h2>
-        </div>
-        <div class="contact-grid">
-          <article class="contact-card">
-            <h3>Pacific Business Park</h3>
-            <p>1E Jakes Gerwel Drive, Cape Town</p>
-            <p>
-              Email:
-              <a href="mailto:info@pacificbusinesspark.co.za"
-                >info@pacificbusinesspark.co.za</a
-              >
-            </p>
-            <p>Mon-Sat: 09:00-18:00 | Sun: 09:00-13:00</p>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=1E+Jakes+Gerwel+Drive,+Cape+Town"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary-dark"
-              >Open in Maps</a
-            >
-          </article>
-          <article class="contact-card map-card">
-            <iframe
-              title="Pacific Business Park location map"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=1E+Jakes+Gerwel+Drive,+Cape+Town&output=embed"
-            ></iframe>
-          </article>
-        </div>
-      </section>
-
-      <section id="business" class="section business">
-        <div class="section-heading">
-          <p class="eyebrow">Business Enquiries</p>
-          <h2>Interested in opening a store at the centre?</h2>
-        </div>
-        <div class="business-card">
-          <p>
-            If you are interested in retail space, contact the centre team and
-            include your business details and space requirements.
-          </p>
-          <a class="btn btn-primary" href="mailto:info@pacificbusinesspark.co.za"
-            >Email Leasing Team</a
-          >
-        </div>
-      </section>
-
-      <section id="privacy" class="section legal">
-        <div class="legal-grid">
-          <article>
-            <h3>Privacy Notice</h3>
-            <p>
-              Enquiry details submitted via this website are used only for
-              communication regarding Pacific Business Park.
-            </p>
-          </article>
-          <article>
-            <h3>Terms of Use</h3>
-            <p>
-              Information on this website is provided for general visitor and
-              retail guidance and may be updated as the centre expands.
-            </p>
-          </article>
+          <div class="route-panel" data-reveal aria-label="Pacific Business Park route">
+            <canvas id="route-canvas" aria-hidden="true"></canvas>
+            <div class="route-label">
+              <i data-lucide="map-pin"></i>
+              <span>1E Jakes Gerwel Drive, Weltevreden Valley</span>
+            </div>
+            <div class="route-stamp" id="route-stamp">Checking hours</div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-main">
-        <h3>Pacific Business Park</h3>
-        <p>Cape Town, South Africa</p>
-        <p>
-          <a href="mailto:info@pacificbusinesspark.co.za"
-            >info@pacificbusinesspark.co.za</a
-          >
-        </p>
-        <div class="footer-social">
-          <a
-            href="https://www.instagram.com/pacific_business_park/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Instagram</a
-          >
-          <a
-            href="https://www.tiktok.com/@pacific_business_park"
-            target="_blank"
-            rel="noopener noreferrer"
-            >TikTok</a
-          >
-        </div>
+      <div>
+        <strong>Pacific Roadhouse</strong>
+        <span>Pacific Business Park's own restaurant, part of the Pacific family.</span>
       </div>
-      <div class="footer-groups">
-        <div class="footer-group">
-          <h4>Explore</h4>
-          <a href="#directory">Store Directory</a>
-          <a href="#opening-day">What's On</a>
-          <a href="#offers">Deals & Offers</a>
-          <a href="#social">Follow Along</a>
-        </div>
-        <div class="footer-group">
-          <h4>Visit</h4>
-          <a href="#overview">About The Centre</a>
-          <a href="#map">Find Your Store</a>
-          <a href="#contact">Visit Us</a>
-        </div>
-        <div class="footer-group">
-          <h4>Business</h4>
-          <a href="#business">Business Enquiries</a>
-          <a href="#privacy">Privacy &amp; Terms</a>
-        </div>
-      </div>
-      <p class="copyright">&copy; 2026 Pacific Business Park. All rights reserved.</p>
+      <a href="#home">Back to top <i data-lucide="arrow-up"></i></a>
     </footer>
-
-    <script src="assets/stores-data.js"></script>
-    <script src="assets/site.js" defer></script>
-    <!-- Official Instagram embed script — third-party, same-origin-safe only
-         if a future CSP allows www.instagram.com in script-src. See SPEC.md §0.1. -->
-    <script async src="//www.instagram.com/embed.js"></script>
   </body>
 </html>
