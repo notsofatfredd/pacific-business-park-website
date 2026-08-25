@@ -15,27 +15,35 @@
 
   /* Business Park signal accent — sampled directly from the real
      Pacific-Business-Park logo's teal building mark (Pacific Brand Family
-     pack, Icon-Marks/Pacific-Symbol-with-Building.png), not invented.
-     Promoted to the site's primary accent (eyebrows, category chips,
-     active tabs, primary buttons, links) — the locked blue family stays
-     for headings/nav/hero structure, but teal is now the color the eye
-     actually follows around the page, not a once-per-section afterthought.
-     --green: large/graphical elements (borders, fills, dots) — 4.0:1 on
-     white, clears the 3:1 UI-component threshold. --green-text: same hue,
-     9% darker, for small text uses (eyebrows, links, badges) — 4.8:1 on
-     white / 4.6:1 on --surface-soft, clears the 4.5:1 body-text threshold.
-     Both checked via script, not eyeballed. Dark-mode variant is a single
-     brighter value used for both roles (6.3-7.1:1 against dark --surface,
-     ample margin either way). */
+     pack, Icon-Marks/Pacific-Symbol-with-Building.png), not invented. */
   --green: #028d91;
   --green-text: #027f83;
 
-  /* Adaptive semantic tokens — light mode (default). Redefined under
-     prefers-color-scheme:dark and [data-theme="dark"] below. Pinned-dark
-     surfaces (hero, footer, top-strip) intentionally keep using the fixed
-     --blue-950/900 tokens directly rather than these, so they stay dark in
-     both themes — same "pinned dark section" pattern used on Xtreme Worx
-     and axiel.co.za. */
+  /* "Insane colours" pass — same two hue families (blue + the real logo
+     teal), pushed to their most saturated/extreme steps, plus true
+     neutrals (black/grey/white/cream) per Saeed's explicit instruction:
+     "the colours are not locked... go crazy... blacks greys whites creams
+     ... wont take away from the company pallete." Bold flat color-blocking,
+     no new hues introduced. */
+  --blue-electric: #1450ff;
+  --blue-ink: #050f22;
+  --teal-bright: #00c2c4;
+  --teal-deep: #015c60;
+  --ink-black: #0d0d0d;
+  --cream: #f5efe0;
+  --cream-deep: #ece0c4;
+  --stone-200: #e4e1d8;
+  --grey-600: #565349;
+  --stroke-w: 3px;
+  --stroke: var(--ink-black);
+  --shadow-pop: 4px 4px 0 var(--ink-black);
+  --teal-chip-bg: #d9f2f1;
+  --teal-chip-text: #016266;
+
+  /* Semantic tokens — single fixed set now (light/dark toggle removed per
+     Saeed: "drop the toggle... i dont want dark moody i want crazy energy
+     but high end"). Pinned-dark surfaces (hero, footer, top-strip, unit-map)
+     keep using the fixed --blue-950/--ink-black tokens directly. */
   --surface: var(--paper);
   --surface-soft: #f7faff;
   --ink: #172133;
@@ -48,42 +56,6 @@
   --shadow: 0 12px 30px rgba(18, 46, 90, 0.12);
 }
 
-/* Dark mode — system preference (no stored override), WCAG-verified via an
-   actual contrast-ratio script, not eyeballed: ink 10.1:1, ink-soft 6.0:1,
-   heading 8.0:1, accent 7.1:1 against --surface (all clear the 4.5:1 body /
-   3:1 large-text thresholds). --surface is deliberately NOT the same navy as
-   the pinned hero/footer (--blue-950) — raw luminance is ~3.3x higher so the
-   general dark background reads as a distinct tone from the pinned-dark
-   sections, not "the same black" (the specific failure mode this pattern is
-   meant to avoid, per the Elysian Labels dark-mode lesson). */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --surface: #203a5c;
-    --surface-soft: #28466f;
-    --ink: #eaf1fb;
-    --ink-soft: #a9bcd6;
-    --heading: #bcd9ff;
-    --accent: var(--sky-400);
-    --green: #4de0dc;
-    --green-text: #4de0dc;
-    --line: rgba(255, 255, 255, 0.14);
-    --shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-  }
-}
-
-:root[data-theme="dark"] {
-  --surface: #203a5c;
-  --surface-soft: #28466f;
-  --ink: #eaf1fb;
-  --ink-soft: #a9bcd6;
-  --heading: #bcd9ff;
-  --accent: var(--sky-400);
-  --green: #4de0dc;
-  --green-text: #4de0dc;
-  --line: rgba(255, 255, 255, 0.14);
-  --shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -92,81 +64,11 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Concept switcher — same working mechanism as the coldcall-demo pattern
-   (~/projects/coldcall-demo/always-plumbing-drainage): a single shared page
-   with all 3 concepts' markup present at once, shown/hidden via the
-   html[data-concept] attribute. Unlike that reference, PBP's palette is
-   LOCKED across concepts (Saeed: "the colour pallete has to stay the same
-   across 3 concepts") — only structure/copy/layout differ here, not color. */
-.concept-copy {
-  display: none;
-}
-html[data-concept="trusted"] .copy-trusted {
-  display: block;
-}
-html[data-concept="canalwalk"] .copy-canalwalk {
-  display: block;
-}
-html[data-concept="waterfront"] .copy-waterfront {
-  display: block;
-}
-
-.switcher-bar {
-  position: sticky;
-  top: 0;
-  z-index: 60;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  padding: 0.85rem 1.4rem;
-  background: var(--blue-950);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-.switcher-bar .label {
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.68rem;
-  font-weight: 700;
-}
-
-.switcher-tabs {
-  display: flex;
-  gap: 0.4rem;
-}
-
-.switcher-tabs button {
-  font-family: "Manrope", sans-serif;
-  font-weight: 800;
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  background: transparent;
-  color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.switcher-tabs button.active {
-  background: var(--sky-400);
-  color: #042b56;
-  border-color: var(--sky-400);
-}
-
 body {
   margin: 0;
   color: var(--ink);
   font-family: "Manrope", sans-serif;
-  background:
-    radial-gradient(circle at 6% 4%, rgba(93, 152, 255, 0.1), transparent 25%),
-    radial-gradient(circle at 92% 12%, rgba(133, 196, 255, 0.12), transparent 22%),
-    var(--surface-soft);
+  background: var(--cream);
 }
 
 a {
@@ -191,8 +93,8 @@ p {
   justify-content: center;
   gap: 1rem;
   padding: 0.65rem 1rem;
-  background: var(--blue-950);
-  color: #e8f2ff;
+  background: var(--ink-black);
+  color: var(--cream);
   font-size: 0.79rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -202,20 +104,23 @@ p {
 
 .top-strip a {
   text-decoration: none;
-  color: #d3e8ff;
+  color: var(--teal-bright);
 }
 
 .top-strip .top-address {
-  color: #ffffff;
+  color: var(--cream);
 }
 
+/* Kept neutral (not a bold color block) on purpose — the sticky header
+   must stay a legible, functional white chip for the real logo (source
+   PNGs have an opaque near-white background baked in) and nav text.
+   The bold black border replaces the soft 1px hairline instead. */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: color-mix(in srgb, var(--surface) 96%, transparent);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  border-bottom: var(--stroke-w) solid var(--ink-black);
 }
 
 .nav-shell {
@@ -248,6 +153,7 @@ p {
   height: 44px;
   border-radius: 10px;
   background: #ffffff;
+  border: 2px solid var(--ink-black);
   flex: 0 0 auto;
 }
 
@@ -325,50 +231,6 @@ p {
   border-color: color-mix(in srgb, var(--green) 40%, var(--line));
 }
 
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--heading);
-  cursor: pointer;
-  padding: 0;
-}
-
-.theme-toggle:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.theme-icon {
-  width: 18px;
-  height: 18px;
-}
-
-.theme-icon--moon {
-  display: none;
-}
-
-:root[data-theme="dark"] .theme-icon--sun {
-  display: none;
-}
-:root[data-theme="dark"] .theme-icon--moon {
-  display: block;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-icon--sun {
-    display: none;
-  }
-  :root:not([data-theme="light"]) .theme-icon--moon {
-    display: block;
-  }
-}
-
 .mobile-menu-button {
   display: none;
   border: 1px solid var(--line);
@@ -404,11 +266,6 @@ p {
 
 .mobile-menu.open {
   display: flex;
-}
-
-.section {
-  width: min(1220px, calc(100% - 2rem));
-  margin: 1.2rem auto 0;
 }
 
 /* Full-bleed, edge-to-edge — the floating rounded card this used to be
@@ -463,18 +320,21 @@ p {
   );
 }
 
+/* Flat "sticker" card, not a glass panel — glassmorphism blur was exactly
+   the safe/soft look Saeed wants gone. A bold solid-cream card with a hard
+   black border + offset shadow floating on the dark animated canvas is the
+   pop-art move: 16.95:1 ink-black-on-cream. */
 .hero-panel {
   position: relative;
   z-index: 2;
   max-width: 640px;
   margin: clamp(2rem, 6vw, 3.5rem);
-  color: #ffffff;
+  color: var(--ink-black);
   padding: clamp(1.6rem, 4vw, 2.4rem);
-  background: rgba(6, 20, 41, 0.42);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: var(--cream);
+  border: var(--stroke-w) solid var(--ink-black);
   border-radius: 6px;
+  box-shadow: var(--shadow-pop);
 }
 
 /* .hero-content: used by the Trusted and Waterfront concepts (Canal Walk
@@ -501,8 +361,8 @@ p {
 .hero-kicker {
   font-size: 0.79rem;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #c6e2ff;
+  letter-spacing: 0.18em;
+  color: var(--green-text);
   font-weight: 800;
 }
 
@@ -512,12 +372,13 @@ p {
   line-height: 0.98;
   letter-spacing: -0.01em;
   max-width: 13ch;
+  color: var(--ink-black);
 }
 
 .hero-copy {
   margin-top: 1.05rem;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.93);
+  color: var(--grey-600);
   max-width: 62ch;
 }
 
@@ -542,8 +403,9 @@ p {
 }
 
 .btn-primary {
-  background: #4de0dc;
-  color: #042b56;
+  background: var(--teal-bright);
+  color: var(--ink-black);
+  border: var(--stroke-w) solid var(--ink-black);
   gap: 0.5rem;
 }
 
@@ -562,8 +424,9 @@ p {
 }
 
 .btn-secondary-dark {
-  background: #dbeaff;
-  color: #0b335f;
+  background: var(--teal-bright);
+  color: var(--ink-black);
+  border: var(--stroke-w) solid var(--ink-black);
 }
 
 .hero-meta {
@@ -574,16 +437,17 @@ p {
 }
 
 .hero-meta article {
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 12px;
+  border: 2px solid var(--ink-black);
+  border-radius: 6px;
   padding: 0.82rem;
-  background: rgba(7, 32, 66, 0.45);
+  background: var(--paper);
 }
 
 .hero-meta strong {
   display: block;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 800;
+  color: var(--ink-black);
 }
 
 .hero-meta span {
@@ -592,15 +456,25 @@ p {
   font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.86);
+  color: var(--grey-600);
 }
 
+/* Full-bleed alternating color blocks — the "insane colours" structural
+   move. Each section fills the viewport width with its own bold
+   background; the actual content still reads at the same 1220px measure
+   via the `.section > *` rule below, so nothing needed restructuring in
+   the HTML. Background/text colors are set per-section further down this
+   file (each section's own class wins by source order). */
 .section {
+  width: 100%;
   background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
-  padding: 1.6rem;
+  padding: 2.6rem 0;
+}
+
+.section > * {
+  width: min(1220px, calc(100% - 2rem));
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-heading {
@@ -611,7 +485,8 @@ p {
    One boxed frame, slides cross-fade on a ~4.2s interval, 01/N counter,
    prefers-reduced-motion respected, pauses on hover/focus. */
 .showcase {
-  padding: 1.4rem 1.6rem;
+  background: var(--cream);
+  padding: 1.8rem 0;
 }
 
 .badge-stage {
@@ -649,8 +524,8 @@ p {
   width: 96px;
   height: 96px;
   border-radius: 14px;
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, #ffffff, #f5f9ff);
+  border: var(--stroke-w) solid var(--ink-black);
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -666,12 +541,12 @@ p {
 
 .badge-slide-info h3 {
   font-size: 1.2rem;
-  color: var(--heading);
+  color: var(--ink-black);
 }
 
 .badge-slide-info p {
   margin-top: 0.3rem;
-  color: var(--accent);
+  color: var(--green-text);
   font-weight: 800;
   font-size: 0.78rem;
   text-transform: uppercase;
@@ -698,11 +573,28 @@ p {
 }
 
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   font-size: 0.73rem;
   font-weight: 800;
   color: var(--green-text);
+}
+
+/* Original signature motif (assets/motif-burst.svg) — a flat radial
+   burst, not a copy of any character/trademark art, just borrowing the
+   bold-flat-radial sensibility. Colored via currentColor so it inherits
+   each section's own eyebrow color automatically. */
+.eyebrow::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  background-color: currentColor;
+  -webkit-mask: url("assets/motif-burst.svg") center / contain no-repeat;
+  mask: url("assets/motif-burst.svg") center / contain no-repeat;
 }
 
 .section-heading h2 {
@@ -741,10 +633,25 @@ p {
   line-height: 1.3;
 }
 
+.unit-map {
+  background: var(--ink-black);
+}
+
+.unit-map .eyebrow,
+.unit-map .section-heading h2 {
+  color: var(--cream);
+}
+
+.unit-map .section-heading p {
+  color: var(--cream);
+  opacity: 0.75;
+}
+
 .unit-note {
   margin-top: 0.9rem;
   font-size: 0.82rem;
-  color: var(--ink-soft);
+  color: var(--cream);
+  opacity: 0.7;
 }
 
 /* Interactive unit-plan — a schematic grid (not a surveyed floor plan;
@@ -769,21 +676,41 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(245, 239, 224, 0.25);
   border-radius: var(--radius-md);
-  background: var(--surface-soft);
-  color: var(--ink-soft);
+  background: rgba(245, 239, 224, 0.05);
+  color: var(--cream);
+  opacity: 0.55;
   font-family: "Sora", sans-serif;
   font-weight: 800;
   font-size: 0.9rem;
   cursor: pointer;
+  transition: transform 0.12s ease;
+}
+
+.plan-unit:hover {
+  transform: translateY(-2px);
 }
 
 .plan-unit.trading {
-  border-color: var(--green);
+  position: relative;
+  border-color: var(--teal-bright);
   border-width: 2px;
-  background: color-mix(in srgb, var(--green) 20%, var(--surface-soft));
-  color: var(--green-text);
+  background: color-mix(in srgb, var(--teal-bright) 18%, transparent);
+  color: var(--teal-bright);
+  opacity: 1;
+}
+
+.plan-unit.trading::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--teal-bright);
+  -webkit-mask: url("assets/motif-burst.svg") center / contain no-repeat;
+  mask: url("assets/motif-burst.svg") center / contain no-repeat;
 }
 
 .plan-unit.trading.unconfirmed {
@@ -792,20 +719,23 @@ p {
 
 .plan-unit.open {
   border-style: dashed;
-  color: var(--ink-soft);
+  border-color: rgba(245, 239, 224, 0.4);
+  color: var(--cream);
+  opacity: 0.7;
 }
 
 .plan-unit.selected {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--teal-bright);
   outline-offset: 2px;
 }
 
 .plan-detail {
   position: sticky;
   top: calc(86px + 1rem);
-  border: 1px solid var(--line);
+  border: var(--stroke-w) solid var(--ink-black);
   border-radius: var(--radius-lg);
-  background: var(--surface);
+  background: var(--paper);
+  box-shadow: var(--shadow-pop);
   padding: 1.3rem;
 }
 
@@ -967,6 +897,12 @@ p {
   line-height: 1.5;
 }
 
+/* Deliberate "rest beat" — the loud sections read as loud by contrast
+   with a couple of calmer ones, not every section maxed out at once. */
+.overview {
+  background: var(--cream);
+}
+
 .snapshot-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -974,21 +910,21 @@ p {
 }
 
 .snapshot-card {
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--ink-black);
   border-radius: var(--radius-md);
-  background: var(--surface-soft);
+  background: var(--stone-200);
   padding: 1rem;
 }
 
 .snapshot-card h3 {
   font-size: 1.05rem;
-  color: var(--heading);
+  color: var(--ink-black);
 }
 
 .snapshot-card p {
   margin-top: 0.62rem;
   line-height: 1.62;
-  color: var(--ink-soft);
+  color: var(--grey-600);
 }
 
 .snapshot-card a {
@@ -1013,25 +949,34 @@ p {
   margin-top: 0.9rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.5rem;
+  background: var(--blue-electric);
+  border: var(--stroke-w) solid var(--ink-black);
+  border-radius: 6px;
+  padding: 0.8rem;
 }
 
 .category-tab {
-  border: 1px solid var(--line);
+  border: 2px solid var(--ink-black);
   border-radius: 4px;
   padding: 0.45rem 0.85rem;
   font-size: 0.76rem;
   font-weight: 700;
-  background: var(--surface-soft);
-  color: var(--heading);
+  background: #ffffff;
+  color: var(--ink-black);
   cursor: pointer;
   white-space: nowrap;
+  transition: transform 0.12s ease;
+}
+
+.category-tab:hover {
+  transform: translateY(-2px);
 }
 
 .category-tab.active {
-  background: var(--green-text);
+  background: var(--ink-black);
   color: #ffffff;
-  border-color: var(--green-text);
+  border-color: var(--ink-black);
 }
 
 .field {
@@ -1093,13 +1038,19 @@ p {
 }
 
 .store-card {
-  border: 1px solid var(--line);
+  border: 2px solid var(--ink-black);
   border-radius: var(--radius-md);
   background: var(--surface);
   padding: 0.95rem;
   text-align: center;
   display: grid;
   gap: 0.55rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.store-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-pop);
 }
 
 .store-card.hidden {
@@ -1153,8 +1104,8 @@ p {
   display: inline-flex;
   padding: 0.24rem 0.56rem;
   border-radius: 999px;
-  background: #d9f2f1;
-  color: #016266;
+  background: var(--teal-chip-bg);
+  color: var(--teal-chip-text);
   font-size: 0.73rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -1203,21 +1154,22 @@ p {
 .store-card-button {
   justify-self: center;
   margin-top: 0.3rem;
-  border: 1px solid var(--line);
+  border: 2px solid var(--ink-black);
   border-radius: 4px;
   padding: 0.5rem 1.1rem;
   font-size: 0.76rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: var(--surface-soft);
-  color: var(--heading);
+  background: #ffffff;
+  color: var(--ink-black);
   cursor: pointer;
+  transition: background-color 0.12s ease, color 0.12s ease;
 }
 
 .store-card-button:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  background: var(--teal-bright);
+  color: var(--ink-black);
 }
 
 /* Store detail dialog — native <dialog>, gets its backdrop/focus-trap/
@@ -1226,12 +1178,12 @@ p {
 .store-dialog {
   width: min(480px, calc(100% - 2rem));
   max-height: min(88vh, 640px);
-  border: none;
+  border: var(--stroke-w) solid var(--ink-black);
   border-radius: var(--radius-lg);
   padding: 0;
   color: var(--ink);
   background: var(--surface);
-  box-shadow: 0 30px 70px rgba(8, 20, 40, 0.35);
+  box-shadow: 8px 8px 0 var(--ink-black);
 }
 
 .store-dialog::backdrop {
@@ -1270,9 +1222,9 @@ p {
   align-items: center;
   justify-content: center;
   margin-bottom: 0.9rem;
-  border: 1px solid #deebfb;
+  border: 2px solid var(--ink-black);
   border-radius: 10px;
-  background: linear-gradient(180deg, #ffffff, #f5f9ff);
+  background: #ffffff;
   padding: 0.6rem;
 }
 
@@ -1300,8 +1252,8 @@ p {
   display: inline-flex;
   padding: 0.24rem 0.56rem;
   border-radius: 999px;
-  background: #d9f2f1;
-  color: #016266;
+  background: var(--teal-chip-bg);
+  color: var(--teal-chip-text);
   font-size: 0.73rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -1353,9 +1305,12 @@ p {
 }
 
 .offers {
-  background:
-    linear-gradient(180deg, rgba(171, 239, 217, 0.16), rgba(255, 255, 255, 0) 38%),
-    var(--surface);
+  background: var(--blue-electric);
+}
+
+.offers .eyebrow,
+.offers .section-heading h2 {
+  color: #ffffff;
 }
 
 .offers-grid {
@@ -1365,9 +1320,7 @@ p {
 }
 
 .social {
-  background:
-    linear-gradient(180deg, rgba(141, 199, 255, 0.11), transparent 35%),
-    var(--surface);
+  background: var(--cream-deep);
 }
 
 .social-links {
@@ -1387,12 +1340,16 @@ p {
 .social-embeds > * {
   min-width: 0;
   width: 100% !important;
+  border: var(--stroke-w) solid var(--ink-black) !important;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-pop);
+  overflow: hidden;
 }
 
 .social-note {
   margin-top: 1rem;
   font-size: 0.86rem;
-  color: var(--ink-soft);
+  color: var(--grey-600);
 }
 
 @media (max-width: 1100px) {
@@ -1411,9 +1368,10 @@ p {
 .opening-card,
 .contact-card,
 .business-card {
-  border: 1px solid var(--line);
+  border: var(--stroke-w) solid var(--ink-black);
   border-radius: var(--radius-md);
-  background: var(--surface);
+  background: var(--paper);
+  box-shadow: var(--shadow-pop);
   padding: 1rem;
 }
 
@@ -1430,15 +1388,21 @@ p {
   color: var(--ink-soft);
 }
 
+.opening-day {
+  background: var(--teal-bright);
+}
+
+.opening-day .eyebrow,
+.opening-day .section-heading h2 {
+  color: var(--ink-black);
+}
+
 .opening-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.opening-card {
-  background: linear-gradient(180deg, var(--surface), var(--surface-soft));
-}
 
 .opening-time {
   margin-top: 0.6rem;
@@ -1494,7 +1458,12 @@ p {
 /* Compact, deliberately restrained per Saeed's "not too overpowering" —
    one small strip, not a full section competing with Directory/Events. */
 .roadhouse {
-  padding: 1rem 1.4rem;
+  background: var(--ink-black);
+  padding: 1.6rem 0;
+}
+
+.roadhouse .eyebrow {
+  color: var(--teal-bright);
 }
 
 .roadhouse-strip {
@@ -1508,18 +1477,41 @@ p {
 .roadhouse-info h3 {
   margin-top: 0.3rem;
   font-size: 1rem;
-  color: var(--heading);
+  color: var(--cream);
 }
 
 .roadhouse-info p {
   margin-top: 0.3rem;
   font-size: 0.86rem;
-  color: var(--ink-soft);
+  color: var(--cream);
+  opacity: 0.82;
   max-width: 48ch;
 }
 
 .business {
-  background: var(--surface-soft);
+  position: relative;
+  overflow: hidden;
+  background: var(--teal-deep);
+}
+
+.business::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  width: 320px;
+  height: 320px;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  opacity: 0.06;
+  -webkit-mask: url("assets/motif-burst.svg") center / contain no-repeat;
+  mask: url("assets/motif-burst.svg") center / contain no-repeat;
+  pointer-events: none;
+}
+
+.business .eyebrow,
+.business .section-heading h2 {
+  color: #ffffff;
 }
 
 .business-card {
@@ -1535,8 +1527,10 @@ p {
   max-width: 72ch;
 }
 
+/* Deliberate second "rest beat" — legal copy shouldn't compete for
+   attention, kept quiet on purpose. */
 .legal {
-  background: var(--surface-soft);
+  background: var(--stone-200);
 }
 
 .legal-grid {
@@ -1598,10 +1592,11 @@ p {
 
 .footer-main p {
   margin-top: 0.45rem;
+  color: var(--cream);
 }
 
 .footer-main a {
-  color: #d4e8ff;
+  color: var(--teal-bright);
   text-decoration: none;
 }
 
@@ -1613,13 +1608,14 @@ p {
 }
 
 .footer-social a {
-  color: #ffffff;
+  color: var(--ink-black);
   text-decoration: none;
   font-weight: 800;
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: var(--teal-bright);
+  border: 2px solid var(--ink-black);
   border-radius: 4px;
   padding: 0.4rem 0.9rem;
 }
@@ -1641,7 +1637,8 @@ p {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #9ec3f2;
+  color: var(--cream);
+  opacity: 0.7;
   margin-bottom: 0.6rem;
 }
 
@@ -1652,7 +1649,7 @@ p {
 }
 
 .footer-group a {
-  color: #b8d9ff;
+  color: var(--teal-bright);
   text-decoration: none;
   font-size: 0.82rem;
   font-weight: 600;
@@ -1661,7 +1658,8 @@ p {
 .copyright {
   margin-top: 1rem;
   font-size: 0.8rem;
-  color: #9ec3f2;
+  color: var(--cream);
+  opacity: 0.6;
 }
 
 @media (max-width: 1100px) {

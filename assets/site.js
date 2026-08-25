@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   renderDirectory();
-  initThemeToggle();
   initShowcase();
   renderUnitPlan();
   updateTradingStatus();
@@ -175,7 +174,7 @@ function initHeroCanvas() {
     }
 
     const dashOffset = reduceMotion ? 0 : -(time / 45);
-    context.strokeStyle = 'rgba(77, 224, 220, 0.48)';
+    context.strokeStyle = 'rgba(0, 194, 196, 0.52)';
     context.lineWidth = 2.25;
     context.setLineDash([7, 9]);
     context.lineDashOffset = dashOffset;
@@ -184,7 +183,7 @@ function initHeroCanvas() {
     context.bezierCurveTo(width * 0.32, height * 0.42, width * 0.6, height * 0.86, width * 0.95, height * 0.3);
     context.stroke();
 
-    context.strokeStyle = 'rgba(77, 224, 220, 0.26)';
+    context.strokeStyle = 'rgba(20, 80, 255, 0.4)';
     context.lineWidth = 1.5;
     context.lineDashOffset = dashOffset * 0.6;
     context.beginPath();
@@ -196,14 +195,27 @@ function initHeroCanvas() {
     const pulse = reduceMotion ? 0.5 : (Math.sin(time / 620) + 1) / 2;
     const markerX = width * 0.78;
     const markerY = height * 0.24;
-    context.strokeStyle = `rgba(77, 224, 220, ${0.35 + pulse * 0.4})`;
+    context.strokeStyle = `rgba(0, 194, 196, ${0.4 + pulse * 0.45})`;
     context.lineWidth = 2;
     context.beginPath();
-    context.arc(markerX, markerY, 7 + pulse * 7, 0, Math.PI * 2);
+    context.arc(markerX, markerY, 7 + pulse * 9, 0, Math.PI * 2);
     context.stroke();
-    context.fillStyle = '#4de0dc';
+    context.fillStyle = '#00c2c4';
     context.beginPath();
     context.arc(markerX, markerY, 3, 0, Math.PI * 2);
+    context.fill();
+
+    const pulse2 = reduceMotion ? 0.5 : (Math.sin(time / 480 + 2) + 1) / 2;
+    const marker2X = width * 0.22;
+    const marker2Y = height * 0.62;
+    context.strokeStyle = `rgba(20, 80, 255, ${0.3 + pulse2 * 0.4})`;
+    context.lineWidth = 1.5;
+    context.beginPath();
+    context.arc(marker2X, marker2Y, 5 + pulse2 * 6, 0, Math.PI * 2);
+    context.stroke();
+    context.fillStyle = '#1450ff';
+    context.beginPath();
+    context.arc(marker2X, marker2Y, 2.5, 0, Math.PI * 2);
     context.fill();
 
     context.restore();
@@ -406,39 +418,6 @@ function initShowcase() {
   stage.addEventListener('mouseleave', start);
   stage.addEventListener('focusin', stop);
   stage.addEventListener('focusout', start);
-}
-
-/* Theme toggle — manual choice overrides system preference and persists.
-   The <head> script (assets/theme-init.js) already applied any stored
-   choice before first paint; this just wires up the click and keeps
-   aria-pressed/label in sync. */
-function initThemeToggle() {
-  const btn = document.getElementById('themeToggle');
-  if (!btn) return;
-  const root = document.documentElement;
-  const mql = window.matchMedia('(prefers-color-scheme: dark)');
-
-  function isDark() {
-    const explicit = root.getAttribute('data-theme');
-    if (explicit === 'dark') return true;
-    if (explicit === 'light') return false;
-    return mql.matches;
-  }
-  function sync() {
-    const dark = isDark();
-    btn.setAttribute('aria-pressed', String(dark));
-    btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
-  }
-  sync();
-
-  btn.addEventListener('click', () => {
-    const next = isDark() ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try {
-      localStorage.setItem('pbp-theme', next);
-    } catch (e) {}
-    sync();
-  });
 }
 
 function storeCardHTML(store) {
