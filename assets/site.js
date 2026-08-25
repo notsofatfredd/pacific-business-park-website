@@ -175,13 +175,21 @@ function initHeroCanvas() {
     }
 
     const dashOffset = reduceMotion ? 0 : -(time / 45);
-    context.strokeStyle = 'rgba(77, 224, 220, 0.3)';
-    context.lineWidth = 1.5;
+    context.strokeStyle = 'rgba(77, 224, 220, 0.48)';
+    context.lineWidth = 2.25;
     context.setLineDash([7, 9]);
     context.lineDashOffset = dashOffset;
     context.beginPath();
     context.moveTo(width * 0.05, height * 0.72);
     context.bezierCurveTo(width * 0.32, height * 0.42, width * 0.6, height * 0.86, width * 0.95, height * 0.3);
+    context.stroke();
+
+    context.strokeStyle = 'rgba(77, 224, 220, 0.26)';
+    context.lineWidth = 1.5;
+    context.lineDashOffset = dashOffset * 0.6;
+    context.beginPath();
+    context.moveTo(width * 0.0, height * 0.15);
+    context.bezierCurveTo(width * 0.28, height * 0.05, width * 0.5, height * 0.32, width * 0.82, height * 0.08);
     context.stroke();
     context.setLineDash([]);
 

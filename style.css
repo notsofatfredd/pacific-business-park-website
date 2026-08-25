@@ -16,13 +16,19 @@
   /* Business Park signal accent — sampled directly from the real
      Pacific-Business-Park logo's teal building mark (Pacific Brand Family
      pack, Icon-Marks/Pacific-Symbol-with-Building.png), not invented.
-     Added alongside the locked blue family (not replacing it) to mark
-     "live"/"trading" state: status pill dot, unit-plan trading indicator,
-     active category tab. WCAG-checked via script: 4.0:1 on white/ink
-     (clears the 3:1 large-text/UI-component threshold; this token is never
-     used for small body text). Dark-mode variant is a brighter version of
-     the same hue, checked separately below (6.3:1 against dark --surface). */
+     Promoted to the site's primary accent (eyebrows, category chips,
+     active tabs, primary buttons, links) — the locked blue family stays
+     for headings/nav/hero structure, but teal is now the color the eye
+     actually follows around the page, not a once-per-section afterthought.
+     --green: large/graphical elements (borders, fills, dots) — 4.0:1 on
+     white, clears the 3:1 UI-component threshold. --green-text: same hue,
+     9% darker, for small text uses (eyebrows, links, badges) — 4.8:1 on
+     white / 4.6:1 on --surface-soft, clears the 4.5:1 body-text threshold.
+     Both checked via script, not eyeballed. Dark-mode variant is a single
+     brighter value used for both roles (6.3-7.1:1 against dark --surface,
+     ample margin either way). */
   --green: #028d91;
+  --green-text: #027f83;
 
   /* Adaptive semantic tokens — light mode (default). Redefined under
      prefers-color-scheme:dark and [data-theme="dark"] below. Pinned-dark
@@ -59,6 +65,7 @@
     --heading: #bcd9ff;
     --accent: var(--sky-400);
     --green: #4de0dc;
+    --green-text: #4de0dc;
     --line: rgba(255, 255, 255, 0.14);
     --shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
   }
@@ -72,6 +79,7 @@
   --heading: #bcd9ff;
   --accent: var(--sky-400);
   --green: #4de0dc;
+  --green-text: #4de0dc;
   --line: rgba(255, 255, 255, 0.14);
   --shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
@@ -313,7 +321,7 @@ p {
 }
 
 .live-status.is-open {
-  color: var(--green);
+  color: var(--green-text);
   border-color: color-mix(in srgb, var(--green) 40%, var(--line));
 }
 
@@ -531,7 +539,7 @@ p {
 }
 
 .btn-primary {
-  background: #8ed3ff;
+  background: #4de0dc;
   color: #042b56;
   gap: 0.5rem;
 }
@@ -691,7 +699,7 @@ p {
   letter-spacing: 0.14em;
   font-size: 0.73rem;
   font-weight: 800;
-  color: var(--accent);
+  color: var(--green-text);
 }
 
 .section-heading h2 {
@@ -770,8 +778,9 @@ p {
 
 .plan-unit.trading {
   border-color: var(--green);
-  background: color-mix(in srgb, var(--green) 12%, var(--surface-soft));
-  color: var(--green);
+  border-width: 2px;
+  background: color-mix(in srgb, var(--green) 20%, var(--surface-soft));
+  color: var(--green-text);
 }
 
 .plan-unit.trading.unconfirmed {
@@ -819,8 +828,8 @@ p {
 }
 
 .plan-detail-status.trading {
-  background: color-mix(in srgb, var(--green) 16%, transparent);
-  color: var(--green);
+  background: color-mix(in srgb, var(--green) 20%, transparent);
+  color: var(--green-text);
 }
 
 .plan-detail-status.open {
@@ -1017,9 +1026,9 @@ p {
 }
 
 .category-tab.active {
-  background: var(--blue-800);
+  background: var(--green-text);
   color: #ffffff;
-  border-color: var(--blue-800);
+  border-color: var(--green-text);
 }
 
 .field {
@@ -1141,8 +1150,8 @@ p {
   display: inline-flex;
   padding: 0.24rem 0.56rem;
   border-radius: 999px;
-  background: #e8f2ff;
-  color: #14509a;
+  background: #d9f2f1;
+  color: #016266;
   font-size: 0.73rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -1171,7 +1180,7 @@ p {
   margin-top: 0;
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--green-text);
 }
 
 .store-hours {
@@ -1288,8 +1297,8 @@ p {
   display: inline-flex;
   padding: 0.24rem 0.56rem;
   border-radius: 999px;
-  background: #e8f2ff;
-  color: #14509a;
+  background: #d9f2f1;
+  color: #016266;
   font-size: 0.73rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -1306,7 +1315,7 @@ p {
   margin-top: 0.5rem;
   font-size: 0.86rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--green-text);
 }
 
 .dialog-hours {
